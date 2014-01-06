@@ -27,6 +27,7 @@ size:: Show this many terms
 order:: In terms mode: count, term, reverse_count or reverse_term,
 in terms_stats mode: term, reverse_term, count, reverse_count,
 total, reverse_total, min, reverse_min, max, reverse_max, mean or reverse_mean
+In terms_all mode: term, count, total, min, max, mean
 // src/app/panels/terms/module.js:69
 
 donut:: In pie chart mode, draw a hole in the middle of the pie to make a tasty donut.
@@ -56,12 +57,12 @@ queries.mode::: Of the queries available, which to use. Options: +all, pinned, u
 queries.ids::: In +selected+ mode, which query ids are selected.
 // src/app/panels/terms/module.js:104
 
-tmode:: Facet mode: terms or terms_stats
+tmode:: Facet mode: terms or terms_stats or terms_all
 // src/app/panels/terms/module.js:114
 
 tstat:: Terms_stats facet stats field
 // src/app/panels/terms/module.js:118
 
-valuefield:: Terms_stats facet value field
+valuefield:: Terms_stats or Terms_all facet value field
 // src/app/panels/terms/module.js:122
 

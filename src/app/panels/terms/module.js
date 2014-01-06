@@ -112,7 +112,7 @@ function (angular, app, _, $, kbn) {
         ids         : []
       },
       /** @scratch /panels/terms/5
-       * tmode:: Facet mode: terms or terms_stats
+       * tmode:: Facet mode: terms or terms_stats or terms_all
        */
       tmode       : 'terms',
       /** @scratch /panels/terms/5
@@ -120,7 +120,7 @@ function (angular, app, _, $, kbn) {
        */
       tstat       : 'total',
       /** @scratch /panels/terms/5
-       * valuefield:: Terms_stats facet value field
+       * valuefield:: Terms_stats or Terms_all facet value field
        */
       valuefield  : ''
     };
@@ -176,7 +176,7 @@ function (angular, app, _, $, kbn) {
               boolQuery,
               filterSrv.getBoolFilter(filterSrv.ids)
             )))).size(0);
-      }
+      }else
       if($scope.panel.tmode === 'terms_stats') {
         request = request
           .facet($scope.ejs.TermStatsFacet('terms')
@@ -189,6 +189,32 @@ function (angular, app, _, $, kbn) {
               boolQuery,
               filterSrv.getBoolFilter(filterSrv.ids)
             )))).size(0);
+      }else
+      if($scope.panel.tmode === 'terms_all') {
+          request = request
+            .facet($scope.ejs.TermStatsFacet('terms')
+            .valueField($scope.panel.valuefield)
+            .keyField($scope.panel.field)
+            .size($scope.panel.size)
+            .order($scope.panel.order)
+            .facetFilter($scope.ejs.QueryFilter(
+              $scope.ejs.FilteredQuery(
+                boolQuery,
+                filterSrv.getBoolFilter(filterSrv.ids)
+              )))).size(0);
+      }else
+      if($scope.panel.tmode === 'merge_terms') {
+          request = request
+            .facet($scope.ejs.TermStatsFacet('terms')
+            .valueField($scope.panel.valuefield)
+            .keyField($scope.panel.field)
+            .size($scope.panel.size)
+            .order($scope.panel.order)
+            .facetFilter($scope.ejs.QueryFilter(
+              $scope.ejs.FilteredQuery(
+                boolQuery,
+                filterSrv.getBoolFilter(filterSrv.ids)
+              )))).size(0);
       }
 
       // Populate the inspector panel
@@ -273,6 +299,8 @@ function (angular, app, _, $, kbn) {
             }
             if(scope.panel.tmode === 'terms_stats') {
               slice = { label : v.term, data : [[k,v[scope.panel.tstat]]], actions: true};
+            }else if(scope.panel.tmode === 'terms_all') {
+              slice = { label : v.term, data : [[k,v.count],[k,v.total],[k,v.min],[k,v.max],[k,v.mean]], actions: true};
             }
             scope.data.push(slice);
             k = k + 1;
