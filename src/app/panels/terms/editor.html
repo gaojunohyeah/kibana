@@ -3,7 +3,7 @@
       <h5>Parameters</h5>
       <div class="editor-option">
         <label class="small">Terms mode</label>
-        <select class="input-medium" ng-model="panel.tmode" ng-options="f for f in ['terms','terms_stats','terms_all','merge_terms']" ng-change="set_refresh(true)"></select>
+        <select class="input-medium" ng-model="panel.tmode" ng-options="f for f in ['terms','terms_stats','terms_all','DAU_terms']" ng-change="set_refresh(true)"></select>
       </div>
       <div class="editor-option" ng-show="panel.tmode == 'terms_stats'">
         <label class="small">Stats type</label>
@@ -26,7 +26,7 @@
         <select class="input-medium" ng-model="panel.order" ng-options="f for f in ['count','term','reverse_count','reverse_term']" ng-change="set_refresh(true)"  ng-show="panel.tmode == 'terms'"></select>
         <select class="input-medium" ng-model="panel.order" ng-options="f for f in ['term', 'reverse_term', 'count', 'reverse_count', 'total', 'reverse_total', 'min', 'reverse_min', 'max', 'reverse_max', 'mean', 'reverse_mean']" ng-change="set_refresh(true)"  ng-show="panel.tmode == 'terms_stats'"></select>
         <select class="input-medium" ng-model="panel.order" ng-options="f for f in ['term', 'count', 'total', 'min', 'max', 'mean']" ng-change="set_refresh(true)"  ng-show="panel.tmode == 'terms_all'"></select>
-        <select class="input-medium" ng-model="panel.order" ng-options="f for f in ['term']" ng-change="set_refresh(true)"  ng-show="panel.tmode == 'merge_terms'"></select>
+        <select class="input-medium" ng-model="panel.order" ng-options="f for f in ['term']" ng-change="set_refresh(true)"  ng-show="panel.tmode == 'DAU_terms'"></select>
       </div>
       <div class="editor-option" ng-show="panel.tmode == 'terms'">
         <label class="small">Exclude Terms(s) (comma seperated)</label>
@@ -39,8 +39,8 @@
       <h5>View Options</h5>
       <div class="editor-option">
         <label class="small">Style</label>
-        <select class="input-small" ng-model="panel.chart" ng-options="f for f in ['bar','pie','table']" ng-show="panel.tmode != 'terms_all' && panel.tmode != 'merge_terms'"></select></span>
-        <select class="input-small" ng-model="panel.chart" ng-options="f for f in ['table']" ng-show="panel.tmode == 'terms_all' || panel.tmode == 'merge_terms'"></select></span>
+        <select class="input-small" ng-model="panel.chart" ng-options="f for f in ['bar','pie','table']" ng-show="panel.tmode != 'terms_all' && panel.tmode != 'DAU_terms'"></select></span>
+        <select class="input-small" ng-model="panel.chart" ng-options="f for f in ['table']" ng-show="panel.tmode == 'terms_all' || panel.tmode == 'DAU_terms'"></select></span>
       </div>
       <div class="editor-option" ng-show="panel.chart == 'table'">
         <label class="small">Font Size</label>

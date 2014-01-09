@@ -203,7 +203,7 @@ function (angular, app, _, $, kbn) {
                 filterSrv.getBoolFilter(filterSrv.ids)
               )))).size(0);
       }else
-      if($scope.panel.tmode === 'merge_terms') {
+      if($scope.panel.tmode === 'DAU_terms') {
           request = request
             .facet($scope.ejs.TermStatsFacet('terms')
             .valueField($scope.panel.valuefield)
