@@ -29,7 +29,7 @@
         <select class="input-medium" ng-model="panel.order" ng-options="f for f in ['term']" ng-change="set_refresh(true)"  ng-show="panel.tmode == 'DAU_terms'"></select>
       </div>
       <div class="editor-option" ng-show="panel.tmode == 'terms'">
-        <label class="small">Exclude Terms(s) (comma seperated)</label>
+        <label class="small">Exclude Terms(s) (comma separated)</label>
         <input array-join type="text" ng-model='panel.exclude'></input>
       </div>
     </div>
