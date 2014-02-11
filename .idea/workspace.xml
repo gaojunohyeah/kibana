@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3f1ce4fd-0fcb-45c2-80c7-655e0d8fd919" name="Default" comment="" />
+    <ignored path="kibana.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="kibana" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="29" selection-start="2614" selection-end="2614" vertical-scroll-proportion="-4.759494" vertical-offset="724" max-vertical-offset="1860">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="366" column="27" selection-start="11968" selection-end="11973" vertical-scroll-proportion="15.5" vertical-offset="8055" max-vertical-offset="8740">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lodash.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vendor/lodash.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3289" column="20" selection-start="109743" selection-end="109759" vertical-scroll-proportion="-5.64" vertical-offset="65498" max-vertical-offset="135800">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/terms/editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="12" selection-start="333" selection-end="333" vertical-scroll-proportion="-1.5189873" vertical-offset="0" max-vertical-offset="1560">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="103" selection-start="1317" selection-end="1332" vertical-scroll-proportion="-10.793103" vertical-offset="207" max-vertical-offset="1860">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="0" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-8.810126" vertical-offset="224" max-vertical-offset="1420">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="190" column="90" selection-start="7025" selection-end="7025" vertical-scroll-proportion="0.8584071" vertical-offset="3315" max-vertical-offset="8900">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="querySrv.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="261" column="46" selection-start="7902" selection-end="7909" vertical-scroll-proportion="0.0" vertical-offset="5075" max-vertical-offset="6240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="30" selection-start="20" selection-end="30" vertical-scroll-proportion="4.137931" vertical-offset="120" max-vertical-offset="1140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="21" selection-start="2686" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="4160">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/custom.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="171" selection-start="973" selection-end="1132" vertical-scroll-proportion="-13.793103" vertical-offset="420" max-vertical-offset="1680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/controllers/dashLoader.js" />
+        <option value="$PROJECT_DIR$/src/app/services/dashboard.js" />
+        <option value="$PROJECT_DIR$/src/app/test.html" />
+        <option value="$PROJECT_DIR$/src/vendor/elasticjs/elastic-angular-client.js" />
+        <option value="$PROJECT_DIR$/src/app/userController.js" />
+        <option value="$PROJECT_DIR$/src/app/i18n/i18nController.js" />
+        <option value="$PROJECT_DIR$/src/app/app.js" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/src/app/controllers/all.js" />
+        <option value="$PROJECT_DIR$/src/app/partials/userlogin.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/histogram/editor.html" />
+        <option value="$PROJECT_DIR$/src/app/services/alertSrv.js" />
+        <option value="$PROJECT_DIR$/src/app/partials/dasheditor.html" />
+        <option value="$PROJECT_DIR$/src/app/partials/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js" />
+        <option value="$PROJECT_DIR$/src/app/components/settings.js" />
+        <option value="$PROJECT_DIR$/src/app/controllers/i18nController.js" />
+        <option value="$PROJECT_DIR$/src/app/services/querySrv.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/table/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/stats/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/sparklines/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/pie/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/map/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/hits/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/column/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/bettermap/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/trends/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/histogram/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/innergram/editor.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/innergram/module.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/terms/module.html" />
+        <option value="$PROJECT_DIR$/src/app/partials/dashLoader.html" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app/controllers/userController.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/innergram/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/innergram/timeSeries.js" />
+        <option value="$PROJECT_DIR$/src/app/directives/kibanaPanel.js" />
+        <option value="$PROJECT_DIR$/src/config.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/terms/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/terms/editor.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/innerterms/module.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/innerterms/editor.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/innerterms/module.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innerterms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Apps/2.0/PMWZRJHC.TQN/X2XK8JTE.54M/gith..tion_317444273a93ac29_0001.0002_5f2f02fff55a2354/GitHub.exe" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="SearchEverywhereHistory" value="‘" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work\github\kibana\src\app\panels\innerterms" />
+      <recent name="E:\work\github\kibana\src\app\panels\innergram" />
+      <recent name="E:\work\github\kibana\src\app\i18n" />
+      <recent name="E:\work\github\kibana\src\app\partials" />
+      <recent name="E:\work\github\kibana\src\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\work\github\kibana\src\app\controllers" />
+      <recent name="E:\work\github\kibana" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f1ce4fd-0fcb-45c2-80c7-655e0d8fd919" name="Default" comment="" />
+      <created>1389694089609</created>
+      <updated>1389694089609</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30444205" sideWeight="0.4997367" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17798841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31960997" sideWeight="0.5002633" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/controllers/dashLoader.js</url>
+          <line>91</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/app/panels/map/lib/jquery.jvectormap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="24854" selection-start="24966" selection-end="24966" vertical-scroll-proportion="0.20408164" vertical-offset="0" max-vertical-offset="588" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/dash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="13" selection-start="1308" selection-end="1315" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2680" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/text/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/column/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="12" selection-start="945" selection-end="945" vertical-scroll-proportion="0.37209302" vertical-offset="252" max-vertical-offset="840" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/timepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8560" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="98" selection-start="802" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/i18nController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="62" selection-start="3385" selection-end="3385" vertical-scroll-proportion="0.0" vertical-offset="1058" max-vertical-offset="1880" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/angular/timepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="0" selection-start="5183" selection-end="5183" vertical-scroll-proportion="3.2036614" vertical-offset="660" max-vertical-offset="17680" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/moment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1333" column="0" selection-start="42768" selection-end="42768" vertical-scroll-proportion="0.0" vertical-offset="32771" max-vertical-offset="33340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="28" selection-start="1982" selection-end="1986" vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="1640" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/stats/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="33" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="3700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/sparklines/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="38" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="7980" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/pie/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="31" selection-start="3321" selection-end="3321" vertical-scroll-proportion="0.0" vertical-offset="1606" max-vertical-offset="6940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/map/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="31" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.0" vertical-offset="1166" max-vertical-offset="4360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/hits/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="32" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="6140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/column/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="34" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="2520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/bettermap/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="37" selection-start="3241" selection-end="3241" vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="5620" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/trends/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="34" selection-start="2372" selection-end="2372" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="5320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/roweditor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="121" selection-start="2299" selection-end="2314" vertical-scroll-proportion="0.5081967" vertical-offset="566" max-vertical-offset="1420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="102" selection-start="1801" selection-end="1803" vertical-scroll-proportion="-3.2911391" vertical-offset="360" max-vertical-offset="2700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="228" column="49" selection-start="7430" selection-end="7432" vertical-scroll-proportion="0.31473213" vertical-offset="4278" max-vertical-offset="10300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="34" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1740" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="16" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.4613583" vertical-offset="1226" max-vertical-offset="2080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="441" column="25" selection-start="15021" selection-end="15027" vertical-scroll-proportion="0.0" vertical-offset="8820" max-vertical-offset="15720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="184" selection-end="184" vertical-scroll-proportion="-0.0" vertical-offset="80" max-vertical-offset="2080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="370" column="58" selection-start="11952" selection-end="11952" vertical-scroll-proportion="0.0" vertical-offset="7400" max-vertical-offset="10200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/dashLoader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="2260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="25" selection-start="3683" selection-end="3683" vertical-scroll-proportion="0.40770102" vertical-offset="1200" max-vertical-offset="3500">
+          <folding>
+            <marker date="1392020575197" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="18" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.6721311" vertical-offset="246" max-vertical-offset="1100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/timeSeries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="3" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/angular/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2415" column="16" selection-start="70953" selection-end="70953" vertical-scroll-proportion="0.65685165" vertical-offset="47720" max-vertical-offset="337960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="11" selection-start="423" selection-end="423" vertical-scroll-proportion="-0.04464286" vertical-offset="340" max-vertical-offset="16260">
+          <folding>
+            <marker date="1392019121539" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1392019121539" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="7" selection-start="696" selection-end="696" vertical-scroll-proportion="0.49107143" vertical-offset="0" max-vertical-offset="896">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="70" selection-end="70" vertical-scroll-proportion="0.19512194" vertical-offset="0" max-vertical-offset="3340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/lodash.extended.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="14" selection-start="651" selection-end="651" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/require.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="71" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.625" vertical-offset="180" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="25" selection-start="2958" selection-end="2958" vertical-scroll-proportion="0.75609756" vertical-offset="1235" max-vertical-offset="2920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/lodash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3289" column="20" selection-start="109743" selection-end="109759" vertical-scroll-proportion="-5.64" vertical-offset="65498" max-vertical-offset="135800">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/terms/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="12" selection-start="333" selection-end="333" vertical-scroll-proportion="-1.5189873" vertical-offset="0" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="366" column="27" selection-start="11968" selection-end="11973" vertical-scroll-proportion="15.5" vertical-offset="8055" max-vertical-offset="8740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="29" selection-start="2614" selection-end="2614" vertical-scroll-proportion="-4.759494" vertical-offset="724" max-vertical-offset="1860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="30" selection-start="20" selection-end="30" vertical-scroll-proportion="4.137931" vertical-offset="120" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="171" selection-start="973" selection-end="1132" vertical-scroll-proportion="-13.793103" vertical-offset="420" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-8.810126" vertical-offset="224" max-vertical-offset="1420">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="21" selection-start="2686" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="4160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="103" selection-start="1317" selection-end="1332" vertical-scroll-proportion="-10.793103" vertical-offset="207" max-vertical-offset="1860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="261" column="46" selection-start="7902" selection-end="7909" vertical-scroll-proportion="0.0" vertical-offset="5075" max-vertical-offset="6240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="90" selection-start="7025" selection-end="7025" vertical-scroll-proportion="0.8584071" vertical-offset="3315" max-vertical-offset="8900">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
