@@ -33,6 +33,14 @@ function (angular, app, _, config) {
 
     // Set and populate defaults
     var _d = {
+
+      /**
+       * @scratch /panels/column/3
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
+
       /** @scratch /panels/column/3
        * === Parameters
        *

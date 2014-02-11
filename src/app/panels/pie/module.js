@@ -100,6 +100,14 @@ define([
         mode        : 'all',
         ids         : []
       },
+
+      /**
+       * @scratch /panels/pie/5
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
+
       default_field : '_type',
 
     };
@@ -146,7 +154,9 @@ define([
       var request = $scope.ejs.Request().indices(dashboard.indices);
 
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
-      var queries = querySrv.getQueryObjs($scope.panel.queries.ids);
+      var queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
+      // append the queryFactors into queries
+      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
 
       // This could probably be changed to a BoolFilter
       var boolQuery = $scope.ejs.BoolQuery();

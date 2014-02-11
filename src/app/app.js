@@ -19,7 +19,7 @@ function (angular, $, _, appLevelRequire) {
 
   "use strict";
 
-  var app = angular.module('kibana', []),
+  var app = angular.module('kibana',['localization']),
     // we will keep a reference to each module defined before boot, so that we can
     // go back and allow it to define new features later. Once we boot, this will be false
     pre_boot_modules = [],
@@ -72,17 +72,20 @@ function (angular, $, _, appLevelRequire) {
   app.config(function ($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
 
     $routeProvider
+      .when('/login', {
+        templateUrl: 'app/partials/userlogin.html'
+      })
       .when('/dashboard', {
-        templateUrl: 'app/partials/dashboard.html',
+        templateUrl: 'app/partials/dashboard.html'
       })
       .when('/dashboard/:kbnType/:kbnId', {
-        templateUrl: 'app/partials/dashboard.html',
+        templateUrl: 'app/partials/dashboard.html'
       })
       .when('/dashboard/:kbnType/:kbnId/:params', {
         templateUrl: 'app/partials/dashboard.html'
       })
       .otherwise({
-        redirectTo: 'dashboard'
+        redirectTo: 'login'
       });
 
     // this is how the internet told me to dynamically add modules :/

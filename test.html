@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Angular: Empty Fiddle - jsFiddle demo</title>
+
+    <script type='text/javascript' src='src/vendor/angular/angular.js'></script>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3.0.0rc2/css/bootstrap.min.css">
+
+
+    <style type='text/css'>
+
+    </style>
+
+</head>
+<body ng-app="myApp">
+<div ng-controller="MyCtrl">
+    <h2>i18n Test</h2>
+    <ul>
+        <li>{{'firstname' |i18n}}</li>
+        <li>{{'lastname' |i18n}}</li>
+        <li>{{'address' |i18n}}</li>
+        <hr>
+        <li><button class="btn btn-primary" ng-click="changeLang()" ng-tooltip="'a'">{{'change' |i18n}}</button>
+    </ul>
+</div>
+
+
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+var myApp = angular.module('myApp',['localization']);
+//angular.module('myApp', ['mgcrea.ngStrap']);
+//angular.module('myApp', [
+//  'mgcrea.ngStrap.modal',
+//  'mgcrea.ngStrap.aside',
+//  'mgcrea.ngStrap.tooltip'
+//]);
+
+
+myApp.controller('MyCtrl', function($rootScope) {
+    // default language setting
+    $rootScope.language = "zh_CN";
+
+    $rootScope.changeLang = function () {
+        if ($rootScope.language === "en_US") {
+            $rootScope.language = "zh_CN";
+        } else {
+            $rootScope.language = "en_US";
+        }
+    };
+})
+
+
+
+// i18n filter
+angular.module('localization', [])
+        .filter('i18n', ['localizedTexts', '$rootScope', function (localizedTexts, $rootScope) {
+            return function (text) {
+                currentLanguage = $rootScope.language || 'en_US';
+                if (localizedTexts[currentLanguage].hasOwnProperty(text)) {
+                    return localizedTexts[currentLanguage][text];
+                }
+                return text;
+            };
+        }])
+
+// separate dictionary file 
+angular.module('localization')
+        .value('localizedTexts', {
+            'zh_CN' : {
+                'firstname': '名',
+                'lastname': '姓',
+                'address': '地址',
+                'change':'切换语言'
+            },
+            'en_US' : {
+                'firstname': 'First Name',
+                'lastname': 'Last Name',
+                'address': 'Home Address',
+                'change':'Change Language'
+            }
+        });
+//]]>  
+
+</script>
+
+
+</body>
+
+
+</html>
+

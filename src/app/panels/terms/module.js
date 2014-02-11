@@ -111,6 +111,14 @@ function (angular, app, _, $, kbn) {
         mode        : 'all',
         ids         : []
       },
+
+      /**
+       * @scratch /panels/terms/5
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
+
       /** @scratch /panels/terms/5
        * tmode:: Facet mode: terms or terms_stats or terms_all
        */
@@ -155,7 +163,9 @@ function (angular, app, _, $, kbn) {
       request = $scope.ejs.Request().indices(dashboard.indices);
 
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
-      queries = querySrv.getQueryObjs($scope.panel.queries.ids);
+      queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
+      // append the queryFactors into queries
+      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
 
       // This could probably be changed to a BoolFilter
       boolQuery = $scope.ejs.BoolQuery();
@@ -191,19 +201,6 @@ function (angular, app, _, $, kbn) {
             )))).size(0);
       }else
       if($scope.panel.tmode === 'terms_all') {
-          request = request
-            .facet($scope.ejs.TermStatsFacet('terms')
-            .valueField($scope.panel.valuefield)
-            .keyField($scope.panel.field)
-            .size($scope.panel.size)
-            .order($scope.panel.order)
-            .facetFilter($scope.ejs.QueryFilter(
-              $scope.ejs.FilteredQuery(
-                boolQuery,
-                filterSrv.getBoolFilter(filterSrv.ids)
-              )))).size(0);
-      }else
-      if($scope.panel.tmode === 'DAU_terms') {
           request = request
             .facet($scope.ejs.TermStatsFacet('terms')
             .valueField($scope.panel.valuefield)
@@ -290,29 +287,29 @@ function (angular, app, _, $, kbn) {
         });
 
         function build_results() {
-          var k = 0;
-          scope.data = [];
-          _.each(scope.results.facets.terms.terms, function(v) {
-            var slice;
+            var k = 0;
+            scope.data = [];
+            _.each(scope.results.facets.terms.terms, function(v) {
+                var slice;
+                if(scope.panel.tmode === 'terms') {
+                    slice = { label : v.term, data : [[k,v.count]], actions: true};
+                }
+                if(scope.panel.tmode === 'terms_stats') {
+                    slice = { label : v.term, data : [[k,v[scope.panel.tstat]]], actions: true};
+                }else if(scope.panel.tmode === 'terms_all') {
+                    slice = { label : v.term, data : [[k,v.count],[k,v.total],[k,v.min],[k,v.max],[k,v.mean]], actions: true};
+                }
+                scope.data.push(slice);
+                k = k + 1;
+            });
+
+            scope.data.push({label:'Missing field',
+                data:[[k,scope.results.facets.terms.missing]],meta:"missing",color:'#aaa',opacity:0});
+
             if(scope.panel.tmode === 'terms') {
-              slice = { label : v.term, data : [[k,v.count]], actions: true};
+                scope.data.push({label:'Other values',
+                    data:[[k+1,scope.results.facets.terms.other]],meta:"other",color:'#444'});
             }
-            if(scope.panel.tmode === 'terms_stats') {
-              slice = { label : v.term, data : [[k,v[scope.panel.tstat]]], actions: true};
-            }else if(scope.panel.tmode === 'terms_all') {
-              slice = { label : v.term, data : [[k,v.count],[k,v.total],[k,v.min],[k,v.max],[k,v.mean]], actions: true};
-            }
-            scope.data.push(slice);
-            k = k + 1;
-          });
-
-          scope.data.push({label:'Missing field',
-            data:[[k,scope.results.facets.terms.missing]],meta:"missing",color:'#aaa',opacity:0});
-
-          if(scope.panel.tmode === 'terms') {
-            scope.data.push({label:'Other values',
-              data:[[k+1,scope.results.facets.terms.other]],meta:"other",color:'#444'});
-          }
         }
 
         // Function for rendering panel
@@ -340,7 +337,7 @@ function (angular, app, _, $, kbn) {
                 plot = $.plot(elem, chartData, {
                   legend: { show: false },
                   series: {
-                    lines:  { show: false, },
+                    lines:  { show: false },
                     bars:   { show: true,  fill: 1, barWidth: 0.8, horizontal: false },
                     shadowSize: 1
                   },

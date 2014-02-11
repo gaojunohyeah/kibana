@@ -63,8 +63,47 @@ function (angular,$) {
             '</span>'+
 
           '</div>'+
+
+        //add queryFactors's input text, eg: serverID text
+        '<div>' +
+          '<span ng-repeat="factor in panel.queryFactors">' +
+            // if factor does not have end operater and type is input
+            '<span ng-show="factor.operater_end === \'\' && factor.type === \'input\'">' +
+            '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
+            '<input type="text" ng-model="factor.value_start" />&nbsp;&nbsp;&nbsp;&nbsp;' +
+            '</span>' +
+            // if factor does not have end operater and type is time
+//            '<span ng-show="factor.operater_end === \'\' && factor.type === \'time\'">' +
+//            '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
+//            '<input type="text" ng-model="factor.value_start" />&nbsp;&nbsp;&nbsp;&nbsp;' +
+//            '</span>' +
+            // if factor has end operater and type is input
+            '<span ng-show="factor.operater_end != \'\' && factor.type === \'input\'">' +
+            '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
+            '<input type="text" ng-model="factor.value_start" />' +
+            '<strong>{{\'TO\'}}</strong>' +
+            '<input type="text" ng-model="factor.value_end" /><strong>{{factor.operater_end}}&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
+            '</span>' +
+            // if factor has end operater and type is time
+//            '<span ng-show="factor.operater_end != \'\' && factor.type === \'time\'">' +
+//            '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
+//            '<input type="text" ng-model="factor.value_start" />' +
+//            '<input class="timepicker-date" type="text" ng-change="validate(temptime)" ng-model="temptime.from.date" data-date-format="yyyy-mm-dd" required bs-datepicker />@' +
+//            '<input class="timepicker-hms" type="text" maxlength="2" ng-change="validate(temptime)" ng-model="temptime.from.hour" required ng-pattern="patterns.hour" onClick="this.select();"/>:' +
+//            '<input class="timepicker-hms" type="text" maxlength="2" ng-change="validate(temptime)" ng-model="temptime.from.minute" required ng-pattern="patterns.minute" onClick="this.select();"/>:' +
+//            '<input class="timepicker-hms" type="text" maxlength="2" ng-change="validate(temptime)" ng-model="temptime.from.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
+//            '<input class="timepicker-ms" type="text" maxlength="3" ng-change="validate(temptime)" ng-model="temptime.from.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
+//            '<strong>{{\'TO\'}}</strong>' +
+//            '<input type="text" ng-model="factor.value_end" /><strong>{{factor.operater_end}}&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
+            '</span>' +
+          '</span>' +
+          '<span>' +
+          '<button type="button" ng-click="get_data();" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>' +
+          '</span>' +
+
         '</div>\n'+
       '</div>';
+
       return {
         restrict: 'E',
         link: function($scope, elem, attr) {

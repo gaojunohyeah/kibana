@@ -113,6 +113,14 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
         mode        : 'all',
         ids         : []
       },
+
+      /**
+       * @scratch /panels/histogram/3
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  : JSON.parse(JSON.stringify($scope.config.query_factors)),
+
       /** @scratch /panels/histogram/3
        * ==== Annotations
        * annotate object:: A query can be specified, the results of which will be displayed as markers on
@@ -334,7 +342,9 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
 
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
 
-      queries = querySrv.getQueryObjs($scope.panel.queries.ids);
+      queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
+      // append the queryFactors into queries
+      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
 
       // Build the query
       _.each(queries, function(q) {

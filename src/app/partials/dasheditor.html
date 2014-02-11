@@ -12,14 +12,14 @@
     <div class="editor-row">
       <div class="section">
         <div class="editor-option">
-          <label class="small">Title</label><input type="text" class="input-large" ng-model='dashboard.current.title'></input>
+          <label class="small">Title</label><input type="text" class="input-large" ng-model='dashboard.current.title' readonly></input>
         </div>
         <div class="editor-option">
           <label class="small">Style</label><select class="input-small" ng-model="dashboard.current.style" ng-options="f for f in ['dark','light']"></select>
         </div>
-        <div class="editor-option">
-          <label class="small"> Editable </label><input type="checkbox" ng-model="dashboard.current.editable" ng-checked="dashboard.current.editable" />
-        </div>
+        <!--<div class="editor-option">-->
+          <!--<label class="small"> Editable </label><input type="checkbox" ng-model="dashboard.current.editable" ng-checked="dashboard.current.editable" />-->
+        <!--</div>-->
         <div class="editor-option">
           <label class="small"> Hints <tip>Show 'Add panel' hints in empty spaces</tip></label><input type="checkbox" ng-model="dashboard.current.panel_hints" ng-checked="dashboard.current.panel_hints" />
         </div>

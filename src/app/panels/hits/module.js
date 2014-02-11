@@ -86,6 +86,13 @@ define([
         mode        : 'all',
         ids         : []
       },
+
+      /**
+       * @scratch /panels/hits/5
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors))
     };
     _.defaults($scope.panel,_d);
 
@@ -112,7 +119,9 @@ define([
       var request = $scope.ejs.Request().indices(dashboard.indices[_segment]);
 
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
-      var queries = querySrv.getQueryObjs($scope.panel.queries.ids);
+      var queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
+      // append the queryFactors into queries
+      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
 
       // Build the question part of the query
       _.each(queries, function(q) {

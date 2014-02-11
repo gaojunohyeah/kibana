@@ -251,6 +251,38 @@ function (angular, _, config, kbn) {
       });
     };
 
+    /**
+     * function appendQueryFactors
+     * use to append the queryFactors into queries
+     *
+     * @param queries
+     * @param queryFactors
+     * @returns {*}
+     */
+    this.appendQueryFactors = function(queries, queryFactors){
+        var appendQuery = "";
+        // for each queryFactors's elements, append to appendQuery str.
+        _.each(queryFactors,function(factor) {
+            // if factor.value is not '',then do the append operation
+            if(factor.value_start != ''){
+                // append the factor's elements to the appendQuery
+                appendQuery += " AND " + factor.name + factor.operater_start + factor.value_start;
+
+                if(factor.operater_end != ''){
+                    appendQuery += " TO " + factor.value_end + factor.operater_end ;
+                }
+            }
+        });
+
+
+        // for each queries's elements, append appendQuery str to the queries's elements.
+        _.each(queries,function(q){
+            q.query += appendQuery;
+        });
+
+        return queries;
+    };
+
     var nextId = function() {
       var idCount = dashboard.current.services.query.ids.length;
       if(idCount > 0) {

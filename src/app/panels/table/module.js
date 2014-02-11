@@ -131,6 +131,14 @@ function (angular, app, _, kbn, moment) {
         mode        : 'all',
         ids         : []
       },
+
+      /**
+       * @scratch /panels/table/5
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
+
       style   : {'font-size': '9pt'},
       normTimes : true,
     };
@@ -293,7 +301,9 @@ function (angular, app, _, kbn, moment) {
 
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
 
-      queries = querySrv.getQueryObjs($scope.panel.queries.ids);
+      queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
+      // append the queryFactors into queries
+      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
 
       boolQuery = $scope.ejs.BoolQuery();
       _.each(queries,function(q) {

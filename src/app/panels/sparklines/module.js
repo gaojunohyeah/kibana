@@ -86,6 +86,13 @@ function (angular, app, $, _, kbn, moment, timeSeries) {
         mode        : 'all',
         ids         : []
       },
+
+      /**
+       * @scratch /panels/sparklines/5
+       * ==== QueryFactors
+       * see config.query_factors
+       */
+      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors))
     };
 
     _.defaults($scope.panel,_d);
@@ -163,7 +170,9 @@ function (angular, app, $, _, kbn, moment, timeSeries) {
 
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
 
-      queries = querySrv.getQueryObjs($scope.panel.queries.ids);
+      queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
+      // append the queryFactors into queries
+      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
 
       // Build the query
       _.each(queries, function(q) {
