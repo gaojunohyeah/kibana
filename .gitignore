@@ -2,11 +2,3 @@ node_modules
 .aws-config.json
 dist
 .idea/*
-.idea/encodings.xml
-.idea/kibana.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
-.idea/vcs.xml
-.idea/workspace.xml
-.idea/workspace.xml
