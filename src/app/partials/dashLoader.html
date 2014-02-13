@@ -73,30 +73,30 @@
       </form>
     </li>
 
-    <li class="dropdown-submenu noarrow" ng-show="dashboard.current.loader.save_local != false || dashboard.current.loader.save_gist != false || dashboard.current.loader.save_default != false">
-      <a tabindex="-1" class="small" style="padding:0"><i class="icon-caret-left"></i> Advanced</a>
-      <ul class="dropdown-menu">
+    <!--<li class="dropdown-submenu noarrow" ng-show="dashboard.current.loader.save_local != false || dashboard.current.loader.save_gist != false || dashboard.current.loader.save_default != false">-->
+      <!--<a tabindex="-1" class="small" style="padding:0"><i class="icon-caret-left"></i> Advanced</a>-->
+      <!--<ul class="dropdown-menu">-->
 
-        <li ng-show="dashboard.current.loader.save_default != false">
-          <a class="link" ng-click="set_default()">Save as Home</a>
-        </li>
-        <li ng-show="dashboard.current.loader.save_default != false">
-          <a class="link" ng-click="purge_default()">Reset Home</a>
-        </li>
-        <li ng-show="dashboard.current.loader.save_local != false">
-          <a class="link" ng-click="dashboard.to_file()">Export schema</a>
-        </li>
+        <!--<li ng-show="dashboard.current.loader.save_default != false">-->
+          <!--<a class="link" ng-click="set_default()">Save as Home</a>-->
+        <!--</li>-->
+        <!--<li ng-show="dashboard.current.loader.save_default != false">-->
+          <!--<a class="link" ng-click="purge_default()">Reset Home</a>-->
+        <!--</li>-->
+        <!--<li ng-show="dashboard.current.loader.save_local != false">-->
+          <!--<a class="link" ng-click="dashboard.to_file()">Export schema</a>-->
+        <!--</li>-->
 
-        <li ng-show="dashboard.current.loader.save_gist" style="margin:10px">
-          <h6>Gist</h6>
-          <form class="input-append">
-            <input class='input-medium' placeholder='Title' type="text" ng-model="gist.title"/>
-            <button class="btn" ng-click="save_gist()"><i class="icon-github-alt"></i></button>
-          </form><br>
-          <small ng-show="gist.last">Last gist: <a target="_blank" href="{{gist.last}}">{{gist.last}}</a></small>
-        </li>
-      </ul>
-    </li>
+        <!--<li ng-show="dashboard.current.loader.save_gist" style="margin:10px">-->
+          <!--<h6>Gist</h6>-->
+          <!--<form class="input-append">-->
+            <!--<input class='input-medium' placeholder='Title' type="text" ng-model="gist.title"/>-->
+            <!--<button class="btn" ng-click="save_gist()"><i class="icon-github-alt"></i></button>-->
+          <!--</form><br>-->
+          <!--<small ng-show="gist.last">Last gist: <a target="_blank" href="{{gist.last}}">{{gist.last}}</a></small>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</li>-->
   </ul>
 
 
@@ -104,4 +104,6 @@
 <!--<li ng-show="showDropdown('share')"><a bs-tooltip="'Share'" data-placement="bottom" ng-click="elasticsearch_save('temp',dashboard.current.loader.save_temp_ttl)" bs-modal="'app/partials/dashLoaderShare.html'"><i class='icon-share'></i></a></li>-->
 
 <li ng-show="dashboard.current.editable" bs-tooltip="'Configure dashboard'" data-placement="bottom"><a class="link" config-modal="app/partials/dasheditor.html" kbn-model="dashboard"><i class='icon-cog'></i></a></li>
+
+<li ><a bs-tooltip="'Logout'" data-placement="bottom" ng-click="logout()" ><i class='icon-remove'></i></a></li>
 

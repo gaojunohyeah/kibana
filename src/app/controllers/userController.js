@@ -15,6 +15,7 @@ function (angular, _, config) {
 
         // user index type in ES
         var type = 'user';
+        var dashType = 'dashboard';
 
         /**
          * user's login information
@@ -23,20 +24,65 @@ function (angular, _, config) {
         $rootScope.user = {
             user_name: "",
             password: "",
+            expiration_date: "",
             user_type: 0,       // 0:normal user  1:admin user
             is_login: false     // false:logout status   true:login status
         };
 
         /**
+         * userInit function
+         */
+        $rootScope.userInit = function () {
+            //cookie有效，则跳转至该用户名的kibana页面
+            if($scope.isCookieValid()){
+                var data = "true";
+                user_load(data);
+            }
+            //cookie无效
+            else{
+                $rootScope.logout();
+            }
+        }
+
+        /**
+         * isCookieValid function
+         * valid if has cookie and it is not expirate
+         * valid    ：   true
+         * invalid  ：   false
+         *
+         * @returns {boolean}
+         */
+        $rootScope.isCookieValid = function(){
+            //获取cookie中的用户名信息
+            $rootScope.user.user_name = $scope.getCookie(config.cookie_user_name);
+
+            //cookie中用户名信息存在且不为空
+            return (!_.isUndefined($rootScope.user.user_name)
+                && "" != $rootScope.user.user_name);
+        }
+
+        /**
          * login function
          */
-        $scope.login = function () {
+        $rootScope.login = function () {
             if (!$rootScope.user.is_login) {
                 // post a http request to ES server to get the needed user information.
-                $http({
-                    url: config.elasticsearch + "/" + config.kibana_user_index + "/" + type + "/"+$rootScope.user.user_name+'?' + new Date().getTime(),
-                    method: "GET"
-                }).error(function(data, status) {
+                var url = config.login_url,
+                    postData = {
+                        "loginForm.userName" : $rootScope.user.user_name ,
+                        "loginForm.password" : $rootScope.user.password ,
+                        "loginFlag" : 1,
+                        "isKibana" : 1
+                    },
+                    transFn = function(postData) {
+                        return $.param(postData);
+                    },
+                    postCfg = {
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                        transformRequest: transFn
+                    };
+                $http.post(url, postData, postCfg
+                    ).error(function(data, status) {
                         // unable contact ES server
                         if(status === 0) {
                             alertSrv.set("ALERT.ERROR","ALERT.ES.UNABLE_CONTACT" ,'error');
@@ -58,18 +104,15 @@ function (angular, _, config) {
         /**
          * logout function
          */
-        $scope.logout = function () {
-            // if user is login status
-            if ($rootScope.user.is_login) {
-                // clean user's information
-                user_clean();
-            }
+        $rootScope.logout = function () {
+            // clean user's information
+            user_clean();
 
             // jump to the login page
-            $location.path("/login");
+            $rootScope.loginPage();
         };
 
-        $scope.elasticsearch_user_save = function(user_name,password,user_type){
+        $rootScope.elasticsearch_user_save = function(user_name,password,user_type){
             user_name = 'passport';
 
             var id = user_name;
@@ -136,16 +179,31 @@ function (angular, _, config) {
          */
         var user_load = function(data){
             // data match
-            if(data._source.password === $rootScope.user.password){
-                // set the user information to $rooScope
-                $rootScope.user.user_name = data._source.username;
-                $rootScope.user.password = data._source.password;
-                $rootScope.user.user_type = data._source.usertype;
+            if(data === "true"){
                 $rootScope.user.is_login = true;
+
+                $rootScope.setCookie(config.cookie_user_name, $rootScope.user.user_name);
 
                 // redirect to the user's view page
                 if(0 === $rootScope.user.user_type){
-                    $location.path("/dashboard/elasticsearch/"+$rootScope.user.user_name);
+
+                    $http({
+                        url: config.elasticsearch + "/" + config.kibana_index + "/" + dashType + "/"+$rootScope.user.user_name+'?' + new Date().getTime(),
+                        method: "GET"
+                    }).error(function(data, status) {
+                            // unable contact ES server
+                            if(status === 0) {
+                                alertSrv.set("ALERT.ERROR","ALERT.ES.UNABLE_CONTACT" ,'error');
+                            }
+                            // user dashboard not found
+                            else {
+//                                alertSrv.set("ALERT.ERROR","ALERT.USER.NOT_FOUND",'error');
+                                $location.path("/dashboard/file/logstash_default.json");
+                            }
+                            return false;
+                        }).success(function() {
+                            $location.path("/dashboard/elasticsearch/"+$rootScope.user.user_name);
+                        });
                 }else{
                     $location.path("/admin");
                 }
@@ -153,7 +211,7 @@ function (angular, _, config) {
             // data not match
             else{
                 // show user that the input password is wrong
-                alertSrv.set("ALERT.ERROR","ALERT.USER.PASSWORD_ERROR",'error');
+                alertSrv.set("ALERT.ERROR","ALERT.USER.USERNAME_PASSWORD_ERROR",'error');
             }
         }
 
@@ -165,6 +223,59 @@ function (angular, _, config) {
             $rootScope.user.password = "";
             $rootScope.user.user_type = 0;
             $rootScope.user.is_login = false;
+
+            $scope.removeCookie(config.cookie_user_name);
+        }
+
+        /**
+         * jump to login page
+         */
+        $rootScope.loginPage = function(){
+            $location.path("/login");
+        }
+
+        /**
+         * get cookie
+         * @param key       cookie's key
+         * @param key
+         * @returns {*}
+         */
+        $rootScope.getCookie = function(key){
+            if (document.cookie.length>0)
+            {
+                var c_start=document.cookie.indexOf(key + "=");
+                if (c_start!=-1)
+                {
+                    c_start=c_start + key.length+1;
+                    var c_end=document.cookie.indexOf(";",c_start);
+                    if (c_end==-1)
+                        c_end=document.cookie.length;
+
+                    return unescape(document.cookie.substring(c_start,c_end));
+                }
+            }
+            return "";
+        }
+
+        /**
+         * set cookie
+         * @param key       cookie's key
+         * @param value     cookie's value
+         */
+        $rootScope.setCookie = function (key, value){
+            var expirationDate = new Date().getTime() + config.cookie_expiration_time;
+            var exdate = new Date(expirationDate);
+            document.cookie= key + "=" +escape(value)+ "; expires="+exdate.toGMTString()+";path=/";
+        }
+
+        /**
+         * remove cookie
+         * @param key       cookie's key
+         */
+        $rootScope.removeCookie = function (key){
+            var exdate=new Date();
+            exdate.setTime(exdate.getTime() - 1);
+            document.cookie= key + "=;expires="+exdate.toGMTString()+";path=/";
         }
     });
 

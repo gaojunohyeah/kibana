@@ -28,7 +28,7 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
       rows: [],
       pulldowns: [
         {
-          type: 'query',
+          type: 'query'
         },
         {
           type: 'filtering'
@@ -139,6 +139,15 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
     // Since the dashboard is responsible for index computation, we can compute and assign the indices
     // here before telling the panels to refresh
     this.refresh = function() {
+      // cookie is valid，then refresh cookie
+      if($rootScope.isCookieValid()){
+          $rootScope.setCookie(config.cookie_user_name, $rootScope.user.user_name);
+      }
+      // cookie is invalid，redict to login page
+      else{
+          $rootScope.logout();
+      }
+
       if(self.current.index.interval !== 'none') {
         if(_.isUndefined(filterSrv)) {
           return;
@@ -202,6 +211,8 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
 
       // Set the current dashboard
       self.current = _.clone(dashboard);
+      self.current.title = $rootScope.user.user_name;
+
 
       // Delay this until we're sure that querySrv and filterSrv are ready
       $timeout(function() {

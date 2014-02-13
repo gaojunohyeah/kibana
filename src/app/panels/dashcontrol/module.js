@@ -80,7 +80,7 @@ function(angular, app, _) {
     $scope.elasticsearch_save = function(type,ttl) {
       dashboard.elasticsearch_save(
         type,
-        ($scope.elasticsearch.title || dashboard.current.title),
+        ($scope.user.user_name || dashboard.current.title),
         ($scope.panel.ttl_enable ? ttl : false)
       ).then(
         function(result) {

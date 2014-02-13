@@ -13,6 +13,25 @@ function (Settings) {
     return new Settings({
 
         /** @scratch /configuration/config.js/5
+         * ==== login_url
+         *
+         * The URL to your passport manager server's login url.
+         */
+        login_url: "http://localhost:9000/pmanager/login_login",
+
+        /** @scratch /configuration/config.js/5
+         * ==== cookie_user_name
+         */
+        cookie_user_name: "pmanager.user.user_name",
+
+        /** @scratch /configuration/config.js/5
+         * ==== cookie_expiration_time
+         *
+         * default is 900000ms (after 15minutes cookie expires)
+         */
+        cookie_expiration_time: 900000,
+
+        /** @scratch /configuration/config.js/5
          * ==== elasticsearch
          *
          * The URL to your elasticsearch server. You almost certainly don't

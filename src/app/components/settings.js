@@ -10,13 +10,16 @@ function (_) {
      * @type {Object}
      */
     var defaults = {
-      elasticsearch     : "http://"+window.location.hostname+":9200",
-      panel_names       : [],
-      query_factors     : [],
-      kibana_index      : 'kibana-int',
-      kibana_user_index : 'kibana-user',
-      default_route     : '/dashboard/file/default.json',
-      default_language  : 'en_US'
+      login_url                 : "http://"+window.location.hostname+":9000/pmanager/login_login",
+      cookie_user_name          : "pmanager.user.user_name",
+      cookie_expiration_time    : 900000,
+      elasticsearch             : "http://"+window.location.hostname+":9200",
+      panel_names               : [],
+      query_factors             : [],
+      kibana_index              : 'kibana-int',
+      kibana_user_index         : 'kibana-user',
+      default_route             : '/login',
+      default_language          : 'en_US'
     };
 
     // This initializes a new hash on purpose, to avoid adding parameters to
