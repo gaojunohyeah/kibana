@@ -13,7 +13,7 @@ define([
   'angular-dragdrop',
   'angular-cookies',
   'extend-jquery',
-  'bindonce',
+  'bindonce'
 ],
 function (angular, $, _, appLevelRequire) {
 
@@ -73,7 +73,7 @@ function (angular, $, _, appLevelRequire) {
 
     $routeProvider
       .when('/login', {
-        templateUrl: 'app/partials/userlogin.html'
+        templateUrl: 'app/partials/userlogin.html'//'http://localhost:9000/pmanager/login?requestFrom=kibana'
       })
       .when('/dashboard', {
         templateUrl: 'app/partials/dashboard.html'
