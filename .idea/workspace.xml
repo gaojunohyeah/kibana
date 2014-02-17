@@ -26,8 +26,11 @@
       <file leaf-file-name="userlogin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="67" selection-start="777" selection-end="777" vertical-scroll-proportion="-7.724138" vertical-offset="36" max-vertical-offset="600">
-              <folding />
+            <state line="24" column="6" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="600">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,7 +38,7 @@
       <file leaf-file-name="userController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="0" selection-start="8147" selection-end="8147" vertical-scroll-proportion="-66.4" vertical-offset="1260" max-vertical-offset="5760">
+            <state line="28" column="74" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5760">
               <folding />
             </state>
           </provider>
@@ -44,7 +47,7 @@
       <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="-5.172414" vertical-offset="690" max-vertical-offset="1580">
+            <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1580">
               <folding />
             </state>
           </provider>
@@ -53,7 +56,7 @@
       <file leaf-file-name="editor.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="1398" selection-end="1398" vertical-scroll-proportion="-19.310345" vertical-offset="0" max-vertical-offset="1860">
+            <state line="28" column="14" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1860">
               <folding />
             </state>
           </provider>
@@ -62,7 +65,7 @@
       <file leaf-file-name="dashLoader.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/partials/dashLoader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="-12.793103" vertical-offset="1569" max-vertical-offset="2300">
+            <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2300">
               <folding />
             </state>
           </provider>
@@ -71,7 +74,7 @@
       <file leaf-file-name="bootstrap.light.min.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/bootstrap.light.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="280">
+            <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="280">
               <folding />
             </state>
           </provider>
@@ -80,7 +83,7 @@
       <file leaf-file-name="kibanaSimplePanel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="-5.2" vertical-offset="480" max-vertical-offset="1640">
+            <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1640">
               <folding />
             </state>
           </provider>
@@ -89,7 +92,7 @@
       <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="-20.413794" vertical-offset="308" max-vertical-offset="1140">
+            <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
@@ -98,7 +101,7 @@
       <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/panels/filtering/module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
+            <state line="14" column="24" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="2060">
               <folding />
             </state>
           </provider>
@@ -107,7 +110,7 @@
       <file leaf-file-name="dashLoader.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="45" selection-start="275" selection-end="275" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="2680">
+            <state line="10" column="45" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="2680">
               <folding />
             </state>
           </provider>
@@ -116,7 +119,7 @@
       <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/panels/dashcontrol/module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="26" selection-start="3334" selection-end="3334" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3720">
+            <state line="100" column="26" selection-start="3334" selection-end="3334" vertical-scroll-proportion="0.0" vertical-offset="2000" max-vertical-offset="4060">
               <folding />
             </state>
           </provider>
@@ -125,16 +128,16 @@
       <file leaf-file-name="logstash.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/dashboards/logstash.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="4660">
+            <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="4660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="51" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="3340">
+            <state line="33" column="40" selection-start="912" selection-end="912" vertical-scroll-proportion="0.7588533" vertical-offset="210" max-vertical-offset="3340">
               <folding />
             </state>
           </provider>
@@ -143,7 +146,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="42" selection-start="702" selection-end="702" vertical-scroll-proportion="-6.8965516" vertical-offset="60" max-vertical-offset="1100">
+            <state line="43" column="14" selection-start="1783" selection-end="2286" vertical-scroll-proportion="-17.241379" vertical-offset="360" max-vertical-offset="1100">
               <folding />
             </state>
           </provider>
@@ -152,7 +155,7 @@
       <file leaf-file-name="i18nController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/i18nController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="52" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0" vertical-offset="1115" max-vertical-offset="1880">
+            <state line="1" column="13" selection-start="22" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1880">
               <folding />
             </state>
           </provider>
@@ -161,7 +164,7 @@
       <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="263" max-vertical-offset="3300">
+            <state line="53" column="65" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
               <folding />
             </state>
           </provider>
@@ -170,16 +173,16 @@
       <file leaf-file-name="settings.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="800">
+            <state line="14" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dashboard.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="67" selection-start="414" selection-end="414" vertical-scroll-proportion="0.5733558" vertical-offset="0" max-vertical-offset="10800">
+            <state line="26" column="22" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="10820">
               <folding />
             </state>
           </provider>
@@ -231,7 +234,6 @@
         <option value="$PROJECT_DIR$/src/app/panels/innerterms/editor.html" />
         <option value="$PROJECT_DIR$/src/app/panels/innerterms/module.js" />
         <option value="$PROJECT_DIR$/src/app/panels/innerterms/module.html" />
-        <option value="$PROJECT_DIR$/src/app/partials/userlogin.html" />
         <option value="$PROJECT_DIR$/src/app/controllers/i18nController.js" />
         <option value="$PROJECT_DIR$/src/app/dashboards/deafult.json" />
         <option value="$PROJECT_DIR$/src/app/controllers/dashLoader.js" />
@@ -240,11 +242,12 @@
         <option value="$PROJECT_DIR$/src/css/bootstrap.light.min.css" />
         <option value="$PROJECT_DIR$/src/app/partials/dashLoader.html" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/config.js" />
-        <option value="$PROJECT_DIR$/src/app/components/settings.js" />
-        <option value="$PROJECT_DIR$/src/app/app.js" />
         <option value="$PROJECT_DIR$/src/app/controllers/userController.js" />
         <option value="$PROJECT_DIR$/src/app/services/dashboard.js" />
+        <option value="$PROJECT_DIR$/src/app/components/settings.js" />
+        <option value="$PROJECT_DIR$/src/app/app.js" />
+        <option value="$PROJECT_DIR$/src/app/partials/userlogin.html" />
+        <option value="$PROJECT_DIR$/src/config.js" />
       </list>
     </option>
   </component>
@@ -280,7 +283,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -631,6 +633,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -727,8 +730,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -840,9 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vendor/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2415" column="16" selection-start="70953" selection-end="70953" vertical-scroll-proportion="0.65685165" vertical-offset="47720" max-vertical-offset="337960">
-          <folding />
-        </state>
+        <state line="2415" column="16" selection-start="70953" selection-end="70953" vertical-scroll-proportion="0.65685165" vertical-offset="47720" max-vertical-offset="337960" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vendor/lodash.js">
@@ -869,9 +870,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="46" selection-start="7902" selection-end="7909" vertical-scroll-proportion="0.16183035" vertical-offset="5075" max-vertical-offset="6240">
-          <folding />
-        </state>
+        <state line="261" column="46" selection-start="7902" selection-end="7909" vertical-scroll-proportion="0.16183035" vertical-offset="5075" max-vertical-offset="6240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/timeSeries.js">
@@ -881,9 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="16" selection-start="3811" selection-end="3820" vertical-scroll-proportion="0.8360656" vertical-offset="1226" max-vertical-offset="2080">
-          <folding />
-        </state>
+        <state line="97" column="16" selection-start="3811" selection-end="3820" vertical-scroll-proportion="0.8360656" vertical-offset="1226" max-vertical-offset="2080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/kibana/panels/histogram.asciidoc">
@@ -893,9 +890,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="801" column="20" selection-start="27599" selection-end="27599" vertical-scroll-proportion="0.21875" vertical-offset="15824" max-vertical-offset="16720">
-          <folding />
-        </state>
+        <state line="801" column="20" selection-start="27599" selection-end="27599" vertical-scroll-proportion="0.21875" vertical-offset="15824" max-vertical-offset="16720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.js">
@@ -915,16 +910,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/require.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="10" selection-start="1080" selection-end="1086" vertical-scroll-proportion="0.328125" vertical-offset="206" max-vertical-offset="2040">
-          <folding />
-        </state>
+        <state line="25" column="10" selection-start="1080" selection-end="1086" vertical-scroll-proportion="0.328125" vertical-offset="206" max-vertical-offset="2040" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="567" column="34" selection-start="24656" selection-end="24660" vertical-scroll-proportion="-0.04464286" vertical-offset="11340" max-vertical-offset="16260">
-          <folding />
-        </state>
+        <state line="567" column="34" selection-start="24656" selection-end="24660" vertical-scroll-proportion="-0.04464286" vertical-offset="11340" max-vertical-offset="16260" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.js">
@@ -934,7 +925,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/dashboards/logstash.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="-11.034483" vertical-offset="0" max-vertical-offset="4660">
+        <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="4660">
           <folding />
         </state>
       </provider>
@@ -946,30 +937,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/i18nController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="52" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0" vertical-offset="1235" max-vertical-offset="1880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/dashboards/default.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="584" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.35027224" vertical-offset="607" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="-5.2" vertical-offset="480" max-vertical-offset="1640">
-          <folding />
-        </state>
+        <state line="40" column="584" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.35027224" vertical-offset="607" max-vertical-offset="1920" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="-20.413794" vertical-offset="308" max-vertical-offset="1140">
+        <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1140">
           <folding />
         </state>
       </provider>
@@ -981,86 +956,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="275" selection-end="275" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="2680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="67" selection-start="777" selection-end="777" vertical-scroll-proportion="-7.724138" vertical-offset="36" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/bootstrap.light.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="280">
+        <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="280">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="-5.172414" vertical-offset="690" max-vertical-offset="1580">
+        <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1580">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="1398" selection-end="1398" vertical-scroll-proportion="-19.310345" vertical-offset="0" max-vertical-offset="1860">
+        <state line="28" column="14" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1860">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/partials/dashLoader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="-12.793103" vertical-offset="1569" max-vertical-offset="2300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="702" selection-end="702" vertical-scroll-proportion="-6.8965516" vertical-offset="60" max-vertical-offset="1100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="263" max-vertical-offset="3300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="800">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="3340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="0" selection-start="8147" selection-end="8147" vertical-scroll-proportion="-66.4" vertical-offset="1260" max-vertical-offset="5760">
+        <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2300">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="67" selection-start="414" selection-end="414" vertical-scroll-proportion="0.5733558" vertical-offset="0" max-vertical-offset="10800">
+        <state line="26" column="22" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/i18nController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="13" selection-start="22" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="45" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="2680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="74" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="14" selection-start="1783" selection-end="2286" vertical-scroll-proportion="-17.241379" vertical-offset="360" max-vertical-offset="1100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="6" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="600">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="65" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="40" selection-start="912" selection-end="912" vertical-scroll-proportion="0.7588533" vertical-offset="210" max-vertical-offset="3340">
           <folding />
         </state>
       </provider>
