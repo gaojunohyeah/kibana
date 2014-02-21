@@ -17,7 +17,7 @@ function (Settings) {
          *
          * The URL to your passport manager server's login request url.
          */
-        login_url: "http://192.168.1.168:8083/pmanager/login_login",
+        login_url: "http://192.168.1.168:9000/pmanager/login_login",
 
         /** @scratch /configuration/config.js/5
          * ==== cookie_user_name
@@ -92,6 +92,7 @@ function (Settings) {
             'innergram',
             'map',
             'pie',
+            'jointable',
             'table',
             'filtering',
             'timepicker',
@@ -145,6 +146,14 @@ function (Settings) {
                 operater_start  : ':',
                 operater_end    : '',
                 type            : 'input'
+            },
+            {
+                name            : '',
+                value_start     : '',
+                value_end       : '',
+                operater_start  : ':',
+                operater_end    : '',
+                type            : 'select'
             },
             {
                 name            : 'time',

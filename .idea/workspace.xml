@@ -23,157 +23,141 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="userlogin.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
+      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/module.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="6" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="600">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="74" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5760">
+            <state line="38" column="113" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="2660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1580">
+            <state line="38" column="161" selection-start="2488" selection-end="2529" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="2700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="564" column="23" selection-start="18548" selection-end="18558" vertical-scroll-proportion="0.0" vertical-offset="10958" max-vertical-offset="13500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/bettermap/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="42" selection-start="1390" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="940" max-vertical-offset="5660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inspector.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/partials/inspector.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="8" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filterSrv.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/services/filterSrv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="31" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4960">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="23" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="4160">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="335" column="31" selection-start="10582" selection-end="10596" vertical-scroll-proportion="0.0" vertical-offset="6700" max-vertical-offset="10240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="querySrv.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="16" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="6240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kibanaPanel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaPanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="24" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.0" vertical-offset="1280" max-vertical-offset="3700">
+              <folding>
+                <marker date="1392965842631" expanded="false" signature="6979:7039" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="344" column="75" selection-start="11331" selection-end="11331" vertical-scroll-proportion="0.0" vertical-offset="6258" max-vertical-offset="16680">
+              <folding>
+                <marker date="1392287684846" expanded="false" signature="26870:26886" placeholder="..." />
+                <marker date="1392287684846" expanded="false" signature="26939:26945" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/editor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="92" selection-start="566" selection-end="586" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="1340">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="editor.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1860">
+            <state line="9" column="44" selection-start="492" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1060">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashLoader.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/partials/dashLoader.html">
+      <file leaf-file-name="micropanel.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/micropanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2300">
+            <state line="55" column="32" selection-start="2987" selection-end="2987" vertical-scroll-proportion="-30.137932" vertical-offset="226" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.light.min.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/bootstrap.light.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="280">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kibanaSimplePanel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1640">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1140">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/panels/filtering/module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="2060">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashLoader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="45" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="2680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/panels/dashcontrol/module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="26" selection-start="3334" selection-end="3334" vertical-scroll-proportion="0.0" vertical-offset="2000" max-vertical-offset="4060">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logstash.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/dashboards/logstash.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="4660">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="40" selection-start="912" selection-end="912" vertical-scroll-proportion="0.7588533" vertical-offset="210" max-vertical-offset="3340">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="14" selection-start="1783" selection-end="2286" vertical-scroll-proportion="-17.241379" vertical-offset="360" max-vertical-offset="1100">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="i18nController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controllers/i18nController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="13" selection-start="22" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1880">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="65" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
+            <state line="19" column="68" selection-start="621" selection-end="621" vertical-scroll-proportion="0.4347826" vertical-offset="0" max-vertical-offset="3480">
               <folding />
             </state>
           </provider>
@@ -182,7 +166,25 @@
       <file leaf-file-name="dashboard.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="22" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="10820">
+            <state line="178" column="34" selection-start="5720" selection-end="5728" vertical-scroll-proportion="0.0" vertical-offset="2983" max-vertical-offset="10820">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dasheditor.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/partials/dasheditor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="61" selection-start="3520" selection-end="3520" vertical-scroll-proportion="-6.6551723" vertical-offset="1087" max-vertical-offset="3780">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logstash_default.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/dashboards/logstash_default.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1511" column="20" selection-start="36967" selection-end="36967" vertical-scroll-proportion="-15.896552" vertical-offset="29759" max-vertical-offset="30760">
               <folding />
             </state>
           </provider>
@@ -202,8 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/app/test.html" />
-        <option value="$PROJECT_DIR$/src/vendor/elasticjs/elastic-angular-client.js" />
         <option value="$PROJECT_DIR$/src/app/userController.js" />
         <option value="$PROJECT_DIR$/src/app/i18n/i18nController.js" />
         <option value="$PROJECT_DIR$/test.html" />
@@ -222,13 +222,11 @@
         <option value="$PROJECT_DIR$/src/app/panels/column/module.js" />
         <option value="$PROJECT_DIR$/src/app/panels/bettermap/module.js" />
         <option value="$PROJECT_DIR$/src/app/panels/trends/module.js" />
-        <option value="$PROJECT_DIR$/src/app/panels/histogram/module.js" />
         <option value="$PROJECT_DIR$/src/app/panels/innergram/editor.html" />
         <option value="$PROJECT_DIR$/src/app/panels/innergram/module.html" />
         <option value="$PROJECT_DIR$/src/app/panels/terms/module.html" />
         <option value="$PROJECT_DIR$/src/app/panels/innergram/module.js" />
         <option value="$PROJECT_DIR$/src/app/panels/innergram/timeSeries.js" />
-        <option value="$PROJECT_DIR$/src/app/directives/kibanaPanel.js" />
         <option value="$PROJECT_DIR$/src/app/panels/terms/module.js" />
         <option value="$PROJECT_DIR$/src/app/panels/terms/editor.html" />
         <option value="$PROJECT_DIR$/src/app/panels/innerterms/editor.html" />
@@ -247,6 +245,15 @@
         <option value="$PROJECT_DIR$/src/app/components/settings.js" />
         <option value="$PROJECT_DIR$/src/app/app.js" />
         <option value="$PROJECT_DIR$/src/app/partials/userlogin.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/histogram/module.js" />
+        <option value="$PROJECT_DIR$/src/app/panels/jointable/micropanel.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/jointable/module.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/jointable/editor.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/jointable/module.js" />
+        <option value="$PROJECT_DIR$/src/app/partials/inspector.html" />
+        <option value="$PROJECT_DIR$/src/app/panels/timepicker/module.js" />
+        <option value="$PROJECT_DIR$/src/app/dashboards/logstash_default.json" />
+        <option value="$PROJECT_DIR$/src/app/directives/kibanaPanel.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
       </list>
     </option>
@@ -329,69 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,7 +384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="timepicker" />
+              <option name="myItemId" value="table" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,59 +410,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="terms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="innerterms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="panels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="innergram" />
+              <option name="myItemId" value="jointable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -565,69 +458,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="filters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kibana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dashboards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kibana" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,8 +491,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Apps/2.0/PMWZRJHC.TQN/X2XK8JTE.54M/gith..tion_317444273a93ac29_0001.0002_5f2f02fff55a2354/GitHub.exe" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -652,11 +505,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work\github\kibana\src\app\panels" />
       <recent name="E:\work\github\kibana\src\app\dashboards" />
       <recent name="E:\work\github\kibana\src\app\panels\innerterms" />
       <recent name="E:\work\github\kibana\src\app\panels\innergram" />
       <recent name="E:\work\github\kibana\src\app\i18n" />
-      <recent name="E:\work\github\kibana\src\app\partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\work\github\kibana\src\app\controllers" />
@@ -718,7 +571,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30444205" sideWeight="0.4997367" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30444205" sideWeight="0.4997367" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17798841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -759,100 +612,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/stats/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="33" selection-start="1245" selection-end="1245" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="3700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/sparklines/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="38" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="7980" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/pie/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="31" selection-start="3321" selection-end="3321" vertical-scroll-proportion="0.0" vertical-offset="1606" max-vertical-offset="6940" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/map/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="31" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.0" vertical-offset="1166" max-vertical-offset="4360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/hits/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="32" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="6140" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/column/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="34" selection-start="966" selection-end="966" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="2520" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/bettermap/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="37" selection-start="3241" selection-end="3241" vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="5620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/trends/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="34" selection-start="2372" selection-end="2372" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="5320" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/partials/roweditor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="121" selection-start="2299" selection-end="2314" vertical-scroll-proportion="0.5081967" vertical-offset="566" max-vertical-offset="1420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="102" selection-start="1801" selection-end="1803" vertical-scroll-proportion="-3.2911391" vertical-offset="360" max-vertical-offset="2700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1740" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="16" selection-start="3126" selection-end="3126" vertical-scroll-proportion="0.4613583" vertical-offset="1226" max-vertical-offset="2080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="370" column="58" selection-start="11952" selection-end="11952" vertical-scroll-proportion="0.0" vertical-offset="7400" max-vertical-offset="10200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="25" selection-start="3683" selection-end="3683" vertical-scroll-proportion="0.40770102" vertical-offset="1200" max-vertical-offset="3500" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/timeSeries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4740" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2415" column="16" selection-start="70953" selection-end="70953" vertical-scroll-proportion="0.65685165" vertical-offset="47720" max-vertical-offset="337960" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vendor/lodash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3289" column="20" selection-start="109743" selection-end="109759" vertical-scroll-proportion="0.32265446" vertical-offset="65498" max-vertical-offset="135800">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/terms/editor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="12" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1560" />
@@ -863,16 +622,6 @@
         <state line="41" column="171" selection-start="973" selection-end="1132" vertical-scroll-proportion="0.4683841" vertical-offset="420" max-vertical-offset="1680" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="21" selection-start="2686" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="4160" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="46" selection-start="7902" selection-end="7909" vertical-scroll-proportion="0.16183035" vertical-offset="5075" max-vertical-offset="6240" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/timeSeries.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="217" column="0" selection-start="6877" selection-end="6877" vertical-scroll-proportion="0.48660713" vertical-offset="3904" max-vertical-offset="4800" />
@@ -881,21 +630,6 @@
     <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="16" selection-start="3811" selection-end="3820" vertical-scroll-proportion="0.8360656" vertical-offset="1226" max-vertical-offset="2080" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/kibana/panels/histogram.asciidoc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="801" column="20" selection-start="27599" selection-end="27599" vertical-scroll-proportion="0.21875" vertical-offset="15824" max-vertical-offset="16720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="45" selection-start="12401" selection-end="12409" vertical-scroll-proportion="0.27455357" vertical-offset="6494" max-vertical-offset="8900" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.html">
@@ -913,11 +647,6 @@
         <state line="25" column="10" selection-start="1080" selection-end="1086" vertical-scroll-proportion="0.328125" vertical-offset="206" max-vertical-offset="2040" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="567" column="34" selection-start="24656" selection-end="24660" vertical-scroll-proportion="-0.04464286" vertical-offset="11340" max-vertical-offset="16260" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/terms/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="405" column="9" selection-start="13224" selection-end="13224" vertical-scroll-proportion="0.3501144" vertical-offset="7754" max-vertical-offset="8740" />
@@ -925,16 +654,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/dashboards/logstash.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="4660">
-          <folding />
-        </state>
+        <state line="16" column="7" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="4660" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/dashcontrol/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="26" selection-start="3334" selection-end="3334" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3720">
-          <folding />
-        </state>
+        <state line="100" column="26" selection-start="3334" selection-end="3334" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/dashboards/default.json">
@@ -944,72 +669,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1140">
-          <folding />
-        </state>
+        <state line="45" column="38" selection-start="2300" selection-end="2317" vertical-scroll-proportion="0.7189696" vertical-offset="286" max-vertical-offset="1140" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/filtering/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
-          <folding />
-        </state>
+        <state line="14" column="24" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/bootstrap.light.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1860">
+        <state line="3" column="30" selection-start="57" selection-end="57" vertical-scroll-proportion="0.06968641" vertical-offset="0" max-vertical-offset="861">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/partials/dashLoader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="0.0" vertical-offset="1569" max-vertical-offset="2300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="22" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10820">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1640">
-          <folding />
-        </state>
+        <state line="97" column="18" selection-start="5445" selection-end="5445" vertical-scroll-proportion="0.5673077" vertical-offset="1468" max-vertical-offset="2300" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/i18nController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="22" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1880">
-          <folding />
-        </state>
+        <state line="1" column="13" selection-start="22" selection-end="36" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1880" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="800">
-          <folding />
-        </state>
+        <state line="14" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.3125" vertical-offset="0" max-vertical-offset="896" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
@@ -1021,38 +708,214 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="74" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5760">
-          <folding />
-        </state>
+        <state line="28" column="74" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5760" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="14" selection-start="1783" selection-end="2286" vertical-scroll-proportion="-17.241379" vertical-offset="360" max-vertical-offset="1100">
-          <folding />
-        </state>
+        <state line="43" column="14" selection-start="1783" selection-end="2286" vertical-scroll-proportion="0.7189696" vertical-offset="246" max-vertical-offset="1100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="600">
+        <state line="24" column="6" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/alertSrv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="24" selection-start="2287" selection-end="2298" vertical-scroll-proportion="0.58035713" vertical-offset="1080" max-vertical-offset="3340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaSimplePanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="39" selection-start="1169" selection-end="1179" vertical-scroll-proportion="0.82589287" vertical-offset="0" max-vertical-offset="1640" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="11" selection-start="2295" selection-end="2295" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1580" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="99" selection-start="534" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="1860" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="567" column="34" selection-start="24656" selection-end="24660" vertical-scroll-proportion="0.0" vertical-offset="9120" max-vertical-offset="16260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="34" selection-start="835" selection-end="835" vertical-scroll-proportion="-0.0" vertical-offset="360" max-vertical-offset="1740" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/elasticjs/elastic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7663" column="7" selection-start="226054" selection-end="226054" vertical-scroll-proportion="0.0" vertical-offset="152876" max-vertical-offset="445460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="27" selection-start="6957" selection-end="6962" vertical-scroll-proportion="0.51339287" vertical-offset="3300" max-vertical-offset="8860" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="16" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.3325893" vertical-offset="1922" max-vertical-offset="18740" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="5" selection-start="3185" selection-end="3185" vertical-scroll-proportion="0.6335697" vertical-offset="2924" max-vertical-offset="3820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/micropanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="32" selection-start="2987" selection-end="2987" vertical-scroll-proportion="-30.137932" vertical-offset="226" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="161" selection-start="2488" selection-end="2529" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="2700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="44" selection-start="492" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1060">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="113" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="2660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/bettermap/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="42" selection-start="1390" selection-end="1399" vertical-scroll-proportion="0.0" vertical-offset="695" max-vertical-offset="5620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="564" column="23" selection-start="18548" selection-end="18558" vertical-scroll-proportion="0.0" vertical-offset="10958" max-vertical-offset="13500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/inspector.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="8" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="34" selection-start="5720" selection-end="5728" vertical-scroll-proportion="0.0" vertical-offset="2983" max-vertical-offset="10820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/dasheditor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="61" selection-start="3520" selection-end="3520" vertical-scroll-proportion="-6.6551723" vertical-offset="1087" max-vertical-offset="3780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dashboards/logstash_default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1511" column="20" selection-start="36967" selection-end="36967" vertical-scroll-proportion="-15.896552" vertical-offset="29759" max-vertical-offset="30760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="16" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="6240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="335" column="31" selection-start="10582" selection-end="10596" vertical-scroll-proportion="0.0" vertical-offset="6700" max-vertical-offset="10280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/timepicker/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="23" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="4160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/filterSrv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="31" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/kibana/panels/histogram.asciidoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="55" selection-start="1833" selection-end="1833" vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="2700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/jointable/editor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="92" selection-start="566" selection-end="586" vertical-scroll-proportion="-6.8965516" vertical-offset="0" max-vertical-offset="1340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="24" selection-start="3510" selection-end="3510" vertical-scroll-proportion="0.0" vertical-offset="1280" max-vertical-offset="3700">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1392965842631" expanded="false" signature="6979:7039" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/histogram/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="344" column="75" selection-start="11331" selection-end="11331" vertical-scroll-proportion="0.0" vertical-offset="6258" max-vertical-offset="16680">
+          <folding>
+            <marker date="1392287684846" expanded="false" signature="26870:26886" placeholder="..." />
+            <marker date="1392287684846" expanded="false" signature="26939:26945" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="65" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="40" selection-start="912" selection-end="912" vertical-scroll-proportion="0.7588533" vertical-offset="210" max-vertical-offset="3340">
+        <state line="19" column="68" selection-start="621" selection-end="621" vertical-scroll-proportion="0.4347826" vertical-offset="0" max-vertical-offset="3480">
           <folding />
         </state>
       </provider>

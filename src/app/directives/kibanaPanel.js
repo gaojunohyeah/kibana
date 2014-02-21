@@ -70,8 +70,17 @@ function (angular,$) {
             // if factor does not have end operater and type is input
             '<span ng-show="factor.operater_end === \'\' && factor.type === \'input\'">' +
             '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
-            '<input type="text" ng-model="factor.value_start" />&nbsp;&nbsp;&nbsp;&nbsp;' +
+            '<input type="text" class="input-small" ng-model="factor.value_start" />&nbsp;&nbsp;&nbsp;&nbsp;' +
             '</span>' +
+
+            // if factor does not have end operater and type is input
+            '<span ng-show="factor.operater_end === \'\' && factor.type === \'select\'">' +
+            '<strong>' +
+            '<select class="input-small" ng-model="factor.name" ng-options="f for f in [\'account_id\',\'account_name\',\'char_id\',\'char_name\']"></select>' +
+            '&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
+            '<input type="text" class="input-small" ng-model="factor.value_start" />&nbsp;&nbsp;&nbsp;&nbsp;' +
+            '</span>' +
+
             // if factor does not have end operater and type is time
 //            '<span ng-show="factor.operater_end === \'\' && factor.type === \'time\'">' +
 //            '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
@@ -80,10 +89,11 @@ function (angular,$) {
             // if factor has end operater and type is input
             '<span ng-show="factor.operater_end != \'\' && factor.type === \'input\'">' +
             '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
-            '<input type="text" ng-model="factor.value_start" />' +
+            '<input type="text" class="input-small" ng-model="factor.value_start" />' +
             '<strong>{{\'TO\'}}</strong>' +
-            '<input type="text" ng-model="factor.value_end" /><strong>{{factor.operater_end}}&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
+            '<input type="text" class="input-small" ng-model="factor.value_end" /><strong>{{factor.operater_end}}&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
             '</span>' +
+
             // if factor has end operater and type is time
 //            '<span ng-show="factor.operater_end != \'\' && factor.type === \'time\'">' +
 //            '<strong>{{factor.name}}&nbsp;&nbsp;{{factor.operater_start}}</strong>&nbsp;&nbsp;' +
@@ -97,7 +107,7 @@ function (angular,$) {
 //            '<input type="text" ng-model="factor.value_end" /><strong>{{factor.operater_end}}&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
             '</span>' +
           '</span>' +
-          '<span>' +
+          '<span ng-show="panel.queryFactors">' +
           '<button type="button" ng-click="get_data();" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>' +
           '</span>' +
 
