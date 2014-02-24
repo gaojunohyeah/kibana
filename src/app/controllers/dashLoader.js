@@ -7,8 +7,35 @@ function (angular, _) {
 
   var module = angular.module('kibana.controllers');
 
-  module.controller('dashLoader', function($scope, $http, timer, dashboard, alertSrv, $location) {
+  module.controller('dashLoader', function($scope, $rootScope, $http, timer, dashboard, alertSrv, $location) {
     $scope.loader = dashboard.current.loader;
+
+    // ng-pattern regexs
+    $rootScope.patterns = {
+      date: /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/,
+      hour: /^([01]?[0-9]|2[0-3])$/,
+      minute: /^([0-5]?[0-9])$/,
+      second: /^([0-5]?[0-9])$/,
+      millisecond: /^[0-9]*$/
+    };
+    $rootScope.query_time_isvalid = true;
+    $rootScope.query_time = {
+      from : {
+        date : '',
+        hour : '00',
+        minute : '00',
+        second : '00',
+        millisecond : '000'
+      },
+
+      to : {
+        date : '',
+        hour : '00',
+        minute : '00',
+        second : '00',
+        millisecond : '000'
+      }
+    };
 
     $scope.init = function() {
       $scope.gist_pattern = /(^\d{5,}$)|(^[a-z0-9]{10,}$)|(gist.github.com(\/*.*)\/[a-z0-9]{5,}\/*$)/;
@@ -121,6 +148,60 @@ function (angular, _) {
           alertSrv.set('Gist Failed','Could not retrieve dashboard list from gist','error',5000);
         }
       });
+    };
+
+    /**
+     * makeFactorTime function
+     *
+     * @param factor
+     * @param query_time
+     * @returns {boolean}
+     */
+    $rootScope.makeFactorTime = function(factor, query_time){
+      // Assume the form is valid since we're setting it to something valid
+      $rootScope.query_time_isvalid = true;
+
+      if($rootScope.query_time_isvalid) {
+        if(!_.isUndefined(query_time.from.date) && ""!=query_time.from.date){
+          var startTime = new Date(query_time.from.date);
+
+          startTime.setHours(query_time.from.hour, query_time.from.minute, query_time.from.second, query_time.from.millisecond);
+
+          factor.value_start = startTime.getTime();
+
+          if(isNaN(factor.value_start)){
+            $rootScope.query_time_isvalid = false;
+            return false;
+          }
+        }else{
+          factor.value_start = '*';
+        }
+
+        if(!_.isUndefined(query_time.to.date) && ""!=query_time.to.date){
+          var endTime = new Date(query_time.to.date);
+
+          endTime.setHours(query_time.to.hour, query_time.to.minute, query_time.to.second, query_time.to.millisecond);
+
+          factor.value_end = endTime.getTime();
+
+          if(isNaN(factor.value_end)){
+            $rootScope.query_time_isvalid = false;
+            return false;
+          }
+        }else{
+          factor.value_end = '*';
+        }
+
+        if("*" === factor.value_start && "*" === factor.value_end){
+          factor.value_start = '';
+          factor.value_end = '';
+        }else if("*" != factor.value_start && "*" != factor.value_end){
+          if(factor.value_start >= factor.value_end){
+            $rootScope.query_time_isvalid = false;
+            return false;
+          }
+        }
+      }
     };
 
   });

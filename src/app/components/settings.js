@@ -16,6 +16,7 @@ function (_) {
       elasticsearch             : "http://"+window.location.hostname+":9200",
       panel_names               : [],
       query_factors             : [],
+      time_field_collection     : [],
       kibana_index              : 'kibana-int',
       kibana_user_index         : 'kibana-user',
       default_route             : '/login',

@@ -33,14 +33,6 @@ function (angular, app, _, config) {
 
     // Set and populate defaults
     var _d = {
-
-      /**
-       * @scratch /panels/column/3
-       * ==== QueryFactors
-       * see config.query_factors
-       */
-      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
-
       /** @scratch /panels/column/3
        * === Parameters
        *
@@ -48,6 +40,14 @@ function (angular, app, _, config) {
        */
       panels : []
     };
+
+    /**
+     * @scratch /panels/innerterms/5
+     * ==== QueryFactors
+     * see config.query_factors
+     */
+    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+
     _.defaults($scope.panel,_d);
 
     $scope.init = function(){

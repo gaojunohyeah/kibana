@@ -604,7 +604,7 @@ function (angular, app, _, kbn, moment) {
   });
 
   // This also escapes some xml sequences
-  module.filter('tableHighlight', function() {
+  module.filter('joinTableHighlight', function() {
     return function(text) {
       if (!_.isUndefined(text) && !_.isNull(text) && text.toString().length > 0) {
         return text.toString().

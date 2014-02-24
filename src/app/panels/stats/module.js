@@ -55,13 +55,6 @@ define([
         ids         : []
       },
 
-      /**
-       * @scratch /panels/stats/5
-       * ==== QueryFactors
-       * see config.query_factors
-       */
-      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
-
       style   : { "font-size": '24pt'},
       format: 'number',
       mode: 'count',
@@ -72,6 +65,13 @@ define([
       value_name: 'Value',
       spyable     : true
     };
+
+    /**
+     * @scratch /panels/innerterms/5
+     * ==== QueryFactors
+     * see config.query_factors
+     */
+    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
 
     _.defaults($scope.panel, defaults);
 
@@ -112,7 +112,7 @@ define([
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
       queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
-      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
+      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
 
 
       // This could probably be changed to a BoolFilter

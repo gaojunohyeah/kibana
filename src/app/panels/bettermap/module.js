@@ -88,15 +88,15 @@ function (angular, app, _, L, localRequire) {
       queries     : {
         mode        : 'all',
         ids         : []
-      },
-
-      /**
-       * @scratch /panels/bettermap/5
-       * ==== QueryFactors
-       * see config.query_factors
-       */
-      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors))
+      }
     };
+
+    /**
+     * @scratch /panels/innerterms/5
+     * ==== QueryFactors
+     * see config.query_factors
+     */
+    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
 
     _.defaults($scope.panel,_d);
 
@@ -140,7 +140,7 @@ function (angular, app, _, L, localRequire) {
         $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
         var queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
         // append the queryFactors into queries
-        queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
+        queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
 
         var boolQuery = $scope.ejs.BoolQuery();
         _.each(queries,function(q) {

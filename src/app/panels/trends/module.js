@@ -72,15 +72,16 @@ function (angular, app, _, kbn) {
         ids         : []
       },
 
-      /**
-       * @scratch /panels/trends/5
-       * ==== QueryFactors
-       * see config.query_factors
-       */
-      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
-
-      style   : { "font-size": '14pt'},
+      style   : { "font-size": '14pt'}
     };
+
+    /**
+     * @scratch /panels/innerterms/5
+     * ==== QueryFactors
+     * see config.query_factors
+     */
+    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+
     _.defaults($scope.panel,_d);
 
     $scope.init = function () {
@@ -128,7 +129,7 @@ function (angular, app, _, kbn) {
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
       var queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
-      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
+      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
 
       // Build the question part of the query
       _.each(queries, function(query) {
@@ -205,7 +206,7 @@ function (angular, app, _, kbn) {
           var i = 0;
           var queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
           // append the queryFactors into queries
-          queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
+          queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
 
           _.each(queries, function(query) {
             var n = results.facets[query.id].count;

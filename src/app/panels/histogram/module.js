@@ -114,13 +114,6 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
         ids         : []
       },
 
-      /**
-       * @scratch /panels/histogram/3
-       * ==== QueryFactors
-       * see config.query_factors
-       */
-      queryFactors  : JSON.parse(JSON.stringify($scope.config.query_factors)),
-
       /** @scratch /panels/histogram/3
        * ==== Annotations
        * annotate object:: A query can be specified, the results of which will be displayed as markers on
@@ -241,6 +234,13 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
       }
     };
 
+    /**
+     * @scratch /panels/innerterms/5
+     * ==== QueryFactors
+     * see config.query_factors
+     */
+    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+
     _.defaults($scope.panel,_d);
     _.defaults($scope.panel.tooltip,_d.tooltip);
     _.defaults($scope.panel.annotate,_d.annotate);
@@ -279,6 +279,23 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
      */
     $scope.get_time_range = function () {
       var range = $scope.range = filterSrv.timeRange('last');
+
+      // if user input time area factor , should compare the timearea, narrow range
+      var query_time = _.find($scope.queryFactors, { 'type': 'time' });
+      if(!_.isUndefined(query_time)){
+        // user input starTime exist and is bigger than filter's startTime
+        if(!_.isUndefined(query_time.value_start) && '*'!=query_time.value_start
+          && ''!=query_time.value_start && range.from.getTime() < query_time.value_start){
+          range.from = new Date(query_time.value_start);
+        }
+
+        // user input endTime exist and is bigger than filter's endTime
+        if(!_.isUndefined(query_time.value_end) && '*'!=query_time.value_end
+          && ''!=query_time.value_end && range.to.getTime() > query_time.value_end){
+          range.to = new Date(query_time.value_end);
+        }
+      }
+
       return range;
     };
 
@@ -344,7 +361,7 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
 
       queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
-      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
+      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
 
       // Build the query
       _.each(queries, function(q) {

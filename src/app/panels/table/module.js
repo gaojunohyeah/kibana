@@ -15,7 +15,7 @@ define([
   'app',
   'lodash',
   'kbn',
-  'moment',
+  'moment'
 ],
 function (angular, app, _, kbn, moment) {
   'use strict';
@@ -132,16 +132,17 @@ function (angular, app, _, kbn, moment) {
         ids         : []
       },
 
-      /**
-       * @scratch /panels/table/5
-       * ==== QueryFactors
-       * see config.query_factors
-       */
-      queryFactors  :JSON.parse(JSON.stringify($scope.config.query_factors)),
-
       style   : {'font-size': '9pt'},
-      normTimes : true,
+      normTimes : true
     };
+
+    /**
+     * @scratch /panels/innerterms/5
+     * ==== QueryFactors
+     * see config.query_factors
+     */
+    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+
     _.defaults($scope.panel,_d);
 
     $scope.init = function () {
@@ -303,7 +304,7 @@ function (angular, app, _, kbn, moment) {
 
       queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
-      queries = querySrv.appendQueryFactors(queries, $scope.panel.queryFactors);
+      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
 
       boolQuery = $scope.ejs.BoolQuery();
       _.each(queries,function(q) {
