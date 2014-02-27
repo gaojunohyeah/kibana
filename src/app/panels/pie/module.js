@@ -105,11 +105,18 @@ define([
     };
 
     /**
-     * @scratch /panels/innerterms/5
+     * @scratch /panels/pie/5
      * ==== QueryFactors
      * see config.query_factors
      */
     $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+
+    /**
+     * @scratch /panels/pie/5
+     * ==== Query_time
+     * see config.query_time
+     */
+    $scope.query_time = JSON.parse(JSON.stringify($scope.config.query_time));
 
     _.defaults($scope.panel,_d);
 

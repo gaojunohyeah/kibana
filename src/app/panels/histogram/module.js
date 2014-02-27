@@ -235,11 +235,18 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
     };
 
     /**
-     * @scratch /panels/innerterms/5
+     * @scratch /panels/histogram/5
      * ==== QueryFactors
      * see config.query_factors
      */
     $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+
+    /**
+     * @scratch /panels/histogram/5
+     * ==== Query_time
+     * see config.query_time
+     */
+    $scope.query_time = JSON.parse(JSON.stringify($scope.config.query_time));
 
     _.defaults($scope.panel,_d);
     _.defaults($scope.panel.tooltip,_d.tooltip);

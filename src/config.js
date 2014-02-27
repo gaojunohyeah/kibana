@@ -193,6 +193,26 @@ define(['settings'],
         'message.timestamp',
         'message.@timestamp',
         'message.logtime.time'
-      ]
+      ],
+
+      query_time : {
+        from : {
+          date : '',
+          hour : '00',
+          minute : '00',
+          second : '00',
+          millisecond : '000'
+        },
+
+        to : {
+          date : '',
+          hour : '00',
+          minute : '00',
+          second : '00',
+          millisecond : '000'
+        },
+
+        query_time_isvalid : true
+      }
     });
   });

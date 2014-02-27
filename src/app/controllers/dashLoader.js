@@ -18,24 +18,6 @@ function (angular, _) {
       second: /^([0-5]?[0-9])$/,
       millisecond: /^[0-9]*$/
     };
-    $rootScope.query_time_isvalid = true;
-    $rootScope.query_time = {
-      from : {
-        date : '',
-        hour : '00',
-        minute : '00',
-        second : '00',
-        millisecond : '000'
-      },
-
-      to : {
-        date : '',
-        hour : '00',
-        minute : '00',
-        second : '00',
-        millisecond : '000'
-      }
-    };
 
     $scope.init = function() {
       $scope.gist_pattern = /(^\d{5,}$)|(^[a-z0-9]{10,}$)|(gist.github.com(\/*.*)\/[a-z0-9]{5,}\/*$)/;
@@ -159,9 +141,9 @@ function (angular, _) {
      */
     $rootScope.makeFactorTime = function(factor, query_time){
       // Assume the form is valid since we're setting it to something valid
-      $rootScope.query_time_isvalid = true;
+      query_time.query_time_isvalid = true;
 
-      if($rootScope.query_time_isvalid) {
+      if(query_time.query_time_isvalid) {
         if(!_.isUndefined(query_time.from.date) && ""!=query_time.from.date){
           var startTime = new Date(query_time.from.date);
 
@@ -170,7 +152,7 @@ function (angular, _) {
           factor.value_start = startTime.getTime();
 
           if(isNaN(factor.value_start)){
-            $rootScope.query_time_isvalid = false;
+            query_time.query_time_isvalid = false;
             return false;
           }
         }else{
@@ -185,7 +167,7 @@ function (angular, _) {
           factor.value_end = endTime.getTime();
 
           if(isNaN(factor.value_end)){
-            $rootScope.query_time_isvalid = false;
+            query_time.query_time_isvalid = false;
             return false;
           }
         }else{
@@ -197,7 +179,7 @@ function (angular, _) {
           factor.value_end = '';
         }else if("*" != factor.value_start && "*" != factor.value_end){
           if(factor.value_start >= factor.value_end){
-            $rootScope.query_time_isvalid = false;
+            query_time.query_time_isvalid = false;
             return false;
           }
         }

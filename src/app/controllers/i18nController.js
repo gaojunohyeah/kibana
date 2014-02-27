@@ -47,7 +47,9 @@ define([
           //if it is a time field
           if(-1 != _.indexOf(config.time_field_collection, fieldName)){
             var time = new Date(text);
-            return time.toLocaleString();
+            if(!isNaN(time)){
+              return time.toLocaleString();
+            }
           }
           return text;
         }
@@ -60,9 +62,9 @@ define([
       .value('localizedTexts', {
         'zh_CN': {
           // field
-          'message.gamecode' :                              '游戏编码',
-          'message.areaid' :                                '游戏大区',
-          'message.serverid' :                              '游戏服务器',
+          'message.gameCode' :                              '游戏编码',
+          'message.regionId' :                              '游戏大区',
+          'message.serverId' :                              '游戏服务器',
           'message.timestamp' :                             '时间',
           'message.day_ACU' :                               '平均同时在线玩家人数',
           'message.day_PCU' :                               '最高同时在线玩家人数',
@@ -70,6 +72,35 @@ define([
           'message.day_UV' :                                '日用户在线数',
           'message.lv_user_graph' :                         '用户等级-用户数量graph',
           'message.CCU_graph' :                             '不同时间段-在线人数graph',
+
+          'message.newLongin' :                             '新登用户数',
+          'message.users' :                                 '总用户数',
+          'message.uv' :                                    '登陆用户数',
+
+          'message.newCharge' :                             '新增付费人数',
+          'message.totalRechargeStone' :                    '兑入宝石数',
+          'message.consumeRMB' :                            '消耗RMB宝石数',
+          'message.consumeMoney' :                          '消耗系统宝石数',
+          'message.totalConsumeUser' :                      '消耗玉石用户数',
+          'message.totalChargeUser' :                       '付费用户数',
+          'message.totalStone' :                            '剩余RMB宝石',
+          'message.totalgmStone' :                          '剩余系统宝石',
+          'message.arpu' :                                  '充值ARPU',
+
+          'message.vip0' :                                  '非VIP',
+          'message.vip1' :                                  'VIP1',
+          'message.vip2' :                                  'VIP2',
+          'message.vip3' :                                  'VIP3',
+          'message.vip4' :                                  'VIP4',
+          'message.vip5' :                                  'VIP5',
+          'message.vip6' :                                  'VIP6',
+          'message.vip7' :                                  'VIP7',
+          'message.vip8' :                                  'VIP8',
+          'message.vip9' :                                  'VIP9',
+          'message.vip10' :                                 'VIP10',
+          'message.totalVip' :                              'VIP总用户数',
+
+          'mean' :                                          '平均值',
 
           // panel
           'PANEL.EXTRA.USER.SELECT' :                       '角色信息',
@@ -102,9 +133,9 @@ define([
         },
         'en_US': {
           // field
-          'message.gamecode' :                              'Gamecode',
-          'message.areaid' :                                'Areaid',
-          'message.serverid' :                              'Serverid',
+          'message.gameCode' :                              'GameCode',
+          'message.regionId' :                              'RegionId',
+          'message.serverId' :                              'ServerId',
           'message.day_ACU' :                               'Average Concurrent Users',
           'message.day_PCU' :                               'Peak Concurrent Users',
           'message.day_RU' :                                'Register Users',
@@ -112,6 +143,35 @@ define([
           'message.lv_user_graph' :                         'UserLevel-userNum graph',
           'message.timestamp' :                             'Timstamp',
           'message.CCU_graph' :                             'Hour-userOnline graph',
+
+          'message.newLongin' :                             'New Login Users Num',
+          'message.users' :                                 'Total Users Num',
+          'message.uv' :                                    'Login Users Num',
+
+          'message.newCharge' :                             'New Recharge Users Num',
+          'message.totalRechargeStone' :                    'Total Recharge Stone Num',
+          'message.consumeRMB' :                            'Consume RMB Stone Num',
+          'message.consumeMoney' :                          'Consume GM Stone Num',
+          'message.totalConsumeUser' :                      'Consume Stone Users Num',
+          'message.totalChargeUser' :                       'Recharge Users Num',
+          'message.totalStone' :                            'Last Total RMB Stone Num',
+          'message.totalgmStone' :                          'Last Total GM Stone Num',
+          'message.arpu' :                                  'Rcharge ARPU',
+
+          'message.vip0' :                                  'No VIP',
+          'message.vip1' :                                  'VIP1',
+          'message.vip2' :                                  'VIP2',
+          'message.vip3' :                                  'VIP3',
+          'message.vip4' :                                  'VIP4',
+          'message.vip5' :                                  'VIP5',
+          'message.vip6' :                                  'VIP6',
+          'message.vip7' :                                  'VIP7',
+          'message.vip8' :                                  'VIP8',
+          'message.vip9' :                                  'VIP9',
+          'message.vip10' :                                 'VIP10',
+          'message.totalVip' :                              'Total VIP Users Num',
+
+          'mean' :                                          'mean',
 
           // panel
           'PANEL.EXTRA.USER.SELECT' :                       'userinfo',

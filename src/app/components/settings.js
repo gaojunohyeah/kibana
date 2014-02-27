@@ -17,6 +17,7 @@ function (_) {
       panel_names               : [],
       query_factors             : [],
       time_field_collection     : [],
+      query_time                : {},
       kibana_index              : 'kibana-int',
       kibana_user_index         : 'kibana-user',
       default_route             : '/login',

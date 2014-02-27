@@ -1,10 +1,10 @@
 {
-  "title": "deafult",
+  "title": "admin",
   "services": {
     "query": {
       "list": {
         "0": {
-          "query": "type:\"week_money\"",
+          "query": "type:\"online_log\"",
           "alias": "",
           "color": "#7EB26D",
           "id": 0,
@@ -19,7 +19,7 @@
           "pin": false,
           "type": "lucene",
           "enable": true,
-          "query": "type:\"week_user\""
+          "query": "type:\"day_online_log\""
         },
         "2": {
           "id": 2,
@@ -28,7 +28,7 @@
           "pin": false,
           "type": "lucene",
           "enable": true,
-          "query": "type:\"day_game\""
+          "query": "type:\"financial_stat\""
         },
         "3": {
           "id": 3,
@@ -37,7 +37,7 @@
           "pin": false,
           "type": "lucene",
           "enable": true,
-          "query": "type:\"day_item\""
+          "query": "type:\"vip_stat\""
         },
         "4": {
           "id": 4,
@@ -80,20 +80,16 @@
         0,
         1,
         2,
-        3,
-        4,
-        5,
-        6,
-        7
+        3
       ]
     },
     "filter": {
       "list": {
         "0": {
-          "from": "2013-11-29T11:46:28.614Z",
-          "to": "now",
           "type": "time",
           "field": "@timestamp",
+          "from": "now-24h",
+          "to": "now",
           "mandate": "must",
           "active": true,
           "alias": "",
@@ -107,117 +103,15 @@
   },
   "rows": [
     {
-      "title": "WEEK_MONEY Graph",
+      "title": "基础日志",
       "height": "350px",
       "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
-          "span": 6,
-          "editable": true,
-          "group": [
-            "default"
-          ],
-          "type": "histogram",
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "week_ARPU",
-          "auto_int": true,
-          "resolution": 100,
-          "interval": "12h",
-          "fill": 1,
-          "linewidth": 3,
-          "timezone": "browser",
-          "spyable": true,
-          "zoomlinks": true,
-          "bars": false,
-          "stack": true,
-          "points": false,
-          "lines": true,
-          "legend": true,
-          "x-axis": true,
-          "y-axis": true,
-          "percentage": false,
-          "interactive": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              0
-            ]
-          },
-          "title": "week_money histogram",
-          "intervals": [
-            "auto",
-            "1s",
-            "1m",
-            "5m",
-            "10m",
-            "30m",
-            "1h",
-            "3h",
-            "12h",
-            "1d",
-            "1w",
-            "1M",
-            "1y"
-          ],
-          "options": true,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "scale": 1,
-          "y_format": "none",
-          "grid": {
-            "max": null,
-            "min": 0
-          },
-          "annotate": {
-            "enable": false,
-            "query": "*",
-            "size": 20,
-            "field": "_type",
-            "sort": [
-              "_score",
-              "desc"
-            ]
-          },
-          "pointradius": 5,
-          "show_query": true,
-          "legend_counts": true,
-          "zerofill": true,
-          "derivative": false,
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ]
-        },
-        {
           "error": false,
-          "span": 6,
+          "span": 12,
           "editable": true,
           "type": "table",
           "loadingEditor": false,
@@ -230,195 +124,13 @@
           ],
           "overflow": "min-height",
           "fields": [
-            "week_PU",
-            "week_new_PU",
-            "week_lose_pu",
-            "week_ARPU",
-            "type",
-            "gamecode",
-            "timestamp",
-            "serverid"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "field_list": false,
-          "all_fields": false,
-          "trimFactor": 300,
-          "localTime": false,
-          "timeField": "@timestamp",
-          "spyable": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              0
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "style": {
-            "font-size": "9pt"
-          },
-          "normTimes": true,
-          "title": "week_money table"
-        }
-      ],
-      "notice": false
-    },
-    {
-      "title": "WEEK_USER Graph",
-      "height": "350px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 6,
-          "editable": true,
-          "type": "histogram",
-          "loadingEditor": false,
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "week_uv",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_format": "none",
-          "grid": {
-            "max": null,
-            "min": 0
-          },
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              1
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "annotate": {
-            "enable": false,
-            "query": "*",
-            "size": 20,
-            "field": "_type",
-            "sort": [
-              "_score",
-              "desc"
-            ]
-          },
-          "auto_int": true,
-          "resolution": 100,
-          "interval": "12h",
-          "intervals": [
-            "auto",
-            "1s",
-            "1m",
-            "5m",
-            "10m",
-            "30m",
-            "1h",
-            "3h",
-            "12h",
-            "1d",
-            "1w",
-            "1y"
-          ],
-          "lines": true,
-          "fill": 1,
-          "linewidth": 3,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "spyable": true,
-          "zoomlinks": true,
-          "options": true,
-          "legend": true,
-          "show_query": true,
-          "interactive": true,
-          "legend_counts": true,
-          "timezone": "browser",
-          "percentage": false,
-          "zerofill": true,
-          "derivative": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "title": "week_user histogram"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "type": "table",
-          "loadingEditor": false,
-          "size": 10,
-          "pages": 100,
-          "offset": 0,
-          "sort": [
-            "_score",
-            "desc"
-          ],
-          "overflow": "min-height",
-          "fields": [
-            "timestamp",
-            "week_active_user",
-            "week_lose_user",
-            "week_RU",
-            "week_turned_user",
-            "week_uv",
-            "serverid",
-            "type"
+            "message.timestamp",
+            "message.gameCode",
+            "message.serverId",
+            "message.uv",
+            "message.newLongin",
+            "message.day_PCU",
+            "message.users"
           ],
           "highlight": [],
           "sortable": true,
@@ -436,779 +148,30 @@
               1
             ]
           },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
           "style": {
             "font-size": "9pt"
           },
           "normTimes": true,
-          "title": "week_user table"
+          "title": "在线汇总"
         }
       ],
       "notice": false
     },
     {
-      "title": "DAY_GAME Graph",
+      "title": "在线日志",
       "height": "350px",
       "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 6,
-          "editable": true,
-          "type": "histogram",
-          "loadingEditor": false,
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "p_chargeUser_dev_activity",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_format": "none",
-          "grid": {
-            "max": null,
-            "min": 0
-          },
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              2
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "annotate": {
-            "enable": false,
-            "query": "*",
-            "size": 20,
-            "field": "_type",
-            "sort": [
-              "_score",
-              "desc"
-            ]
-          },
-          "auto_int": true,
-          "resolution": 100,
-          "interval": "12h",
-          "intervals": [
-            "auto",
-            "1s",
-            "1m",
-            "5m",
-            "10m",
-            "30m",
-            "1h",
-            "3h",
-            "12h",
-            "1d",
-            "1w",
-            "1y"
-          ],
-          "lines": true,
-          "fill": 1,
-          "linewidth": 3,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "spyable": true,
-          "zoomlinks": true,
-          "options": true,
-          "legend": true,
-          "show_query": true,
-          "interactive": true,
-          "legend_counts": true,
-          "timezone": "browser",
-          "percentage": false,
-          "zerofill": true,
-          "derivative": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "title": "day_game histogram"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "type": "table",
-          "loadingEditor": false,
-          "size": 10,
-          "pages": 100,
-          "offset": 0,
-          "sort": [
-            "_score",
-            "desc"
-          ],
-          "overflow": "min-height",
-          "fields": [
-            "APA",
-            "APPU",
-            "p_chargeUser_dev_activity",
-            "serverid",
-            "timestamp",
-            "type"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "field_list": false,
-          "all_fields": false,
-          "trimFactor": 300,
-          "localTime": false,
-          "timeField": "@timestamp",
-          "spyable": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              2
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "style": {
-            "font-size": "9pt"
-          },
-          "normTimes": true,
-          "title": "day_game table"
-        }
-      ],
-      "notice": false
-    },
-    {
-      "title": "DAY_ITEM Graph",
-      "height": "350px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 6,
-          "editable": true,
-          "type": "histogram",
-          "loadingEditor": false,
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "day_item_type_graph",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_format": "none",
-          "grid": {
-            "max": null,
-            "min": 0
-          },
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              3
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "annotate": {
-            "enable": false,
-            "query": "*",
-            "size": 20,
-            "field": "_type",
-            "sort": [
-              "_score",
-              "desc"
-            ]
-          },
-          "auto_int": true,
-          "resolution": 100,
-          "interval": "12h",
-          "intervals": [
-            "auto",
-            "1s",
-            "1m",
-            "5m",
-            "10m",
-            "30m",
-            "1h",
-            "3h",
-            "12h",
-            "1d",
-            "1w",
-            "1y"
-          ],
-          "lines": true,
-          "fill": 1,
-          "linewidth": 3,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "spyable": true,
-          "zoomlinks": true,
-          "options": true,
-          "legend": true,
-          "show_query": true,
-          "interactive": true,
-          "legend_counts": true,
-          "timezone": "browser",
-          "percentage": false,
-          "zerofill": true,
-          "derivative": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "title": "day_item histogram"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "type": "table",
-          "loadingEditor": false,
-          "size": 10,
-          "pages": 100,
-          "offset": 0,
-          "sort": [
-            "_score",
-            "desc"
-          ],
-          "overflow": "min-height",
-          "fields": [
-            "day_item_lv_graph",
-            "day_item_type_graph",
-            "day_item_user_graph",
-            "timestamp",
-            "serverid",
-            "type"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "field_list": false,
-          "all_fields": false,
-          "trimFactor": 300,
-          "localTime": false,
-          "timeField": "@timestamp",
-          "spyable": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              3
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "style": {
-            "font-size": "9pt"
-          },
-          "normTimes": true,
-          "title": "day_item table"
-        }
-      ],
-      "notice": false
-    },
-    {
-      "title": "DAY_MONEY Graph",
-      "height": "350px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 6,
-          "editable": true,
-          "type": "histogram",
-          "loadingEditor": false,
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "day_charge_type_percent",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_format": "none",
-          "grid": {
-            "max": null,
-            "min": 0
-          },
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              4
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "annotate": {
-            "enable": false,
-            "query": "*",
-            "size": 20,
-            "field": "_type",
-            "sort": [
-              "_score",
-              "desc"
-            ]
-          },
-          "auto_int": true,
-          "resolution": 100,
-          "interval": "12h",
-          "intervals": [
-            "auto",
-            "1s",
-            "1m",
-            "5m",
-            "10m",
-            "30m",
-            "1h",
-            "3h",
-            "12h",
-            "1d",
-            "1w",
-            "1y"
-          ],
-          "lines": true,
-          "fill": 1,
-          "linewidth": 3,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "spyable": true,
-          "zoomlinks": true,
-          "options": true,
-          "legend": true,
-          "show_query": true,
-          "interactive": true,
-          "legend_counts": true,
-          "timezone": "browser",
-          "percentage": false,
-          "zerofill": true,
-          "derivative": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "title": "day_money histogram"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "type": "table",
-          "loadingEditor": false,
-          "size": 10,
-          "pages": 100,
-          "offset": 0,
-          "sort": [
-            "_score",
-            "desc"
-          ],
-          "overflow": "min-height",
-          "fields": [
-            "day_charge_type_percent",
-            "day_charge_user",
-            "day_consume_gold",
-            "day_consume_user",
-            "day_r2pu",
-            "gamecode",
-            "serverid"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "field_list": false,
-          "all_fields": false,
-          "trimFactor": 300,
-          "localTime": false,
-          "timeField": "@timestamp",
-          "spyable": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              4
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "style": {
-            "font-size": "9pt"
-          },
-          "normTimes": true,
-          "title": "DAY_MONEY TABLE"
-        }
-      ],
-      "notice": false
-    },
-    {
-      "title": "DAY_USER Graph",
-      "height": "350px",
-      "editable": true,
-      "collapse": false,
-      "collapsable": true,
-      "panels": [
-        {
-          "span": 6,
-          "editable": true,
-          "type": "histogram",
-          "loadingEditor": false,
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "day_pcu",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_format": "none",
-          "grid": {
-            "max": null,
-            "min": 0
-          },
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              5
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "annotate": {
-            "enable": false,
-            "query": "*",
-            "size": 20,
-            "field": "_type",
-            "sort": [
-              "_score",
-              "desc"
-            ]
-          },
-          "auto_int": true,
-          "resolution": 100,
-          "interval": "12h",
-          "intervals": [
-            "auto",
-            "1s",
-            "1m",
-            "5m",
-            "10m",
-            "30m",
-            "1h",
-            "3h",
-            "12h",
-            "1d",
-            "1w",
-            "1y"
-          ],
-          "lines": true,
-          "fill": 1,
-          "linewidth": 3,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": true,
-          "spyable": true,
-          "zoomlinks": true,
-          "options": true,
-          "legend": true,
-          "show_query": true,
-          "interactive": true,
-          "legend_counts": true,
-          "timezone": "browser",
-          "percentage": false,
-          "zerofill": true,
-          "derivative": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "title": "day_user histogram"
-        },
-        {
-          "error": false,
-          "span": 6,
-          "editable": true,
-          "type": "table",
-          "loadingEditor": false,
-          "size": 10,
-          "pages": 100,
-          "offset": 0,
-          "sort": [
-            "_score",
-            "desc"
-          ],
-          "overflow": "min-height",
-          "fields": [
-            "day_acu",
-            "day_AV",
-            "day_pcu",
-            "day_RU",
-            "day_UV",
-            "serverid",
-            "timestamp",
-            "type",
-            "lv_user_graph",
-            "CCU_graph"
-          ],
-          "highlight": [],
-          "sortable": true,
-          "header": true,
-          "paging": true,
-          "field_list": false,
-          "all_fields": false,
-          "trimFactor": 300,
-          "localTime": false,
-          "timeField": "@timestamp",
-          "spyable": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              5
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "style": {
-            "font-size": "9pt"
-          },
-          "normTimes": true,
-          "title": "day_user table"
-        }
-      ],
-      "notice": false
-    },
-    {
-      "title": "TEST",
-      "height": "350px",
-      "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
           "span": 12,
           "editable": true,
-          "type": "innergram",
+          "type": "histogram",
           "loadingEditor": false,
-          "mode": "total",
-          "time_field": "timestamp",
-          "value_field": "week_ARPU",
-          "query_field_name": "serverid",
-          "query_field_values": "1000 1001 1002",
+          "mode": "mean",
+          "time_field": "@timestamp",
+          "value_field": "message.day_RU",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1223,32 +186,6 @@
               0
             ]
           },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
           "annotate": {
             "enable": false,
             "query": "*",
@@ -1259,9 +196,9 @@
               "desc"
             ]
           },
-          "auto_int": true,
+          "auto_int": false,
           "resolution": 100,
-          "interval": "12h",
+          "interval": "5m",
           "intervals": [
             "auto",
             "1s",
@@ -1277,7 +214,7 @@
             "1y"
           ],
           "lines": true,
-          "fill": 0,
+          "fill": 1,
           "linewidth": 1,
           "points": true,
           "pointradius": 1,
@@ -1298,81 +235,21 @@
             "value_type": "cumulative",
             "query_as_alias": true
           },
-          "title": "week_money innergram"
+          "title": "实时在线"
         }
       ],
       "notice": false
     },
     {
-      "title": "test",
+      "title": "收入日志",
       "height": "350px",
       "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
           "error": false,
-          "span": 6,
-          "editable": true,
-          "type": "innerterms",
-          "loadingEditor": false,
-          "field": "lv_user_graph",
-          "exclude": [],
-          "missing": true,
-          "other": true,
-          "size": 10,
-          "style": {
-            "font-size": "10pt"
-          },
-          "donut": false,
-          "tilt": false,
-          "labels": true,
-          "arrangement": "horizontal",
-          "chart": "bar",
-          "counter_pos": "above",
-          "spyable": true,
-          "queries": {
-            "mode": "selected",
-            "ids": [
-              7
-            ]
-          },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
-          "tmode": "inner_terms",
-          "innerTypeField": "lv",
-          "innerValueField": "num",
-          "startDate": "2014-01-04T00:00:00.000Z",
-          "endDate": "",
-          "dateField": "timestamp"
-        },
-        {
-          "error": false,
-          "span": 6,
+          "span": 12,
           "editable": true,
           "type": "table",
           "loadingEditor": false,
@@ -1380,15 +257,24 @@
           "pages": 100,
           "offset": 0,
           "sort": [
-            "timestamp",
-            "asc"
+            "_score",
+            "desc"
           ],
           "overflow": "min-height",
           "fields": [
-            "type",
-            "timestamp",
-            "serverid",
-            "lv_user_graph"
+            "message.timestamp",
+            "message.gameCode",
+            "message.regionId",
+            "message.serverId",
+            "message.totalChargeUser",
+            "message.totalConsumeUser",
+            "message.totalRechargeStone",
+            "message.newCharge",
+            "message.arpu",
+            "message.consumeRMB",
+            "message.consumeMoney",
+            "message.totalStone",
+            "message.totalgmStone"
           ],
           "highlight": [],
           "sortable": true,
@@ -1403,39 +289,68 @@
           "queries": {
             "mode": "selected",
             "ids": [
-              7
+              2
             ]
           },
-          "queryFactors": [
-            {
-              "name": "gamecode",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "serverid",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":",
-              "operater_end": "",
-              "type": "input"
-            },
-            {
-              "name": "time",
-              "value_start": "",
-              "value_end": "",
-              "operater_start": ":[",
-              "operater_end": "]",
-              "type": "time"
-            }
-          ],
           "style": {
             "font-size": "9pt"
           },
-          "normTimes": true
+          "normTimes": true,
+          "title": "收入统计"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "VIP日志",
+      "height": "350px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "table",
+          "loadingEditor": false,
+          "size": 10,
+          "pages": 100,
+          "offset": 0,
+          "sort": [
+            "_score",
+            "desc"
+          ],
+          "overflow": "min-height",
+          "fields": [
+            "message.timestamp",
+            "message.gameCode",
+            "message.regionId",
+            "message.serverId",
+            "message.vip0",
+            "message.totalVip"
+          ],
+          "highlight": [],
+          "sortable": true,
+          "header": true,
+          "paging": true,
+          "field_list": false,
+          "all_fields": false,
+          "trimFactor": 300,
+          "localTime": false,
+          "timeField": "@timestamp",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              3
+            ]
+          },
+          "style": {
+            "font-size": "9pt"
+          },
+          "normTimes": true,
+          "title": "VIP分布"
         }
       ],
       "notice": false
@@ -1454,28 +369,28 @@
   "pulldowns": [
     {
       "type": "query",
-      "collapse": false,
+      "collapse": true,
       "notice": false,
       "query": "*",
       "pinned": true,
       "history": [
+        "type:\"day_item\"",
+        "type:\"day_game\"",
+        "type:\"week_user\"",
+        "type:\"week_money\"",
+        "type:\"lv_user\"",
+        "type:\"day_user\"",
+        "type:\"day_money\"",
         "type:testlog",
         "type:“day_user”",
-        "type:“day_money”",
-        "type:“day_item”",
-        "type:“day_game”",
-        "type:“week_user”",
-        "type:“week_money”",
-        "*",
-        "type=moneylog",
-        "type=loginlog"
+        "type:“day_money”"
       ],
       "remember": 10,
       "enable": true
     },
     {
       "type": "filtering",
-      "collapse": false,
+      "collapse": true,
       "notice": true,
       "enable": true
     }
@@ -1509,7 +424,7 @@
         "2h",
         "1d"
       ],
-      "timefield": "timestamp",
+      "timefield": "@timestamp",
       "now": true,
       "filter_id": 0,
       "enable": true
