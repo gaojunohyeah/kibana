@@ -46,7 +46,7 @@ define([
         if (!_.isUndefined(text) && !_.isNull(text) && text.toString().length > 0) {
           //if it is a time field
           if(-1 != _.indexOf(config.time_field_collection, fieldName)){
-            var time = new Date(text);
+            var time = new Date(parseInt(text));
             if(!isNaN(time)){
               return time.toLocaleString();
             }

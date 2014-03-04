@@ -40,7 +40,7 @@ define(['settings'],
        * kibana installed on. You probably want to set it to the FQDN of your
        * elasticsearch host
        */
-      elasticsearch: "http://192.168.1.168:9200",
+      elasticsearch: "http://192.168.1.115:9200",
 
       /** @scratch /configuration/config.js/5
        * ==== default_route
@@ -132,7 +132,7 @@ define(['settings'],
        */
       query_factors: [
         {
-          name: 'message.gamecode',
+          name: 'message.gameCode',
           value_start: '',
           value_end: '',
           operater_start: ':',
@@ -140,7 +140,7 @@ define(['settings'],
           type: 'input'
         },
         {
-          name: 'message.areaid',
+          name: 'message.regionId',
           value_start: '',
           value_end: '',
           operater_start: ':',
@@ -148,7 +148,7 @@ define(['settings'],
           type: 'input'
         },
         {
-          name: 'message.serverid',
+          name: 'message.serverId',
           value_start: '',
           value_end: '',
           operater_start: ':',
