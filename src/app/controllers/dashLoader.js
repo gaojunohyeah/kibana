@@ -63,7 +63,7 @@ function (angular, _) {
     $scope.elasticsearch_save = function(type,ttl) {
       dashboard.elasticsearch_save(
         type,
-        ($scope.user.user_name || dashboard.current.title),
+        (dashboard.current.title),
         ($scope.loader.save_temp_ttl_enable ? ttl : false)
       ).then(
         function(result) {

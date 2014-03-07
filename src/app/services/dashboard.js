@@ -212,7 +212,7 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
 
       // Set the current dashboard
       self.current = _.clone(dashboard);
-      self.current.title = $rootScope.user.user_name;
+      self.current.title = $rootScope.user.user_name + $rootScope.pageType;
 
 
       // Delay this until we're sure that querySrv and filterSrv are ready

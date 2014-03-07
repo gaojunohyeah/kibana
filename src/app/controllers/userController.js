@@ -16,6 +16,7 @@ function (angular, _, config) {
         // user index type in ES
         var type = 'user';
         var dashType = 'dashboard';
+        $rootScope.pageType = "_stat";
 
         /**
          * user's login information
@@ -168,7 +169,17 @@ function (angular, _, config) {
                         }
                     });
             }
-        }
+        };
+
+      /**
+       * change pageType
+       * use this function to change page type
+       * @param pageType
+       */
+        $rootScope.changePageType = function(pageType){
+          $rootScope.pageType = pageType;
+          user_load("true");
+        };
 
         /**
          * if the response matches user's input
@@ -186,9 +197,8 @@ function (angular, _, config) {
 
                 // redirect to the user's view page
                 if(0 === $rootScope.user.user_type){
-
                     $http({
-                        url: config.elasticsearch + "/" + config.kibana_index + "/" + dashType + "/"+$rootScope.user.user_name+'?' + new Date().getTime(),
+                        url: config.elasticsearch + "/" + config.kibana_index + "/" + dashType + "/"+$rootScope.user.user_name + $rootScope.pageType + '?' + new Date().getTime(),
                         method: "GET"
                     }).error(function(data, status) {
                             // unable contact ES server
@@ -198,11 +208,11 @@ function (angular, _, config) {
                             // user dashboard not found
                             else {
 //                                alertSrv.set("ALERT.ERROR","ALERT.USER.NOT_FOUND",'error');
-                                $location.path("/dashboard/file/logstash_default.json");
+                                $location.path("/dashboard/file/logstash" + $rootScope.pageType + ".json");
                             }
                             return false;
                         }).success(function() {
-                            $location.path("/dashboard/elasticsearch/"+$rootScope.user.user_name);
+                            $location.path("/dashboard/elasticsearch/"+$rootScope.user.user_name + $rootScope.pageType);
                         });
                 }else{
                     $location.path("/admin");
@@ -213,7 +223,7 @@ function (angular, _, config) {
                 // show user that the input password is wrong
                 alertSrv.set("ALERT.ERROR","ALERT.USER.USERNAME_PASSWORD_ERROR",'error');
             }
-        }
+        };
 
         /**
          * clean user's information
@@ -225,14 +235,14 @@ function (angular, _, config) {
             $rootScope.user.is_login = false;
 
             $scope.removeCookie(config.cookie_user_name);
-        }
+        };
 
         /**
          * jump to login page
          */
         $rootScope.loginPage = function(){
             $location.path("/login");
-        }
+        };
 
         /**
          * get cookie
@@ -255,7 +265,7 @@ function (angular, _, config) {
                 }
             }
             return "";
-        }
+        };
 
         /**
          * set cookie
@@ -266,7 +276,7 @@ function (angular, _, config) {
             var expirationDate = new Date().getTime() + config.cookie_expiration_time;
             var exdate = new Date(expirationDate);
             document.cookie= key + "=" +escape(value)+ "; expires="+exdate.toGMTString()+";path=/";
-        }
+        };
 
         /**
          * remove cookie

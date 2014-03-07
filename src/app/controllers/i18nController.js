@@ -101,6 +101,8 @@ define([
           'message.totalVip' :                              'VIP总用户数',
 
           'mean' :                                          '平均值',
+          '_stat' :                                         '统计日志库',
+          '_meta' :                                         '原始日志库',
 
           // panel
           'PANEL.EXTRA.USER.SELECT' :                       '角色信息',
@@ -109,6 +111,7 @@ define([
 
           // type base
           'BASE.RESET_INPUT':                               '重置',
+          'BASE.CLICK_CHANGE_PAGE_TYPE':                    '点击切换日志库',
 
           // type alert
           'ALERT.SUCCESS':                                  '成功',
@@ -172,6 +175,8 @@ define([
           'message.totalVip' :                              'Total VIP Users Num',
 
           'mean' :                                          'mean',
+          '_stat' :                                         'stat log base',
+          '_meta' :                                         'meta log base',
 
           // panel
           'PANEL.EXTRA.USER.SELECT' :                       'userinfo',
@@ -180,6 +185,7 @@ define([
 
           // type base
           'BASE.RESET_INPUT':                               'Reset',
+          'BASE.CLICK_CHANGE_PAGE_TYPE':                    'Click to change log base',
 
           // type alert
           'ALERT.SUCCESS':                                  'Success',

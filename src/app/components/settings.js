@@ -21,7 +21,8 @@ function (_) {
       kibana_index              : 'kibana-int',
       kibana_user_index         : 'kibana-user',
       default_route             : '/login',
-      default_language          : 'en_US'
+      default_language          : 'en_US',
+      metaLogType               : []
     };
 
     // This initializes a new hash on purpose, to avoid adding parameters to

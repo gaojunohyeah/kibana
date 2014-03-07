@@ -1,5 +1,5 @@
 {
-  "title": "admin",
+  "title": "",
   "services": {
     "query": {
       "list": {
@@ -171,7 +171,7 @@
           "loadingEditor": false,
           "mode": "mean",
           "time_field": "@timestamp",
-          "value_field": "message.day_RU",
+          "value_field": "message.day_UV",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -360,7 +360,7 @@
   "failover": false,
   "index": {
     "interval": "day",
-    "pattern": "[logstash-]YYYY.MM.DD",
+    "pattern": "[stat_log-]YYYY.MM",
     "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED",
     "warm_fields": true
   },

@@ -1,0 +1,1691 @@
+{
+  "template_meta_log": {
+    "template": "meta_log-*",
+    "settings": {
+      "number_of_shards": 5,
+      "number_of_replicas": 1,
+      "index.refresh_interval": "5s",
+      "index": {
+        "store": {
+          "compress": {
+            "stored": true,
+            "tv": true
+          }
+        }
+      }
+    },
+    "mappings": {
+      "_default_": {
+        "_all": {
+          "enabled": false
+        },
+        "_source": {
+          "compress": true
+        },
+        "dynamic_templates": [
+          {
+            "string_fields": {
+              "match": "*",
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "multi_field",
+                "fields": {
+                  "{name}": {
+                    "type": "string",
+                    "index": "analyzed",
+                    "omit_norms": true
+                  },
+                  "raw": {
+                    "type": "string",
+                    "index": "not_analyzed",
+                    "ignore_above": 256
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "@version": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "geoip": {
+            "type": "object",
+            "dynamic": true,
+            "path": "full",
+            "properties": {
+              "location": {
+                "type": "geo_point"
+              }
+            }
+          },
+          "type": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "host": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "path": {
+            "type": "string",
+            "index": "not_analyzed"
+          },
+          "thread_name": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "level": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "file": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "class": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "line_number": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "logger_name": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "method": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "source_host": {
+            "type": "string",
+            "index": "not_analyzed",
+            "store": "no"
+          },
+          "@timestamp": {
+            "format": "dateOptionalTime",
+            "type": "date",
+            "index": "not_analyzed"
+          }
+        }
+      },
+      "activitypoint_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "card_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "cardId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "cardName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "cardLevel": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "cardExperience": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "position": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "cardQuality": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "changeroleinfo_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "chatroom_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "collect_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "dungeon_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "dungeonId": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "failload_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "fpoint_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "playFpoint": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "gainFpoint": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "friend_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "friendSl": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "friendID": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "friendName": {
+                "type": "String"
+              },
+              "friendDl": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "gift_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "giftId": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "gold_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "playerGold": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "gainGold": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "invite_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "inviter": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "inviterCount": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "jade_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "current": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "useJade": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "jadetype": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "mission_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "missionId": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "monlogin_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "loginDay": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "newbie_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "position": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "pay_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "deviceType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "orderId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "productId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "startId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "notificationId": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "player_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "deviceId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "deviceType": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "deviceConnectType": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "deviceVersion": {
+                "type": "string",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "spskill_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "spskillId": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "stamina_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "count": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "changeCount": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "ticket_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "count": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "changeCount": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "weibo_log": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "logTime": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "rid": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "logType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountName": {
+                "type": "string"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "param": {
+                "type": "string"
+              },
+              "wbType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "num": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -58,7 +58,34 @@
 
 
 <!--</li>-->
+
+<li>
+  <ul class="nav nav-pills timepicker-dropdown">
+    <li class="dropdown">
+
+      <a class="dropdown-toggle timepicker-dropdown" data-toggle="dropdown" href="" bs-tooltip="'BASE.CLICK_CHANGE_PAGE_TYPE' | i18n" data-placement="bottom" ng-click="dismiss();">
+
+          <span>
+            <span class="pointer">{{pageType | i18n}}</span>
+          </span>
+        <i class="icon-caret-down"></i>
+      </a>
+
+      <ul class="dropdown-menu">
+        <!-- Relative time options -->
+        <li ng-show="pageType=='_stat'">
+          <a ng-click="changePageType('_meta')">{{'_meta' | i18n}}</a>
+        </li>
+        <li ng-show="pageType=='_meta'">
+          <a ng-click="changePageType('_stat')">{{'_stat' | i18n}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
 <li class="dropdown"ng-show="showDropdown('save')">
+<!--<li class="dropdown"ng-show="!1">-->
   <a href="#"  bs-tooltip="'Save'" data-placement="bottom" class="dropdown-toggle" data-toggle="dropdown">
     <i class='icon-save'></i>
   </a>

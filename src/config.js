@@ -93,6 +93,7 @@ define(['settings'],
         'map',
         'goal',
         'jointable',
+        'logtable',
         'table',
         'filtering',
         'timepicker',
@@ -192,7 +193,8 @@ define(['settings'],
         '@timestamp',
         'message.timestamp',
         'message.@timestamp',
-        'message.logtime.time'
+        'message.logtime.time',
+        'message.logTime'
       ],
 
       query_time : {
@@ -213,6 +215,31 @@ define(['settings'],
         },
 
         query_time_isvalid : true
-      }
+      },
+
+      metaLogType:[
+        'player_log',
+        'card_log',
+        'sp_skill_log',
+        'jade_log',
+        'gold_log',
+        'gift_log',
+        'friend_log',
+        'fpoint_log',
+        'stamina_log',
+        'ticket_log',
+        'dungeon_log',
+        'mission_log',
+        'weibo_log',
+        'chatroom_log',
+        'new_bie_log',
+        'invite_log',
+        'collect_log',
+        'mon_login_log',
+        'activity_point_log',
+        'fail_load_log',
+        'change_role_info_log',
+        'pay_log'
+      ]
     });
   });
