@@ -4,76 +4,13 @@
     "query": {
       "list": {
         "0": {
-          "query": "type:\"online_log\"",
+          "query": "*",
           "alias": "",
           "color": "#7EB26D",
           "id": 0,
           "pin": false,
           "type": "lucene",
           "enable": true
-        },
-        "1": {
-          "id": 1,
-          "color": "#EAB839",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"day_online_log\""
-        },
-        "2": {
-          "id": 2,
-          "color": "#6ED0E0",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"financial_stat\""
-        },
-        "3": {
-          "id": 3,
-          "color": "#EF843C",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"vip_stat\""
-        },
-        "4": {
-          "id": 4,
-          "color": "#E24D42",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"day_money\""
-        },
-        "5": {
-          "id": 5,
-          "color": "#1F78C1",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"day_user\""
-        },
-        "6": {
-          "id": 6,
-          "color": "#BA43A9",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:testlog"
-        },
-        "7": {
-          "id": 7,
-          "color": "#705DA0",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"lv_user\""
         }
       },
       "ids": [
@@ -98,12 +35,67 @@
       ]
     }
   },
-  "rows": [],
+  "rows": [
+    {
+      "title": "日志",
+      "height": "350px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "logtable",
+          "loadingEditor": false,
+          "size": 10,
+          "pages": 10,
+          "offset": 0,
+          "sort": [
+            "_score",
+            "desc"
+          ],
+          "overflow": "min-height",
+          "fields": [],
+          "highlight": [],
+          "sortable": true,
+          "header": true,
+          "paging": true,
+          "field_list": true,
+          "all_fields": false,
+          "trimFactor": 300,
+          "localTime": false,
+          "timeField": "@timestamp",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "style": {
+            "font-size": "9pt"
+          },
+          "normTimes": true,
+          "title": "详细日志"
+        }
+      ],
+      "notice": false
+    }
+  ],
   "editable": true,
   "failover": false,
   "index": {
     "interval": "day",
-    "pattern": "[stat_log-]YYYY.MM",
+    "pattern": "[meta_log-]YYYY.MM.DD",
     "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED",
     "warm_fields": true
   },
@@ -134,7 +126,7 @@
     {
       "type": "filtering",
       "collapse": true,
-      "notice": false,
+      "notice": true,
       "enable": true
     }
   ],

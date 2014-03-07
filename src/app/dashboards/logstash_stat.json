@@ -38,42 +38,6 @@
           "type": "lucene",
           "enable": true,
           "query": "type:\"vip_stat\""
-        },
-        "4": {
-          "id": 4,
-          "color": "#E24D42",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"day_money\""
-        },
-        "5": {
-          "id": 5,
-          "color": "#1F78C1",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"day_user\""
-        },
-        "6": {
-          "id": 6,
-          "color": "#BA43A9",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:testlog"
-        },
-        "7": {
-          "id": 7,
-          "color": "#705DA0",
-          "alias": "",
-          "pin": false,
-          "type": "lucene",
-          "enable": true,
-          "query": "type:\"lv_user\""
         }
       },
       "ids": [
