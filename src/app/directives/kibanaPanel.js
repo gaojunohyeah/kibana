@@ -86,7 +86,7 @@ function (angular,$) {
               // if factor does not have end operater and type is select
               '<span ng-show="factor.operater_end === \'\' && factor.type === \'user_select\'">' +
                 '<strong>{{\'PANEL.EXTRA.USER.SELECT\' | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
-                '<select class="input" ng-model="factor.name" ng-options="f for f in [\'message.accountId\',\'message.accountName\',\'message.charId\',\'message.charName\']"></select>' +
+                '<select class="input-small" ng-model="factor.name" ng-options="f for f in [\'message.accountId\',\'message.accountName\',\'message.charId\',\'message.charName\']"></select>' +
                 '&nbsp;&nbsp;:&nbsp;&nbsp;' +
                 '<input type="text" class="input-small" ng-model="factor.value_start" />&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
               '</span>' +
@@ -135,21 +135,20 @@ function (angular,$) {
               // if factor type is type_select
               '<span ng-show="factor.type === \'type_select\'">' +
                 '<strong>{{factor.name | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
-                '<select class="input" ng-model="factor.value" ng-options="f for f in logType"></select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
+                '<select class="input-small" ng-model="factor.value" ng-options="f for f in logType"></select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
               '</span>' +
 
               // if factor type is user_select
               '<span ng-show="factor.type === \'user_select\'">' +
-                '<strong>{{\'PANEL.EXTRA.USER.SELECT\' | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
-                '<select class="input" ng-model="factor.name" ng-options="f for f in [\'message.accountId\',\'message.accountName\',\'message.charId\',\'message.charName\']"></select>' +
+                '<br><strong>{{\'PANEL.EXTRA.USER.SELECT\' | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
+                '<select class="input-small" ng-model="factor.name" ng-options="f for f in [\'message.accountId\',\'message.accountName\',\'message.charId\',\'message.charName\']"></select>' +
                 '&nbsp;&nbsp;:&nbsp;&nbsp;' +
                 '<input type="text" class="input-small" ng-model="factor.value" />&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
               '</span>' +
 
               // if factor has end operater and type is time
               '<span ng-show="factor.type === \'time\'">' +
-                '<br><strong>{{\'QUERY.TIMESTAMP.AREA\' | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
-                '&nbsp;&nbsp;:&nbsp;&nbsp;' +
+                '<strong>{{\'QUERY.TIMESTAMP.AREA\' | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
                 '<input class="timepicker-date" type="text" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.date" data-date-format="yyyy-mm-dd" required bs-datepicker />@' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.hour" required ng-pattern="patterns.hour" onClick="this.select();"/>:' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.minute" required ng-pattern="patterns.minute" onClick="this.select();"/>:' +
@@ -173,7 +172,7 @@ function (angular,$) {
             '</span>' +
             '<span name="query_time" ng-show="queryFactors">' +
               '<span ng-hide="query_time.query_time_isvalid"><strong><font color="red">{{\'QUERY.INVALID.DATE_RANGE\' |i18n}}</font></strong></span>' +
-              '<button type="button" ng-click="dashboard.refresh();" ng-disabled="!query_time.query_time_isvalid" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>&nbsp;&nbsp;&nbsp;&nbsp;' +
+              '<button type="button" ng-click="dashboard.refresh();" ng-disabled="!query_time.query_time_isvalid" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>&nbsp;&nbsp;' +
               '<button type="reset" class="btn btn-danger">{{\'BASE.RESET_INPUT\' |i18n}}</button>' +
             '</span>' +
           '</form>' +

@@ -160,12 +160,12 @@ function (angular, app, _, kbn, moment) {
       {
         name: 'message.reason',
         value: '',
-        type: 'select'
+        type: 'input'
       },
       {
         name: 'message.logType',
         value: '',
-        type: 'select'
+        type: 'input'
       },
       {
         name: '',
@@ -361,6 +361,25 @@ function (angular, app, _, kbn, moment) {
 
       queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
+      var queryFactorStr = "";
+      // for each queryFactors's elements, append to appendQuery str.
+      _.each($scope.queryFactors,function(factor) {
+        // if factor.value is not '',then do the append operation
+        if(factor.value != ''){
+          // append the factor's elements to the appendQuery
+          queryFactorStr += " AND ";
+          if(""!=factor.name){
+            queryFactorStr += factor.name + ":";
+          }
+          queryFactorStr += factor.value;
+        }
+      });
+
+      // for each queries's elements, append appendQuery str to the queries's elements.
+      _.each(queries,function(q){
+        q.query += queryFactorStr;
+      });
+
 
       boolQuery = $scope.ejs.BoolQuery();
       _.each(queries,function(q) {
@@ -520,7 +539,7 @@ function (angular, app, _, kbn, moment) {
             query_time.query_time_isvalid = false;
             return false;
           }
-          factor.value = '[' + startTime.getTime();
+          factor.value = '[' + startTime.getTime() + ' TO ';
         }else{
           factor.value = '[* TO';
         }
@@ -536,14 +555,16 @@ function (angular, app, _, kbn, moment) {
           }
           factor.value = factor.value + 'TO' + startTime.getTime() + ']';
         }else{
-          factor.value_end = factor.value + '*]';
+          factor.value = factor.value + '*]';
         }
 
         if("[* TO *]" === factor.value){
           factor.value = '';
-        }else if(startTime.getTime() > endTime.getTime()){
-          query_time.query_time_isvalid = false;
-          return false;
+        }else if(!isNaN(startTime.getTime()) && !isNaN(endTime.getTime())){
+          if(startTime.getTime() > endTime.getTime()){
+            query_time.query_time_isvalid = false;
+            return false;
+          }
         }
       }
     };
