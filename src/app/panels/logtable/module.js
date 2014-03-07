@@ -189,7 +189,7 @@ function (angular, app, _, kbn, moment) {
      * ==== QueryFactors
      * see config.query_factors
      */
-    $scope.queryFactors = JSON.parse(JSON.stringify(defaultQueryFactors));
+    $scope.queryFactors = _.cloneDeep(defaultQueryFactors);
 
     /**
      * @scratch /panels/table/5
@@ -567,6 +567,16 @@ function (angular, app, _, kbn, moment) {
           }
         }
       }
+    };
+
+    /**
+     * function resetInput
+     *
+     * reset the input query factors
+     */
+    $scope.resetInput = function(){
+      $scope.query_time.query_time_isvalid = true;
+      $scope.queryFactors = _.cloneDeep(defaultQueryFactors);//JSON.parse(JSON.stringify(defaultQueryFactors));
     };
   });
 

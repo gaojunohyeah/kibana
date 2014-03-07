@@ -69,10 +69,19 @@
       <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/panels/logtable/module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="21" selection-start="5206" selection-end="5206" vertical-scroll-proportion="-12.44" vertical-offset="2718" max-vertical-offset="12840">
+            <state line="575" column="7" selection-start="17426" selection-end="17426" vertical-scroll-proportion="-6.76" vertical-offset="11162" max-vertical-offset="13040">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lodash.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vendor/lodash.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="774" column="9" selection-start="24646" selection-end="24646" vertical-scroll-proportion="9.56" vertical-offset="15798" max-vertical-offset="135640">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,9 +98,9 @@
       <file leaf-file-name="kibanaPanel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="0" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.3137033" vertical-offset="1563" max-vertical-offset="5000">
+            <state line="170" column="0" selection-start="12565" selection-end="12565" vertical-scroll-proportion="0.6534541" vertical-offset="2823" max-vertical-offset="5000">
               <folding>
-                <marker date="1394197949657" expanded="true" signature="13558:13618" placeholder="..." />
+                <marker date="1394199314717" expanded="true" signature="13594:13654" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -100,7 +109,16 @@
       <file leaf-file-name="dashLoader.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="25" selection-start="5429" selection-end="5429" vertical-scroll-proportion="-4.92" vertical-offset="2854" max-vertical-offset="3940">
+            <state line="187" column="0" selection-start="6366" selection-end="6366" vertical-scroll-proportion="-13.32" vertical-offset="3074" max-vertical-offset="3920">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="143" column="79" selection-start="4702" selection-end="4729" vertical-scroll-proportion="0.0" vertical-offset="2498" max-vertical-offset="10400">
               <folding />
             </state>
           </provider>
@@ -166,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/app/dashboards/logstash_default.json" />
         <option value="$PROJECT_DIR$/src/app/dashboards/logstash_meta.json" />
         <option value="$PROJECT_DIR$/src/app/dashboards/logstash_stat.json" />
-        <option value="$PROJECT_DIR$/src/app/controllers/dashLoader.js" />
         <option value="$PROJECT_DIR$/src/app/panels/dashcontrol/module.js" />
         <option value="$PROJECT_DIR$/src/app/services/dashboard.js" />
         <option value="$PROJECT_DIR$/src/app/controllers/i18nController.js" />
@@ -178,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/app/panels/logtable/module.html" />
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/src/app/components/settings.js" />
+        <option value="$PROJECT_DIR$/src/app/controllers/dashLoader.js" />
         <option value="$PROJECT_DIR$/src/app/panels/logtable/module.js" />
         <option value="$PROJECT_DIR$/src/app/directives/kibanaPanel.js" />
       </list>
@@ -507,11 +525,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/panels/innergram/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="84" selection-start="8430" selection-end="8625" vertical-scroll-proportion="0.0" vertical-offset="4543" max-vertical-offset="16400" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/innerterms/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="84" selection-start="4475" selection-end="4671" vertical-scroll-proportion="0.0" vertical-offset="2343" max-vertical-offset="9000" />
@@ -787,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="738" selection-end="819" vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/logtable/module.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="0" selection-start="873" selection-end="873" vertical-scroll-proportion="-15.862069" vertical-offset="540" max-vertical-offset="3660">
@@ -831,20 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="0" selection-start="4734" selection-end="4911" vertical-scroll-proportion="0.40401787" vertical-offset="2498" max-vertical-offset="10400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/querySrv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="277" column="8" selection-start="8540" selection-end="8705" vertical-scroll-proportion="-10.84" vertical-offset="4998" max-vertical-offset="6240">
@@ -852,16 +844,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/lodash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="774" column="9" selection-start="24646" selection-end="24646" vertical-scroll-proportion="9.56" vertical-offset="15798" max-vertical-offset="135640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/partials/userlogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="738" selection-end="819" vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/panels/table/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="79" selection-start="4702" selection-end="4729" vertical-scroll-proportion="0.0" vertical-offset="2498" max-vertical-offset="10400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controllers/dashLoader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="25" selection-start="5429" selection-end="5429" vertical-scroll-proportion="-4.92" vertical-offset="2854" max-vertical-offset="3940">
+        <state line="187" column="0" selection-start="6366" selection-end="6366" vertical-scroll-proportion="-13.32" vertical-offset="3074" max-vertical-offset="3920">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/panels/logtable/module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="21" selection-start="5206" selection-end="5206" vertical-scroll-proportion="-12.44" vertical-offset="2718" max-vertical-offset="12840">
+        <state line="575" column="7" selection-start="17426" selection-end="17426" vertical-scroll-proportion="-6.76" vertical-offset="11162" max-vertical-offset="13040">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -870,9 +890,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/directives/kibanaPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="4640" selection-end="4640" vertical-scroll-proportion="0.3137033" vertical-offset="1563" max-vertical-offset="5000">
+        <state line="170" column="0" selection-start="12565" selection-end="12565" vertical-scroll-proportion="0.6534541" vertical-offset="2823" max-vertical-offset="5000">
           <folding>
-            <marker date="1394197949657" expanded="true" signature="13558:13618" placeholder="..." />
+            <marker date="1394199314717" expanded="true" signature="13594:13654" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -119,7 +119,7 @@ function (angular,$) {
             '</span>' +
             '<span name="query_time" ng-show="queryFactors">' +
               '<span ng-hide="query_time.query_time_isvalid"><strong><font color="red">{{\'QUERY.INVALID.DATE_RANGE\' |i18n}}</font></strong></span>' +
-              '<button type="button" ng-click="dashboard.refresh();" ng-disabled="!query_time.query_time_isvalid" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>' +
+              '<button type="button" ng-click="dashboard.refresh();" ng-disabled="!query_time.query_time_isvalid" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>&nbsp;&nbsp;' +
             '</span>' +
           '</form>' +
 
@@ -173,7 +173,7 @@ function (angular,$) {
             '<span name="query_time" ng-show="queryFactors">' +
               '<span ng-hide="query_time.query_time_isvalid"><strong><font color="red">{{\'QUERY.INVALID.DATE_RANGE\' |i18n}}</font></strong></span>' +
               '<button type="button" ng-click="dashboard.refresh();" ng-disabled="!query_time.query_time_isvalid" class="btn btn-success">{{\'QUERY.SUBMIT_QUERY\' |i18n}}</button>&nbsp;&nbsp;' +
-              '<button type="reset" class="btn btn-danger">{{\'BASE.RESET_INPUT\' |i18n}}</button>' +
+              '<button type="reset" ng-click="resetInput()" class="btn btn-danger">{{\'BASE.RESET_INPUT\' |i18n}}</button>' +
             '</span>' +
           '</form>' +
         '</div>\n'+
