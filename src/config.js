@@ -17,7 +17,7 @@ define(['settings'],
        *
        * The URL to your passport manager server's login request url.
        */
-      login_url: "http://192.168.1.115:9000/pmanager/login_login",
+      login_url: "http://192.168.1.101:9000/pmanager/login_login",
 
       /** @scratch /configuration/config.js/5
        * ==== cookie_user_name
@@ -40,7 +40,7 @@ define(['settings'],
        * kibana installed on. You probably want to set it to the FQDN of your
        * elasticsearch host
        */
-      elasticsearch: "http://192.168.1.115:9200",
+      elasticsearch: "http://192.168.1.101:9200",
 
       /** @scratch /configuration/config.js/5
        * ==== default_route
