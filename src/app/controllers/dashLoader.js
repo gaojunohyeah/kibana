@@ -10,6 +10,8 @@ function (angular, _) {
   module.controller('dashLoader', function($scope, $rootScope, $http, timer, dashboard, alertSrv, $location) {
     $scope.loader = dashboard.current.loader;
 
+    $scope.pageTypeArray = $scope.config.pageTypeArray;
+
     // ng-pattern regexs
     $rootScope.patterns = {
       date: /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/,

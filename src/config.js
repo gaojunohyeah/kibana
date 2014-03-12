@@ -17,7 +17,7 @@ define(['settings'],
        *
        * The URL to your passport manager server's login request url.
        */
-      login_url: "http://192.168.1.101:9000/pmanager/login_login",
+      login_url: "http://192.168.1.115:9000/pmanager/login_login",
 
       /** @scratch /configuration/config.js/5
        * ==== cookie_user_name
@@ -40,7 +40,7 @@ define(['settings'],
        * kibana installed on. You probably want to set it to the FQDN of your
        * elasticsearch host
        */
-      elasticsearch: "http://192.168.1.101:9200",
+      elasticsearch: "http://passport.genchance.com:9200/",
 
       /** @scratch /configuration/config.js/5
        * ==== default_route
@@ -217,6 +217,22 @@ define(['settings'],
         query_time_isvalid : true
       },
 
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== gameCodeArray
+       * gameCode array
+       */
+      pageTypeArray:[
+        '_meta',
+        '_stat',
+        '_passport'
+      ],
+
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== metaLogType
+       * meta_log's log type list
+       */
       metaLogType:[
         'player_log',
         'card_log',
@@ -240,6 +256,16 @@ define(['settings'],
         'fail_load_log',
         'change_role_info_log',
         'pay_log'
+      ],
+
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== gameCodeArray
+       * gameCode array
+       */
+      gameCodeArray:[
+        'pokersg',
+        'passport'
       ]
     });
   });

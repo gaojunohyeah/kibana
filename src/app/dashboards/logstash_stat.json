@@ -133,7 +133,7 @@
           "editable": true,
           "type": "histogram",
           "loadingEditor": false,
-          "mode": "mean",
+          "mode": "total",
           "time_field": "@timestamp",
           "value_field": "message.day_UV",
           "x-axis": true,

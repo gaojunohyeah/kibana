@@ -355,7 +355,7 @@ define([
 
         queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
         // append the queryFactors into queries
-        queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
+        queries = querySrv.appendQueryFactors(queries, $scope.queryFactors, $scope.gameCode);
 
 
         var query_field_name = $scope.panel.query_field_name;

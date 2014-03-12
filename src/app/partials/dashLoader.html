@@ -73,11 +73,8 @@
 
       <ul class="dropdown-menu">
         <!-- Relative time options -->
-        <li ng-show="pageType=='_stat'">
-          <a ng-click="changePageType('_meta')">{{'_meta' | i18n}}</a>
-        </li>
-        <li ng-show="pageType=='_meta'">
-          <a ng-click="changePageType('_stat')">{{'_stat' | i18n}}</a>
+        <li ng-repeat="type in pageTypeArray" ng-show="pageType!=type">
+          <a ng-click="changePageType(type)">{{type | i18n}}</a>
         </li>
       </ul>
     </li>

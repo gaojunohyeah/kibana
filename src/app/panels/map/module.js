@@ -118,7 +118,7 @@ function (angular, app, _, $) {
       request = $scope.ejs.Request().indices(dashboard.indices);
       queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
-      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
+      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors, $scope.gameCode);
 
       boolQuery = $scope.ejs.BoolQuery();
       _.each(queries,function(q) {

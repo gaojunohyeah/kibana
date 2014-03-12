@@ -37,7 +37,7 @@
   },
   "rows": [
     {
-      "title": "游戏原始日志",
+      "title": "平台原始日志",
       "height": "350px",
       "editable": true,
       "collapse": true,
@@ -85,7 +85,7 @@
             "font-size": "9pt"
           },
           "normTimes": true,
-          "title": "游戏详细日志"
+          "title": "平台详细日志"
         }
       ],
       "notice": false
@@ -95,7 +95,7 @@
   "failover": false,
   "index": {
     "interval": "day",
-    "pattern": "[meta_log-]YYYY.MM.DD",
+    "pattern": "[passport_log-]YYYY.MM.DD",
     "default": "NO_TIME_FILTER_OR_INDEX_PATTERN_NOT_MATCHED",
     "warm_fields": true
   },

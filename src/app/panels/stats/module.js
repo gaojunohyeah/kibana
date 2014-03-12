@@ -119,7 +119,7 @@ define([
       $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
       queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
       // append the queryFactors into queries
-      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
+      queries = querySrv.appendQueryFactors(queries, $scope.queryFactors, $scope.gameCode);
 
 
       // This could probably be changed to a BoolFilter

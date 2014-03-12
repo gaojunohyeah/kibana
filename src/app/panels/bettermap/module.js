@@ -147,7 +147,7 @@ function (angular, app, _, L, localRequire) {
         $scope.panel.queries.ids = querySrv.idsByMode($scope.panel.queries);
         var queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
         // append the queryFactors into queries
-        queries = querySrv.appendQueryFactors(queries, $scope.queryFactors);
+        queries = querySrv.appendQueryFactors(queries, $scope.queryFactors, $scope.gameCode);
 
         var boolQuery = $scope.ejs.BoolQuery();
         _.each(queries,function(q) {
