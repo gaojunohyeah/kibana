@@ -78,7 +78,7 @@ function (angular, config, _) {
       $scope.row = {
         title: '',
         height: '150px',
-        editable: true,
+        editable: true
       };
     };
 

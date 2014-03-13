@@ -10,6 +10,7 @@ function (_) {
      * @type {Object}
      */
     var defaults = {
+      local_url                 : "http://"+window.location.hostname,
       login_url                 : "http://"+window.location.hostname+":9000/pmanager/login_login",
       cookie_user_name          : "pmanager.user.user_name",
       cookie_expiration_time    : 900000,
@@ -22,10 +23,11 @@ function (_) {
       kibana_user_index         : 'kibana-user',
       default_route             : '/login',
       default_language          : 'en_US',
-      metaLogType               : [],
-      specialFilterText         : {},
-      gameCodeArray             : [],
-      pageTypeArray             : []
+      pageTypeArray             : [],
+      gameDic                   : {},
+      logTypeDic                : {},
+      logReasonDic              : {},
+      specialFilterDictionary   : {}
     };
 
     // This initializes a new hash on purpose, to avoid adding parameters to

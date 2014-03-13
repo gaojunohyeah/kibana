@@ -11,6 +11,12 @@ define(['settings'],
      * === Parameters
      */
     return new Settings({
+      /** @scratch /configuration/config.js/5
+       * ==== login_url
+       *
+       * The URL to your passport manager server's login request url.
+       */
+      local_url: "http://192.168.1.115:9000",
 
       /** @scratch /configuration/config.js/5
        * ==== login_url
@@ -197,24 +203,24 @@ define(['settings'],
         'message.logTime'
       ],
 
-      query_time : {
-        from : {
-          date : '',
-          hour : '00',
-          minute : '00',
-          second : '00',
-          millisecond : '000'
+      query_time: {
+        from: {
+          date: '',
+          hour: '00',
+          minute: '00',
+          second: '00',
+          millisecond: '000'
         },
 
-        to : {
-          date : '',
-          hour : '00',
-          minute : '00',
-          second : '00',
-          millisecond : '000'
+        to: {
+          date: '',
+          hour: '00',
+          minute: '00',
+          second: '00',
+          millisecond: '000'
         },
 
-        query_time_isvalid : true
+        query_time_isvalid: true
       },
 
       /**
@@ -222,7 +228,7 @@ define(['settings'],
        * ==== gameCodeArray
        * gameCode array
        */
-      pageTypeArray:[
+      pageTypeArray: [
         '_meta',
         '_stat',
         '_passport'
@@ -230,42 +236,34 @@ define(['settings'],
 
       /**
        * @scratch /configuration/config.js/5
-       * ==== metaLogType
-       * meta_log's log type list
+       * ==== gameDic
+       * gameCode dictionary
+       * see userController.js -> function loadJsonConfig
        */
-      metaLogType:[
-        'player_log',
-        'card_log',
-        'sp_skill_log',
-        'jade_log',
-        'gold_log',
-        'gift_log',
-        'friend_log',
-        'fpoint_log',
-        'stamina_log',
-        'ticket_log',
-        'dungeon_log',
-        'mission_log',
-        'weibo_log',
-        'chatroom_log',
-        'new_bie_log',
-        'invite_log',
-        'collect_log',
-        'mon_login_log',
-        'activity_point_log',
-        'fail_load_log',
-        'change_role_info_log',
-        'pay_log'
-      ],
+      gameDic : {},
 
       /**
        * @scratch /configuration/config.js/5
-       * ==== gameCodeArray
-       * gameCode array
+       * ==== logTypeDic
+       * logType dictionary
+       * see userController.js -> function loadJsonConfig
        */
-      gameCodeArray:[
-        'pokersg',
-        'passport'
-      ]
+      logTypeDic : {},
+
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== logReasonDic
+       * logReason dictionary
+       * see userController.js -> function loadJsonConfig
+       */
+      logReasonDic : {},
+
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== specialFilterDictionary
+       * specialFilter dictionary
+       * see userController.js -> function loadJsonConfig
+       */
+      specialFilterDictionary : {}
     });
   });

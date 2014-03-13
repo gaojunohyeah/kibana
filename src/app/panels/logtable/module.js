@@ -140,47 +140,57 @@ define([
         {
           name: 'type',
           value: '',
-          type: 'type_select'
+          type: 'after_select',
+          list: $rootScope.config.logTypeDic,
+          selected: true
         },
         {
           name: 'message.gameCode',
           value: '',
-          type: 'input'
+          type: 'input',
+          selected: true
         },
         {
           name: 'message.regionId',
           value: '',
-          type: 'input'
+          type: 'input',
+          selected: true
         },
         {
           name: 'message.serverId',
           value: '',
-          type: 'input'
+          type: 'input',
+          selected: true
         },
         {
           name: 'message.reason',
           value: '',
-          type: 'input'
+          type: 'input',
+          selected: true
         },
         {
           name: 'message.logType',
           value: '',
-          type: 'input'
+          type: 'input',
+          selected: true
         },
         {
           name: '',
           value: '',
-          type: 'user_select'
+          type: 'before_select',
+          selected: true
         },
         {
           name: 'message.logTime',
           value: '',
-          type: 'time'
+          type: 'time',
+          selected: true
         },
         {
           name: '',
           value: '',
-          type: 'query'
+          type: 'query',
+          selected: true
         }
       ];
 
@@ -197,8 +207,6 @@ define([
        * see config.query_time
        */
       $scope.query_time = _.cloneDeep($scope.config.query_time);
-
-      $scope.logType = $scope.config.metaLogType;
 
       _.defaults($scope.panel, _d);
 

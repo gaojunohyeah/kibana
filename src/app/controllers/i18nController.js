@@ -58,15 +58,16 @@ define([
     });
 
     // special field filter
-    module.filter('specialFilter', ['specialFilterDictionary', function (specialFilterDictionary) {
+    module.filter('specialFilter', ['$rootScope', function ($rootScope) {
       return function (text, gameCode, fieldName) {
+        var dic = $rootScope.config.specialFilterDictionary;
         if (!_.isUndefined(text) && !_.isNull(text) && text.toString().length > 0) {
           // if gameCode has value and exist in the dictionary
           if (!_.isUndefined(gameCode) && !_.isNull(gameCode) && gameCode.toString().length > 0) {
-            if (specialFilterDictionary.hasOwnProperty(gameCode)) {
+            if (dic.hasOwnProperty(gameCode)) {
               // do special filter
-              if (specialFilterDictionary[gameCode].hasOwnProperty(fieldName)) {
-                return specialFilterDictionary[gameCode][fieldName][text];
+              if (dic[gameCode].hasOwnProperty(fieldName)) {
+                return dic[gameCode][fieldName][text];
               }
             }
           }
@@ -402,6 +403,7 @@ define([
 
           'ALERT.ERROR': '异常',
           'ALERT.ES.UNABLE_CONTACT': '无法连接ElasticSearch服务器,请检查连接参数并确认ES启动正常.',
+          'ALERT.CONFIG.UNABLE_LOAD': '无法加载数据字典，请联系管理员.',
           'ALERT.USER.NOT_FOUND': '无法找到该用户.请检查你的输入是否正确!',
           'ALERT.USER.USERNAME_PASSWORD_ERROR': '用户名或密码错误.请检查你的输入是否正确!',
           'ALERT.USER.USERNAME_EMPTY': '用户名不能为空!',
@@ -532,6 +534,7 @@ define([
 
           'ALERT.ERROR': 'Error',
           'ALERT.ES.UNABLE_CONTACT': 'Could not contact Elasticsearch. Please ensure that Elasticsearch is running and your config is correct.',
+          'ALERT.CONFIG.UNABLE_LOAD': 'Could not load config dictionary. Please contact the administrator.',
           'ALERT.USER.NOT_FOUND': 'Could not find this user. Please ensure your input correctly!',
           'ALERT.USER.USERNAME_PASSWORD_ERROR': 'Your username or password is wrong.Please ensure your input correctly!',
           'ALERT.USER.USERNAME_EMPTY': 'UserName must input',

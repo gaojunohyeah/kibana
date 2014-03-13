@@ -99,14 +99,14 @@ function (angular,$) {
                 '<input class="timepicker-date" type="text" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.date" data-date-format="yyyy-mm-dd" required bs-datepicker />@' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.hour" required ng-pattern="patterns.hour" onClick="this.select();"/>:' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.minute" required ng-pattern="patterns.minute" onClick="this.select();"/>:' +
-                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
-                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
+//                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
+//                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
                 '&nbsp;&nbsp;{{\'PANEL.EXTRA.STRING.TO\' | i18n}}&nbsp;&nbsp;' +
                 '<input class="timepicker-date" type="text" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.date" data-date-format="yyyy-mm-dd" required bs-datepicker />@' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.hour" required ng-pattern="patterns.hour" onClick="this.select();"/>:' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.minute" required ng-pattern="patterns.minute" onClick="this.select();"/>:' +
-                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
-                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
+//                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
+//                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
                 '&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
               '</span>' +
 
@@ -133,13 +133,15 @@ function (angular,$) {
               '</span>' +
 
               // if factor type is type_select
-              '<span ng-show="factor.type === \'type_select\'">' +
+              '<span ng-show="factor.type === \'after_select\'">' +
                 '<strong>{{factor.name | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
-                '<select class="input-small" ng-model="factor.value" ng-options="f for f in logType"></select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
+                '<select class="input-small" ng-model="factor.value" ng-options="key as value for (key,value) in factor.list">' +//
+//                   '<option ng-repeat="(key,value) in config.logTypeDic" value="(key)">{{value}}</option>' +
+                '</select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
               '</span>' +
 
               // if factor type is user_select
-              '<span ng-show="factor.type === \'user_select\'">' +
+              '<span ng-show="factor.type === \'before_select\'">' +
                 '<br><strong>{{\'PANEL.EXTRA.USER.SELECT\' | i18n}}&nbsp;&nbsp;:&nbsp;&nbsp;' +
                 '<select class="input-small" ng-model="factor.name" ng-options="f for f in [\'message.accountId\',\'message.accountName\',\'message.charId\',\'message.charName\']"></select>' +
                 '&nbsp;&nbsp;:&nbsp;&nbsp;' +
@@ -152,14 +154,14 @@ function (angular,$) {
                 '<input class="timepicker-date" type="text" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.date" data-date-format="yyyy-mm-dd" required bs-datepicker />@' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.hour" required ng-pattern="patterns.hour" onClick="this.select();"/>:' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.minute" required ng-pattern="patterns.minute" onClick="this.select();"/>:' +
-                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
-                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
+//                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
+//                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.from.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
                 '&nbsp;&nbsp;{{\'PANEL.EXTRA.STRING.TO\' | i18n}}&nbsp;&nbsp;' +
                 '<input class="timepicker-date" type="text" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.date" data-date-format="yyyy-mm-dd" required bs-datepicker />@' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.hour" required ng-pattern="patterns.hour" onClick="this.select();"/>:' +
                 '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.minute" required ng-pattern="patterns.minute" onClick="this.select();"/>:' +
-                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
-                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
+//                '<input class="timepicker-hms" type="text" maxlength="2" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.second" required ng-pattern="patterns.second" onClick="this.select();"/>.' +
+//                '<input class="timepicker-ms" type="text" maxlength="3" ng-change="makeFactorTime(factor,query_time)" ng-model="query_time.to.millisecond" required ng-pattern="patterns.millisecond"  onClick="this.select();"/>' +
                 '&nbsp;&nbsp;&nbsp;&nbsp;</strong>' +
               '</span>' +
 
