@@ -138,46 +138,48 @@ define([
 
       var defaultQueryFactors = [
         {
-          name: 'type',
-          value: '',
-          type: 'after_select',
-          list: $rootScope.config.logTypeDic,
-          selected: true
-        },
-        {
           name: 'message.gameCode',
           value: '',
-          type: 'input',
+          type: 'after_select',
+          list: $rootScope.config.gameConfigDictionary,
+          affectIndex : "1,3",
           selected: true
         },
         {
           name: 'message.regionId',
           value: '',
-          type: 'input',
+          type: 'after_select',
+          list: {},
+          affectIndex : "2",
           selected: true
         },
         {
           name: 'message.serverId',
           value: '',
-          type: 'input',
+          type: 'after_select',
+          list: {},
+          selected: true
+        },
+        {
+          name: 'type',
+          value: '',
+          type: 'after_select',
+          list: {},
+          affectIndex : "4",
           selected: true
         },
         {
           name: 'message.reason',
           value: '',
-          type: 'input',
-          selected: true
-        },
-        {
-          name: 'message.logType',
-          value: '',
-          type: 'input',
+          type: 'after_select',
+          list: {},
           selected: true
         },
         {
           name: '',
           value: '',
           type: 'before_select',
+          list: $rootScope.config.userInfoDictionary,
           selected: true
         },
         {
@@ -380,7 +382,7 @@ define([
         // for each queryFactors's elements, append to appendQuery str.
         _.each($scope.queryFactors, function (factor) {
           // if factor.value is not '',then do the append operation
-          if (factor.value != '') {
+          if (factor.value != '' && true === factor.selected) {
             // append the factor's elements to the appendQuery
             queryFactorStr += " AND ";
             if ("" != factor.name) {
@@ -452,6 +454,7 @@ define([
                 _source: _.extend(kbn.flatten_json(hit._source), _p),
                 highlight: kbn.flatten_json(hit.highlight || {})
               };
+
 
               // Kind of cheating with the _.map here, but this is faster than kbn.get_all_fields
               $scope.current_fields = $scope.current_fields.concat(_.keys(_h.kibana._source));
@@ -596,6 +599,32 @@ define([
         $scope.query_time.query_time_isvalid = true;
         $scope.queryFactors = _.cloneDeep(defaultQueryFactors);
         $scope.query_time = _.cloneDeep($scope.config.query_time);
+      };
+
+      $scope.selectFactor = function (factor){
+        if(!_.isUndefined(factor.name) && !_.isNull(factor.name) && factor.name.toString().length > 0){
+          // if factor.type is after_select_level
+          if(factor.type === "after_select" && !_.isUndefined(factor.affectIndex) && factor.affectIndex != ""){
+            var indexs = factor.affectIndex.split(",");
+
+            _.each(indexs, function(index){
+              if(index <= $scope.queryFactors.length){
+                var f = $scope.queryFactors[index];
+                // if value has no value
+                if(!_.isUndefined(factor.value) && !_.isNull(factor.value) && factor.value.toString().length > 0){
+                  f.list = factor.list[factor.value][f.name];
+                }else{
+                  f.list = {};
+                }
+              }
+            });
+          }
+          // if value has no value
+          if(_.isUndefined(factor.value) || _.isNull(factor.value)){
+            factor.value = "";
+          }
+
+        }
       };
     });
 

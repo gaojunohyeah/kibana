@@ -24,10 +24,9 @@ function (_) {
       default_route             : '/login',
       default_language          : 'en_US',
       pageTypeArray             : [],
-      gameDic                   : {},
-      logTypeDic                : {},
-      logReasonDic              : {},
-      specialFilterDictionary   : {}
+      specialFilterDictionary   : {},
+      gameConfigDictionary      : {},
+      userInfoDictionary        : {}
     };
 
     // This initializes a new hash on purpose, to avoid adding parameters to

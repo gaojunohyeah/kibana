@@ -234,10 +234,10 @@ define([
        * function : loadJsonConfig
        * load json config dictionary
        */
-      var loadJsonConfig = function(){
-        if(needLoadConfig){
+      var loadJsonConfig = function () {
+        if (needLoadConfig) {
           $http({
-            url: config.local_url + "/kibana/src/app/dashboards/json_dictionary.json" + '?' + new Date().getTime(),
+            url: config.local_url + "/kibana/src/app/dashboards/test.json" + '?' + new Date().getTime(),
             method: "GET"
           }).error(function () {
               // can't load config
@@ -246,26 +246,38 @@ define([
             }).success(function (data) {
               $rootScope.config = config;
 
-              // for loop the games
-              _.each(data["jsonConfig"], function(game){
-                $rootScope.config.gameDic[game["code"]] = game["name"];
+              $rootScope.config.gameConfigDictionary = data["jsonConfig"];
+              var regionId = {
+                "1": {
+                  "name": "91大区",
+                  "message.serverId": {
+                    "1998": "1998服务器",
+                    "1999": "1999服务器"
+                  }
+                }
+              };
+              var regionIdLabel = "message.regionId";
 
-                $rootScope.config.specialFilterDictionary[game["code"]] = {
-                  "message.reason":{}
+              // for loop the games
+              _.forOwn(data["jsonConfig"], function (gameValue, gameKey) {
+
+                $rootScope.config.gameConfigDictionary[gameKey] = gameValue;
+                $rootScope.config.gameConfigDictionary[gameKey][regionIdLabel] = regionId;
+
+                $rootScope.config.specialFilterDictionary[gameKey] = {
+                  "message.reason": {}
                 };
 
-                _.each(game["others"], function(other){
-                  $rootScope.config.specialFilterDictionary[game["code"]][other["code"]] = other["value"];
+                _.forOwn(gameValue["others"], function (otherValue, otherKey) {
+                  $rootScope.config.specialFilterDictionary[gameKey][otherKey] = otherValue;
                 });
 
                 // for loop the game log types
-                _.each(game["message.logName"], function(log){
-                  $rootScope.config.logTypeDic[log["code"]] = log["name"];
-                  $rootScope.config.logReasonDic[log["code"]] = log["message.reason"];
+                _.forOwn(gameValue["type"], function (logValue, logKey) {
 
-                  for(var key in log["message.reason"]){
-                    $rootScope.config.specialFilterDictionary[game["code"]]["message.reason"][key] = log["message.reason"][key];
-                  }
+                  _.forOwn(logValue["message.reason"], function (reasonValue, reasonKey) {
+                    $rootScope.config.specialFilterDictionary[gameKey]["message.reason"][reasonKey] = reasonValue;
+                  });
                 })
               });
             });
