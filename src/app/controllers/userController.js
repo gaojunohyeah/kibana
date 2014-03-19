@@ -237,11 +237,11 @@ define([
       var loadJsonConfig = function () {
         if (needLoadConfig) {
           $http({
-            url: config.local_url + "/kibana/src/app/dashboards/test.json" + '?' + new Date().getTime(),
+            url: config.local_url + "/kibana/src/app/dashboards/json_dictionary.json" + '?' + new Date().getTime(),
             method: "GET"
           }).error(function () {
               // can't load config
-              alertSrv.set("ALERT.ERROR", "ALERT.ES.UNABLE_CONTACT", 'error');
+              alertSrv.set("ALERT.ERROR", "ALERT.CONFIG.UNABLE_LOAD", 'error');
               return false;
             }).success(function (data) {
               $rootScope.config = config;

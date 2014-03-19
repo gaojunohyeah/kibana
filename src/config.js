@@ -16,14 +16,14 @@ define(['settings'],
        *
        * The URL to your passport manager server's login request url.
        */
-      local_url: "http://192.168.1.115:9000",
+      local_url: "http://passport.genchance.com",
 
       /** @scratch /configuration/config.js/5
        * ==== login_url
        *
        * The URL to your passport manager server's login request url.
        */
-      login_url: "http://192.168.1.115:9000/pmanager/login_login",
+      login_url: "http://passport.genchance.com/passport_manager/login_login",
 
       /** @scratch /configuration/config.js/5
        * ==== cookie_user_name
@@ -35,7 +35,7 @@ define(['settings'],
        *
        * default is 900000ms (after 15minutes cookie expires)
        */
-      cookie_expiration_time: 900000,
+      cookie_expiration_time: 3600000,
 
       /** @scratch /configuration/config.js/5
        * ==== elasticsearch

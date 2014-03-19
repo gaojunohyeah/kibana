@@ -24,6 +24,24 @@
         },
         "dynamic_templates": [
           {
+            "failStar_fields" : {
+              "match" : "failStar_*",
+              "mapping" : {
+                "type" : "long",
+                "index" : "not_analyzed"
+              }
+            }
+          },
+          {
+            "blessCardType_fields" : {
+              "match" : "blessCardType_*",
+              "mapping" : {
+                "type" : "long",
+                "index" : "not_analyzed"
+              }
+            }
+          },
+          {
             "string_fields": {
               "match": "*",
               "match_mapping_type": "string",
@@ -372,6 +390,404 @@
                 "index": "not_analyzed"
               },
               "totalVip": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "consume_point_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "reason": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "consumeJadeNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "consumeTimesNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "consumePeopleNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "dungeon_fail_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "dungeonType": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "dungeonFailNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "dungeon_process_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "dungeonStar": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "completeNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "dungeon_type_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "dungeonType": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "completeNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "friend_num_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "friendNumArea": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "peopleNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "recharge_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "userId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "totalRechargeCnt": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "totalCreditAmount": {
+                "type": "double",
+                "index": "not_analyzed"
+              },
+              "rechargeType": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "registerTimestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "lastLoginTimestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "firstRechargeTimestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "lastRechargeTimestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "scard_source_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "CARD_CREATE_ROLE": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "CARD_GIFT_ADD": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "CARD_BOSSDROP_ADD": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "CARD_WEIXIN": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "CARD_COMB_ADD": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "sscard_add_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "ssCardAddNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "ssCardAddUserNum": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      },
+      "user_operation_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "userOperation": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "userOperationNum": {
                 "type": "long",
                 "index": "not_analyzed"
               }

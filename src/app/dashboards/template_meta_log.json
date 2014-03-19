@@ -163,14 +163,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -227,14 +229,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -315,14 +319,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -379,14 +385,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -443,14 +451,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -507,14 +517,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -575,14 +587,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -639,14 +653,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -711,14 +727,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -790,14 +808,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -858,14 +878,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -930,14 +952,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1002,14 +1026,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1078,14 +1104,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1146,14 +1174,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1214,14 +1244,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1282,14 +1314,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1366,14 +1400,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1446,14 +1482,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1514,14 +1552,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1586,14 +1626,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
@@ -1658,14 +1700,16 @@
                 "index": "not_analyzed"
               },
               "accountName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "charId": {
                 "type": "long",
                 "index": "not_analyzed"
               },
               "charName": {
-                "type": "string"
+                "type": "string",
+                "index": "not_analyzed"
               },
               "reason": {
                 "type": "long",
