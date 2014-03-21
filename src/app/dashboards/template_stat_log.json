@@ -794,6 +794,52 @@
             }
           }
         }
+      },
+      "online_time_stat": {
+        "properties": {
+          "message": {
+            "properties": {
+              "timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "@timestamp": {
+                "format": "dateOptionalTime",
+                "type": "date",
+                "index": "not_analyzed"
+              },
+              "gameCode": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "regionId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "serverId": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "accountId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charId": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
+              "charName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "totalOnlineTime": {
+                "type": "long",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
       }
     }
   }
