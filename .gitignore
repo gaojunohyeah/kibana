@@ -1,9 +1,7 @@
 node_modules
 .aws-config.json
 dist
-<<<<<<< HEAD
 .idea/*
 .svn/*
 =======
 .DS_Store
->>>>>>> 3a485aaed852b489997842034bc690b58b0af4ae

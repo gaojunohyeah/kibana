@@ -97,14 +97,14 @@ function (angular, app, $, _, kbn, moment, timeSeries) {
      * ==== QueryFactors
      * see config.query_factors
      */
-    $scope.queryFactors = JSON.parse(JSON.stringify($scope.config.query_factors));
+    $scope.queryFactors = _.cloneDeep($scope.config.query_factors[$scope.pageType]);
 
     /**
      * @scratch /panels/sparklines/5
      * ==== Query_time
      * see config.query_time
      */
-    $scope.query_time = JSON.parse(JSON.stringify($scope.config.query_time));
+    $scope.query_time = _.cloneDeep($scope.config.query_time);
 
     _.defaults($scope.panel,_d);
 

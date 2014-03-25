@@ -26,7 +26,9 @@ function (_) {
       pageTypeArray             : [],
       specialFilterDictionary   : {},
       gameConfigDictionary      : {},
-      userInfoDictionary        : {}
+      userInfoDictionary        : {},
+      gameServerConfigDictionary: {},
+      gameServerConfigModify    : {}
     };
 
     // This initializes a new hash on purpose, to avoid adding parameters to

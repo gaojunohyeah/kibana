@@ -17,14 +17,14 @@ define(['settings'],
        *
        * The URL to your passport manager server's login request url.
        */
-      local_url: "http://passport.genchance.com",
+      local_url: "http://192.168.1.5:9000",
 
       /** @scratch /configuration/config.js/5
        * ==== login_url
        *
        * The URL to your passport manager server's login request url.
        */
-      login_url: "http://passport.genchance.com/passport_manager/login_login",
+      login_url: "http://192.168.1.5:9000/pmanager/login_login",
 
       /** @scratch /configuration/config.js/5
        * ==== cookie_user_name
@@ -58,7 +58,7 @@ define(['settings'],
        *
        * +default_route: '/dashboard/elasticsearch/WebLogs',+
        */
-      default_route: '/login',//'/dashboard/file/default.json',
+      default_route: '/login',
 
       /** @scratch /configuration/config.js/5
        * ==== default_language
@@ -118,79 +118,6 @@ define(['settings'],
 
       /**
        * @scratch /configuration/config.js/5
-       * ==== Query_factors
-       * query_factors object:: This object describes the extra query conditions on this panel.
-       * query_factors.name::: In extra query,which the query field.
-       * query_factors.value_start::: In extra query,which the value to query.
-       * query_factors.operater_start::: In extra query,which the query operator.
-       * query_factors.value_end::: In extra query,which the value to query.
-       * query_factors.operater_end::: In extra query,which the query operator.
-       * query_factors.type::: In extra query,which the type of the factor.
-       *              if you just need text input for user to input this factor,you can use 'input' type in query_factors.type
-       *              or you want for date input,you can use 'time' type in query_factors.type
-       *
-       * eg: serverid:1000   time:[100 TO 200]
-       * 'serverid' and 'time'    is  query_factors.name
-       * ':' and ':['             is  query_factors.operater_start
-       * '1000' and '100'         is  query_factors.value_start
-       * '200'                    is  query_factors.value_end
-       * ']'                      is  query_factors.operater_end
-       *
-       * Not every factor's value_end and operater_end attributes have value.
-       */
-      query_factors: [
-        {
-          name: 'message.gameCode',
-          value_start: '',
-          value_end: '',
-          operater_start: ':',
-          operater_end: '',
-          type: 'input'
-        },
-        {
-          name: 'message.regionId',
-          value_start: '',
-          value_end: '',
-          operater_start: ':',
-          operater_end: '',
-          type: 'input'
-        },
-        {
-          name: 'message.serverId',
-          value_start: '',
-          value_end: '',
-          operater_start: ':',
-          operater_end: '',
-          type: 'input'
-        },
-        {
-          name: '',
-          value_start: '',
-          value_end: '',
-          operater_start: ':',
-          operater_end: '',
-          type: 'user_select'
-        },
-        {
-          name: 'message.timestamp',
-          value_start: '',
-          value_end: '',
-          operater_start: ':[',
-          operater_end: ']',
-          type: 'time'
-        },
-        {
-          name: '',
-          value_start: '',
-          value_end: '',
-          operater_start: '',
-          operater_end: '',
-          type: 'query'
-        }
-      ],
-
-      /**
-       * @scratch /configuration/config.js/5
        * ==== Time_field_collection
        * time_field_collection array:: This array defined the time field names in this web.
        * Use it to do time field filter, translate timestamp into time string.
@@ -235,6 +162,13 @@ define(['settings'],
         '_passport'
       ],
 
+      userInfoDictionary: {
+        "message.accountId": "平台userid",
+        "message.accountName": "平台用户名",
+        "message.charId": "游戏roleid",
+        "message.charName": "游戏角色名"
+      },
+
       /**
        * @scratch /configuration/config.js/5
        * ==== specialFilterDictionary
@@ -243,13 +177,48 @@ define(['settings'],
        */
       specialFilterDictionary: {},
 
-      userInfoDictionary: {
-        "message.accountId": "平台userid",
-        "message.accountName": "平台用户名",
-        "message.charId": "游戏roleid",
-        "message.charName": "游戏角色名"
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== Query_factors
+       * see userController.js -> function loadJsonConfig
+       */
+      query_factors: {},
+
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== specialFilterDictionary
+       * gameConfigDictionary dictionary
+       * see userController.js -> function loadJsonConfig
+       */
+      gameConfigDictionary: {},
+
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== gameServerConfigDictionary
+       * gameServerConfig dictionary
+       * see userController.js -> function loadGameServerConfig
+       */
+      gameServerConfigDictionary: {
+//        "pokersg": {
+//          "name": "天天爱西游",
+//          "message.regionId":{
+//            "1": {
+//              "name": "91大区",
+//              "message.serverId": {
+//                "1998": "1998服务器",
+//                "1999": "1999服务器"
+//              }
+//            }
+//          }
+//        }
       },
 
-      gameConfigDictionary: {}
+      /**
+       * @scratch /configuration/config.js/5
+       * ==== gameServerConfigModify
+       * gameServerConfig modify info
+       * see userController.js -> function loadGameServerConfig
+       */
+      gameServerConfigModify:{}
     });
   });

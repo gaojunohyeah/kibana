@@ -5,9 +5,22 @@
 </head>
 <body>
 <script>
-  var text = "1393823982893";
-  alert(new Date(text));
+  var gameServerConfigDictionary= {
+    "pokersg": {
+      "1": {
+        "name": "91大区",
+          "message.serverId": {
+          "1998": "1998服务器",
+            "1999": "1999服务器"
+        }
+      }
+    }
+  };
 
+  alert(gameServerConfigDictionary['pokersg']['1']["name"]);
+  delete gameServerConfigDictionary['pokersg']['1'];
+//  alert(gameServerConfigDictionary['pokersg']['1']["name"]);
+  alert(String(gameServerConfigDictionary));
 </script>
 </body>
 </html>

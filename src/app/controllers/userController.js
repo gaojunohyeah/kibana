@@ -44,7 +44,7 @@ define([
         else {
           $rootScope.logout();
         }
-      }
+      };
 
       /**
        * isCookieValid function
@@ -210,13 +210,13 @@ define([
                 else {
 //                                alertSrv.set("ALERT.ERROR","ALERT.USER.NOT_FOUND",'error');
                   // load json config dictionary
-                  loadJsonConfig();
+                  loadConfig();
                   $location.path("/dashboard/file/logstash" + $rootScope.pageType + ".json");
                 }
                 return false;
               }).success(function () {
                 // load json config dictionary
-                loadJsonConfig();
+                loadConfig();
                 $location.path("/dashboard/elasticsearch/" + $rootScope.user.user_name + $rootScope.pageType);
               });
           } else {
@@ -231,57 +231,291 @@ define([
       };
 
       /**
+       * function : loadConfig
+       * load config info
+       */
+      var loadConfig = function () {
+        if (needLoadConfig) {
+          // load gameServerConfig from ES
+          $rootScope.loadGameServerConfig();
+        }
+      };
+
+      /**
        * function : loadJsonConfig
        * load json config dictionary
        */
       var loadJsonConfig = function () {
-        if (needLoadConfig) {
-          $http({
-            url: config.local_url + "/kibana/src/app/dashboards/json_dictionary.json" + '?' + new Date().getTime(),
-            method: "GET"
-          }).error(function () {
-              // can't load config
-              alertSrv.set("ALERT.ERROR", "ALERT.CONFIG.UNABLE_LOAD", 'error');
-              return false;
-            }).success(function (data) {
-              $rootScope.config = config;
+        $http({
+          url: config.local_url + "/kibana/src/app/dashboards/json_dictionary.json" + '?' + new Date().getTime(),
+          method: "GET"
+        }).error(function () {
+            // can't load config
+            alertSrv.set("ALERT.ERROR", "ALERT.CONFIG.UNABLE_LOAD", 'error');
+            return false;
+          }).success(function (data) {
+            $rootScope.config.gameConfigDictionary = data["jsonConfig"];
+            var regionIdLabel = "message.regionId";
 
-              $rootScope.config.gameConfigDictionary = data["jsonConfig"];
-              var regionId = {
-                "1": {
-                  "name": "91大区",
-                  "message.serverId": {
-                    "1998": "1998服务器",
-                    "1999": "1999服务器"
-                  }
-                }
+            // for loop the games
+            _.forOwn(data["jsonConfig"], function (gameValue, gameKey) {
+
+              $rootScope.config.gameConfigDictionary[gameKey] = gameValue;
+              $rootScope.config.gameConfigDictionary[gameKey][regionIdLabel] = $rootScope.config.gameServerConfigDictionary[gameKey][regionIdLabel];
+
+              $rootScope.config.specialFilterDictionary[gameKey] = {
+                "message.reason": {}
               };
-              var regionIdLabel = "message.regionId";
 
-              // for loop the games
-              _.forOwn(data["jsonConfig"], function (gameValue, gameKey) {
-
-                $rootScope.config.gameConfigDictionary[gameKey] = gameValue;
-                $rootScope.config.gameConfigDictionary[gameKey][regionIdLabel] = regionId;
-
-                $rootScope.config.specialFilterDictionary[gameKey] = {
-                  "message.reason": {}
-                };
-
-                _.forOwn(gameValue["others"], function (otherValue, otherKey) {
-                  $rootScope.config.specialFilterDictionary[gameKey][otherKey] = otherValue;
-                });
-
-                // for loop the game log types
-                _.forOwn(gameValue["type"], function (logValue, logKey) {
-
-                  _.forOwn(logValue["message.reason"], function (reasonValue, reasonKey) {
-                    $rootScope.config.specialFilterDictionary[gameKey]["message.reason"][reasonKey] = reasonValue;
-                  });
-                })
+              _.forOwn(gameValue["others"], function (otherValue, otherKey) {
+                $rootScope.config.specialFilterDictionary[gameKey][otherKey] = otherValue;
               });
+
+              // for loop the game log types
+              _.forOwn(gameValue["type"], function (logValue) {
+
+                _.forOwn(logValue["message.reason"], function (reasonValue, reasonKey) {
+                  $rootScope.config.specialFilterDictionary[gameKey]["message.reason"][reasonKey] = reasonValue;
+                });
+              })
             });
+
+            // define query_factor
+            $rootScope.config.query_factors = {
+              '_stat': [
+                {
+                  name: 'message.gameCode',
+                  value: '',
+                  type: 'after_select',
+                  list: $rootScope.config.gameConfigDictionary,
+                  affectIndex: "1",
+                  selected: true
+                },
+                {
+                  name: 'message.regionId',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  affectIndex: "2",
+                  selected: true
+                },
+                {
+                  name: 'message.serverId',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  selected: true
+                },
+                {
+                  name: '',
+                  value: '',
+                  type: 'before_select',
+                  list: $rootScope.config.userInfoDictionary,
+                  selected: true
+                },
+                {
+                  name: 'message.timestamp',
+                  value: '',
+                  type: 'time',
+                  selected: true
+                },
+                {
+                  name: '',
+                  value: '',
+                  type: 'query',
+                  selected: true
+                }
+              ],
+              '_meta': [
+                {
+                  name: 'message.gameCode',
+                  value: '',
+                  type: 'after_select',
+                  list: $rootScope.config.gameConfigDictionary,
+                  affectIndex: "1,3",
+                  selected: true
+                },
+                {
+                  name: 'message.regionId',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  affectIndex: "2",
+                  selected: true
+                },
+                {
+                  name: 'message.serverId',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  selected: true
+                },
+                {
+                  name: 'type',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  affectIndex: "4",
+                  selected: true
+                },
+                {
+                  name: 'message.reason',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  selected: true
+                },
+                {
+                  name: '',
+                  value: '',
+                  type: 'before_select',
+                  list: $rootScope.config.userInfoDictionary,
+                  selected: true
+                },
+                {
+                  name: 'message.logTime',
+                  value: '',
+                  type: 'time',
+                  selected: true
+                },
+                {
+                  name: '',
+                  value: '',
+                  type: 'query',
+                  selected: true
+                }
+              ],
+              '_passport': [
+                {
+                  name: 'message.gameCode',
+                  value: '',
+                  type: 'after_select',
+                  list: $rootScope.config.gameConfigDictionary,
+                  affectIndex: "1,3",
+                  selected: true
+                },
+                {
+                  name: 'message.regionId',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  affectIndex: "2",
+                  selected: true
+                },
+                {
+                  name: 'message.serverId',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  selected: true
+                },
+                {
+                  name: 'type',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  affectIndex: "4",
+                  selected: true
+                },
+                {
+                  name: 'message.reason',
+                  value: '',
+                  type: 'after_select',
+                  list: {},
+                  selected: true
+                },
+                {
+                  name: '',
+                  value: '',
+                  type: 'before_select',
+                  list: $rootScope.config.userInfoDictionary,
+                  selected: true
+                },
+                {
+                  name: 'message.logTime',
+                  value: '',
+                  type: 'time',
+                  selected: true
+                },
+                {
+                  name: '',
+                  value: '',
+                  type: 'query',
+                  selected: true
+                }
+              ]
+            };
+          });
+      };
+
+      /**
+       * function loadGameServerConfig
+       * load gameServerConfig from ES
+       */
+      $rootScope.loadGameServerConfig = function () {
+        $rootScope.config = config;
+        $http({
+          url: config.elasticsearch + "/" + config.kibana_index + "/config/game_server_config?" + new Date().getTime(),
+          method: "GET"
+        }).error(function (data, status) {
+            // unable contact ES server
+            if (status === 0) {
+              alertSrv.set("ALERT.ERROR", "ALERT.ES.UNABLE_CONTACT", 'error');
+            }
+            // log_game_server_config not found
+            else {
+              alertSrv.set("ALERT.ERROR", "ALERT.ES.UNABLE_LOAD_GAMESERVER", 'error');
+            }
+
+            loadJsonConfig();
+            return false;
+          }).success(function (data) {
+            // load log_game_server_config
+            $rootScope.config.gameServerConfigDictionary = data['_source']['gameServerConfig'];
+
+            loadJsonConfig();
+          });
+      };
+
+      /**
+       * function saveGameServerConfig
+       * save gameServerConfig to ES
+       */
+      $rootScope.saveGameServerConfig = function (needSaveConfig) {
+        if (needSaveConfig) {
+          // Create request with id as title. Rethink this.
+          var request = ejs.Document(config.kibana_index, 'config', 'game_server_config').source({
+            gameServerConfig: $rootScope.config.gameServerConfigDictionary
+          });
+
+          return request.doIndex(
+            // Success
+            function (result) {
+              if (type === 'config') {
+                $location.path('/dashboard/elasticsearch/' + config.kibana_index);
+              }
+              alertSrv.set("ALERT.SUCCESS", "ALERT.ES.SAVE_GAMESERVER", 'success');
+              return true;
+            },
+            // Failure
+            function () {
+              alertSrv.set("ALERT.ERROR", "ALERT.ES.UNABLE_SAVE_GAMESERVER", 'error');
+              return false;
+            }
+          );
         }
+      };
+
+      /**
+       * function cancelGameServerConfig
+       * cancel gameServerConfig update
+       */
+      $rootScope.cancelGameServerConfig = function (needSaveConfig) {
+          if(needSaveConfig){
+            // reload the gameServerConfig
+            $rootScope.loadGameServerConfig();
+            return true;
+          }
       };
 
       /**

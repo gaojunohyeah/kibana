@@ -194,6 +194,9 @@ define([
 
           'ALERT.ERROR': '异常',
           'ALERT.ES.UNABLE_CONTACT': '无法连接ElasticSearch服务器,请检查连接参数并确认ES启动正常.',
+          'ALERT.ES.UNABLE_LOAD_GAMESERVER': '无法找到游戏服务器信息.',
+          'ALERT.ES.SAVE_GAMESERVER': '保存游戏服务器信息成功.',
+          'ALERT.ES.UNABLE_SAVE_GAMESERVER': '无法保存游戏服务器信息.',
           'ALERT.CONFIG.UNABLE_LOAD': '无法加载数据字典，请联系管理员.',
           'ALERT.USER.NOT_FOUND': '无法找到该用户.请检查你的输入是否正确!',
           'ALERT.USER.USERNAME_PASSWORD_ERROR': '用户名或密码错误.请检查你的输入是否正确!',
@@ -210,7 +213,22 @@ define([
           // type user
           'USER.USERNAME': '用户名:',
           'USER.PASSWORD': '密码:',
-          'USER.LOGIN': '登录'
+          'USER.LOGIN': '登录',
+
+          'SHOW.ADD': '增加',
+          'SHOW.DEL': '删除',
+          'SHOW.ADD.GAMESERVER': '添加信息(id:name)',
+
+          'TOOLTIP.GAMESERVER.CONFIG.ADD': '<font size="1">添加游戏服务器信息<br/>添加格式-> id:name' +
+            '<br/>1.未选择游戏编码，为添加游戏编码' +
+            '<br/>2.选择游戏编码未选择游戏大区，为添加游戏大区' +
+            '<br/>3.即选择游戏编码又选择游戏大区时，为添加游戏服务器' +
+            '<br/>所有修改需要保存才能生效</font>',
+          'TOOLTIP.GAMESERVER.CONFIG.DEL': '<font size="1">删除游戏服务器信息' +
+            '<br/>1.只选择游戏编码，为删除游戏编码(其下所有大区及服务器)' +
+            '<br/>2.选择了游戏编码、游戏大区，为删除游戏大区(含其下的所有服务器)' +
+            '<br/>3.选择了游戏编码、游戏大区和游戏服务器，为删除游戏服务器' +
+            '<br/>所有修改需要保存才能生效</font>'
         },
         'en_US': {
           // field
@@ -327,6 +345,9 @@ define([
 
           'ALERT.ERROR': 'Error',
           'ALERT.ES.UNABLE_CONTACT': 'Could not contact Elasticsearch. Please ensure that Elasticsearch is running and your config is correct.',
+          'ALERT.ES.UNABLE_LOAD_GAMESERVER': 'Could not find gameserver config.',
+          'ALERT.ES.SAVE_GAMESERVER': 'Save gameserver config success.',
+          'ALERT.ES.UNABLE_SAVE_GAMESERVER': 'Could not save gameserver config.',
           'ALERT.CONFIG.UNABLE_LOAD': 'Could not load config dictionary. Please contact the administrator.',
           'ALERT.USER.NOT_FOUND': 'Could not find this user. Please ensure your input correctly!',
           'ALERT.USER.USERNAME_PASSWORD_ERROR': 'Your username or password is wrong.Please ensure your input correctly!',
@@ -342,7 +363,14 @@ define([
           // type user
           'USER.USERNAME': 'username:',
           'USER.PASSWORD': 'password:',
-          'USER.LOGIN': 'Login'
+          'USER.LOGIN': 'Login',
+
+          'SHOW.ADD': 'Add',
+          'SHOW.DEL': 'Del',
+          'SHOW.ADD.GAMESERVER': 'add info(id:name)',
+
+          'TOOLTIP.GAMESERVER.CONFIG.ADD': '',
+          'TOOLTIP.GAMESERVER.CONFIG.DEL': ''
         }
       });
 

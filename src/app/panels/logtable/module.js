@@ -136,72 +136,12 @@ define([
         normTimes: true
       };
 
-      var defaultQueryFactors = [
-        {
-          name: 'message.gameCode',
-          value: '',
-          type: 'after_select',
-          list: $rootScope.config.gameConfigDictionary,
-          affectIndex : "1,3",
-          selected: true
-        },
-        {
-          name: 'message.regionId',
-          value: '',
-          type: 'after_select',
-          list: {},
-          affectIndex : "2",
-          selected: true
-        },
-        {
-          name: 'message.serverId',
-          value: '',
-          type: 'after_select',
-          list: {},
-          selected: true
-        },
-        {
-          name: 'type',
-          value: '',
-          type: 'after_select',
-          list: {},
-          affectIndex : "4",
-          selected: true
-        },
-        {
-          name: 'message.reason',
-          value: '',
-          type: 'after_select',
-          list: {},
-          selected: true
-        },
-        {
-          name: '',
-          value: '',
-          type: 'before_select',
-          list: $rootScope.config.userInfoDictionary,
-          selected: true
-        },
-        {
-          name: 'message.logTime',
-          value: '',
-          type: 'time',
-          selected: true
-        },
-        {
-          name: '',
-          value: '',
-          type: 'query',
-          selected: true
-        }
-      ];
-
       /**
        * @scratch /panels/logtable/5
        * ==== QueryFactors
        * see config.query_factors
        */
-      $scope.queryFactors = _.cloneDeep(defaultQueryFactors);
+      $scope.queryFactors = _.cloneDeep($scope.config.query_factors[$scope.pageType]);
 
       /**
        * @scratch /panels/table/5
@@ -378,28 +318,7 @@ define([
 
         queries = JSON.parse(JSON.stringify(querySrv.getQueryObjs($scope.panel.queries.ids)));
         // append the queryFactors into queries
-        var queryFactorStr = "";
-        // for each queryFactors's elements, append to appendQuery str.
-        _.each($scope.queryFactors, function (factor) {
-          // if factor.value is not '',then do the append operation
-          if (factor.value != '' && true === factor.selected) {
-            // append the factor's elements to the appendQuery
-            queryFactorStr += " AND ";
-            if ("" != factor.name) {
-              queryFactorStr += factor.name + ":";
-
-              if (factor.name === 'message.gameCode') {
-                $scope.gameCode = factor.value;
-              }
-            }
-            queryFactorStr += factor.value;
-          }
-        });
-
-        // for each queries's elements, append appendQuery str to the queries's elements.
-        _.each(queries, function (q) {
-          q.query += queryFactorStr;
-        });
+        queries = querySrv.appendQueryFactors(queries, $scope.queryFactors, $scope.gameCode);
 
 
         boolQuery = $scope.ejs.BoolQuery();
@@ -536,96 +455,6 @@ define([
         return obj;
       };
 
-      /**
-       * makeFactorTime function
-       *
-       * @param factor
-       * @param query_time
-       * @returns {boolean}
-       */
-      $scope.makeFactorTime = function (factor, query_time) {
-        // Assume the form is valid since we're setting it to something valid
-        query_time.query_time_isvalid = true;
-
-        var startTime;
-        var endTime;
-
-        if (query_time.query_time_isvalid) {
-          if (!_.isUndefined(query_time.from.date) && "" != query_time.from.date) {
-            startTime = new Date(query_time.from.date);
-
-            startTime.setHours(query_time.from.hour, query_time.from.minute, query_time.from.second, query_time.from.millisecond);
-
-            if (isNaN(startTime.getTime())) {
-              query_time.query_time_isvalid = false;
-              return false;
-            }
-            factor.value = '[' + startTime.getTime() + ' TO ';
-          } else {
-            factor.value = '[* TO ';
-          }
-
-          if (!_.isUndefined(query_time.to.date) && "" != query_time.to.date) {
-            endTime = new Date(query_time.to.date);
-
-            endTime.setHours(query_time.to.hour, query_time.to.minute, query_time.to.second, query_time.to.millisecond);
-
-            if (isNaN(endTime.getTime())) {
-              query_time.query_time_isvalid = false;
-              return false;
-            }
-            factor.value = factor.value + endTime.getTime() + ']';
-          } else {
-            factor.value = factor.value + '*]';
-          }
-
-          if ("[* TO *]" === factor.value) {
-            factor.value = '';
-          } else if (!isNaN(startTime.getTime()) && !isNaN(endTime.getTime())) {
-            if (startTime.getTime() > endTime.getTime()) {
-              query_time.query_time_isvalid = false;
-              return false;
-            }
-          }
-        }
-      };
-
-      /**
-       * function resetInput
-       *
-       * reset the input query factors
-       */
-      $scope.resetInput = function () {
-        $scope.query_time.query_time_isvalid = true;
-        $scope.queryFactors = _.cloneDeep(defaultQueryFactors);
-        $scope.query_time = _.cloneDeep($scope.config.query_time);
-      };
-
-      $scope.selectFactor = function (factor){
-        if(!_.isUndefined(factor.name) && !_.isNull(factor.name) && factor.name.toString().length > 0){
-          // if factor.type is after_select_level
-          if(factor.type === "after_select" && !_.isUndefined(factor.affectIndex) && factor.affectIndex != ""){
-            var indexs = factor.affectIndex.split(",");
-
-            _.each(indexs, function(index){
-              if(index <= $scope.queryFactors.length){
-                var f = $scope.queryFactors[index];
-                // if value has no value
-                if(!_.isUndefined(factor.value) && !_.isNull(factor.value) && factor.value.toString().length > 0){
-                  f.list = factor.list[factor.value][f.name];
-                }else{
-                  f.list = {};
-                }
-              }
-            });
-          }
-          // if value has no value
-          if(_.isUndefined(factor.value) || _.isNull(factor.value)){
-            factor.value = "";
-          }
-
-        }
-      };
     });
 
     // This also escapes some xml sequences
