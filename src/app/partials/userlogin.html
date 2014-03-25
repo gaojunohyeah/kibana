@@ -7,11 +7,11 @@
             <div class="row-fluid">
                 <div class="span12" style="text-align:center;">
                     <form>
-                        <div>{{'USER.USERNAME' |i18n}}<input type="text" ng-model="user.user_name"/></div>
-                        <div>{{'USER.PASSWORD' |i18n}}<input type="password" ng-model="user.password"/></div>
+                        <div>{{'USER.USERNAME' |i18n:'base'}}<input type="text" ng-model="user.user_name"/></div>
+                        <div>{{'USER.PASSWORD' |i18n:'base'}}<input type="password" ng-model="user.password"/></div>
                         <div><!-- style="text-align: right"-->
-                            <button type="button" ng-click="login();" class="btn btn-success">{{'USER.LOGIN' |i18n}}</button>
-                            <button type="reset" class="btn btn-danger">{{'BASE.RESET_INPUT' |i18n}}</button>
+                            <button type="button" ng-click="login();" class="btn btn-success">{{'USER.LOGIN' |i18n:'base'}}</button>
+                            <button type="reset" class="btn btn-danger">{{'BASE.RESET_INPUT' |i18n:'base'}}</button>
 
                             <!--<button type="button" ng-click="elasticsearch_user_save();" class="btn btn-success">{{'保存用户'}}</button>-->
                         </div>

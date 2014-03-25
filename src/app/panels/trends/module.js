@@ -92,6 +92,9 @@ function (angular, app, _, kbn) {
      * see config.query_time
      */
     $scope.query_time = _.cloneDeep($scope.config.query_time);
+    $scope.gameCode = {
+      'gameCode': ''
+    };
 
     _.defaults($scope.panel,_d);
 

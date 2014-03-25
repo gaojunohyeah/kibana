@@ -261,6 +261,7 @@ function (angular, _, config, kbn) {
      * @returns {*}
      */
     this.appendQueryFactors = function(queries, queryFactors , gameCode){
+      gameCode['gameCode'] = '';
       // append the queryFactors into queries
       var queryFactorStr = "";
       // for each queryFactors's elements, append to appendQuery str.
@@ -273,7 +274,7 @@ function (angular, _, config, kbn) {
             queryFactorStr += factor.name + ":";
 
             if (factor.name === 'message.gameCode') {
-              gameCode = factor.value;
+              gameCode['gameCode'] = factor.value;
             }
           }
           queryFactorStr += factor.value;

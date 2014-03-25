@@ -257,8 +257,13 @@ define([
             $rootScope.config.gameConfigDictionary = data["jsonConfig"];
             var regionIdLabel = "message.regionId";
 
+            // get the first gameCode
+            var firstGameCode ='';
             // for loop the games
             _.forOwn(data["jsonConfig"], function (gameValue, gameKey) {
+              if(_.isUndefined(firstGameCode) || _.isNull(firstGameCode) || firstGameCode.toString().length<=0){
+                firstGameCode = gameKey;
+              }
 
               $rootScope.config.gameConfigDictionary[gameKey] = gameValue;
               $rootScope.config.gameConfigDictionary[gameKey][regionIdLabel] = $rootScope.config.gameServerConfigDictionary[gameKey][regionIdLabel];
@@ -285,7 +290,7 @@ define([
               '_stat': [
                 {
                   name: 'message.gameCode',
-                  value: '',
+                  value: firstGameCode,
                   type: 'after_select',
                   list: $rootScope.config.gameConfigDictionary,
                   affectIndex: "1",
@@ -295,7 +300,7 @@ define([
                   name: 'message.regionId',
                   value: '',
                   type: 'after_select',
-                  list: {},
+                  list: $rootScope.config.gameConfigDictionary[firstGameCode]['message.regionId'],
                   affectIndex: "2",
                   selected: true
                 },
@@ -329,7 +334,7 @@ define([
               '_meta': [
                 {
                   name: 'message.gameCode',
-                  value: '',
+                  value: firstGameCode,
                   type: 'after_select',
                   list: $rootScope.config.gameConfigDictionary,
                   affectIndex: "1,3",
@@ -339,7 +344,7 @@ define([
                   name: 'message.regionId',
                   value: '',
                   type: 'after_select',
-                  list: {},
+                  list: $rootScope.config.gameConfigDictionary[firstGameCode]['message.regionId'],
                   affectIndex: "2",
                   selected: true
                 },
@@ -354,7 +359,7 @@ define([
                   name: 'type',
                   value: '',
                   type: 'after_select',
-                  list: {},
+                  list: $rootScope.config.gameConfigDictionary[firstGameCode]['type'],
                   affectIndex: "4",
                   selected: true
                 },

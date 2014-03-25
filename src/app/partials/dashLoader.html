@@ -63,10 +63,10 @@
   <ul class="nav nav-pills timepicker-dropdown">
     <li class="dropdown">
 
-      <a class="dropdown-toggle timepicker-dropdown" data-toggle="dropdown" href="" bs-tooltip="'BASE.CLICK_CHANGE_PAGE_TYPE' | i18n" data-placement="bottom" ng-click="dismiss();">
+      <a class="dropdown-toggle timepicker-dropdown" data-toggle="dropdown" href="" bs-tooltip="'BASE.CLICK_CHANGE_PAGE_TYPE' | i18n:'base'" data-placement="bottom" ng-click="dismiss();">
 
           <span>
-            <span class="pointer">{{pageType | i18n}}</span>
+            <span class="pointer">{{pageType | i18n:'base'}}</span>
           </span>
         <i class="icon-caret-down"></i>
       </a>
@@ -74,7 +74,7 @@
       <ul class="dropdown-menu">
         <!-- Relative time options -->
         <li ng-repeat="type in pageTypeArray" ng-show="pageType!=type">
-          <a ng-click="changePageType(type)">{{type | i18n}}</a>
+          <a ng-click="changePageType(type)">{{type | i18n:'base'}}</a>
         </li>
       </ul>
     </li>

@@ -172,61 +172,61 @@
   <div ng-if="editor.index == 4">
     <div class="editor-row">
       <div class="section">
-        <h5>{{'SHOW.ADD' | i18n}}</h5>
+        <h5>{{'SHOW.ADD' | i18n:'base'}}</h5>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'message.gameCode' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'message.gameCode' | i18n:'base'}}</label>
           <select class="input-medium" ng-model="gameServer.add.gameCode" ng-options="key as value.name for (key ,value) in config.gameServerConfigDictionary" ng-change="">
-            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n}}</option>
+            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n:'base'}}</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         </div>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'message.regionId' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'message.regionId' | i18n:'base'}}</label>
           <select class="input-medium" ng-model="gameServer.add.regionId" ng-options="key as value.name for (key ,value) in config.gameServerConfigDictionary[gameServer.add.gameCode]['message.regionId']" ng-change="">
-            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n}}</option>
+            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n:'base'}}</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         </div>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'message.serverId' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'message.serverId' | i18n:'base'}}</label>
           <select class="input-medium" ng-model="gameServer.add.serverId" ng-options="key as value for (key ,value) in config.gameServerConfigDictionary[gameServer.add.gameCode]['message.regionId'][gameServer.add.regionId]['message.serverId']">
-            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n}}</option>
+            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n:'base'}}</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         </div>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'SHOW.ADD.GAMESERVER' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'SHOW.ADD.GAMESERVER' | i18n:'base'}}</label>
           <input type="text" ng-model="gameServer.add.inputId" class="input-small"/><strong>:</strong>
           <input type="text" ng-model="gameServer.add.inputName" class="input-small"/>
         </div>
         <div class="editor-option">
           <label class="small" style="text-transform:capitalize;">&nbsp;</label>
-          <button type="button" class="btn btn-success" ng-click="addGameServer()">{{'SHOW.ADD' | i18n}}</button><i class="icon-question-sign" bs-tooltip="'TOOLTIP.GAMESERVER.CONFIG.ADD' | i18n"></i>
+          <button type="button" class="btn btn-success" ng-click="addGameServer()">{{'SHOW.ADD' | i18n:'base'}}</button><i class="icon-question-sign" bs-tooltip="'TOOLTIP.GAMESERVER.CONFIG.ADD' | i18n:'base'"></i>
         </div>
       </div>
     </div>
 
     <div class="editor-row">
       <div class="section">
-        <h5>{{'SHOW.DEL' | i18n}}</h5>
+        <h5>{{'SHOW.DEL' | i18n:'base'}}</h5>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'message.gameCode' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'message.gameCode' | i18n:'base'}}</label>
           <select class="input-medium" ng-model="gameServer.del.gameCode" ng-options="key as value.name for (key ,value) in config.gameServerConfigDictionary">
-            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n}}</option>
+            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n:'base'}}</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         </div>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'message.regionId' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'message.regionId' | i18n:'base'}}</label>
           <select class="input-medium" ng-model="gameServer.del.regionId" ng-options="key as value.name for (key ,value) in config.gameServerConfigDictionary[gameServer.del.gameCode]['message.regionId']">
-            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n}}</option>
+            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n:'base'}}</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         </div>
         <div class="editor-option">
-          <label class="small" style="text-transform:capitalize;">{{'message.serverId' | i18n}}</label>
+          <label class="small" style="text-transform:capitalize;">{{'message.serverId' | i18n:'base'}}</label>
           <select class="input-medium" ng-model="gameServer.del.serverId" ng-options="key as value for (key ,value) in config.gameServerConfigDictionary[gameServer.del.gameCode]['message.regionId'][gameServer.del.regionId]['message.serverId']">
-            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n}}</option>
+            <option value="">{{'QUERY.SELECT.DEFAULT' | i18n:'base'}}</option>
           </select>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
         </div>
         <div class="editor-option">
           <label class="small" style="text-transform:capitalize;">&nbsp;</label>
-          <button type="button" class="btn btn-danger" ng-click="delGameServer()">{{'SHOW.DEL' | i18n}}</button><i class="icon-question-sign" bs-tooltip="'TOOLTIP.GAMESERVER.CONFIG.DEL' | i18n"></i>
+          <button type="button" class="btn btn-danger" ng-click="delGameServer()">{{'SHOW.DEL' | i18n:'base'}}</button><i class="icon-question-sign" bs-tooltip="'TOOLTIP.GAMESERVER.CONFIG.DEL' | i18n:'base'"></i>
         </div>
       </div>
     </div>

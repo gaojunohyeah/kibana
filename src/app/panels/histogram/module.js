@@ -252,6 +252,9 @@ function (angular, app, $, _, kbn, moment, timeSeries, numeral) {
      * see config.query_time
      */
     $scope.query_time = _.cloneDeep($scope.config.query_time);
+    $scope.gameCode = {
+      'gameCode': ''
+    };
 
     _.defaults($scope.panel,_d);
     _.defaults($scope.panel.tooltip,_d.tooltip);
