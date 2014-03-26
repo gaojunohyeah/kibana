@@ -373,7 +373,8 @@ function (angular, app, _, kbn, moment) {
             };
 
             // Kind of cheating with the _.map here, but this is faster than kbn.get_all_fields
-            $scope.current_fields = $scope.current_fields.concat(_.keys(_h.kibana._source));
+            var fieldsArray = $scope.removeArrayElem(_.keys(_h.kibana._source),function(elem){return elem.toString().indexOf('message.')>-1});
+            $scope.current_fields = $scope.current_fields.concat(fieldsArray);
 
             return _h;
           }));

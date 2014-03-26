@@ -128,7 +128,11 @@ define(['settings'],
         'message.timestamp',
         'message.@timestamp',
         'message.logtime.time',
-        'message.logTime'
+        'message.logTime',
+        'message.registerTimestamp',
+        'message.lastLoginTimestamp',
+        'message.firstRechargeTimestamp',
+        'message.lastRechargeTimestamp'
       ],
 
       query_time: {

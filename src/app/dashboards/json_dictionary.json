@@ -291,7 +291,7 @@
           "4": "进化卡",
           "5": "技能卡"
         },
-        "type": {
+        "message.logName": {
           "player_log": "角色日志表",
           "card_log": "卡牌日志",
           "spskill_log": "SP技能日志表",
@@ -314,6 +314,29 @@
           "fail_load_log": "加载失败日志",
           "change_roleInfo_log": "绑定账号日志",
           "pay_log": "支付日志表"
+        },
+        "message.dungeonType": {
+          "NORMAL_DUNGEON": "普通关卡",
+          "ELITE_DUNGEON": "精英关卡",
+          "RESOURCE_DUNGEON": "资源关卡",
+          "ACTIVITY_DUNGEON": "获得关卡"
+        },
+        "message.userOperation": {
+          "GIFT_GET": "礼包获得",
+          "DUNGEON_COMPLETE": "关卡完成",
+          "DUNGEON_FAIL": "关卡失败",
+          "CARD_COMB_ADD": "卡牌进化",
+          "CARD_GACHA_ADD": "抽卡",
+          "CARD_HECHENG_CONSUME_DEL": "卡牌合成",
+          "CARD_CHANGE": "普通卡片替换",
+          "CARD_A_CHANGE": "A卡片替换"
+        },
+        "message.friendNumArea": {
+          "ZERO_TO_FOUR": "0-4位好友",
+          "FIVE_TO_TEN": "5-10位好友",
+          "ELEVEN_TO_TWENTY": "11-20位好友",
+          "TWENTYONE_TO_THIRTY": "21-30位好友",
+          "OVER_THIRTY": "30位以上好友"
         }
       }
     }

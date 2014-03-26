@@ -211,7 +211,7 @@ define([
 //                                alertSrv.set("ALERT.ERROR","ALERT.USER.NOT_FOUND",'error');
                   // load json config dictionary
                   loadConfig();
-                  $location.path("/dashboard/file/logstash" + $rootScope.pageType + ".json");
+                  $location.path("/dashboard/file/log_page" + $rootScope.pageType + ".json");
                 }
                 return false;
               }).success(function () {
@@ -581,6 +581,25 @@ define([
         var exdate = new Date();
         exdate.setTime(exdate.getTime() - 1);
         document.cookie = key + "=;expires=" + exdate.toGMTString() + ";path=/";
+      };
+
+      $rootScope.removeArrayElem = function (array, callback, thisArg) {
+        var arrayRef = [],
+          index = -1,
+          length = array ? array.length : 0,
+          result = [],
+          splice = arrayRef.splice;
+
+        callback = _.createCallback(callback, thisArg, 3);
+        while (++index < length) {
+          var value = array[index];
+          if (callback(value, index, array)) {
+            result.push(value);
+            splice.call(array, index--, 1);
+            length--;
+          }
+        }
+        return result;
       }
     });
 

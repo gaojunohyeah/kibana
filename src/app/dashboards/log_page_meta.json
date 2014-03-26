@@ -47,7 +47,7 @@
           "error": false,
           "span": 12,
           "editable": true,
-          "type": "logtable",
+          "type": "table",
           "loadingEditor": false,
           "size": 10,
           "pages": 10,
