@@ -153,7 +153,7 @@ define([
 
       request = request
         .query(boolQuery)
-        .filter(filterSrv.getBoolFilter(filterSrv.ids))
+        .filter(filterSrv.getBoolFilter(filterSrv.ids()))
         .size(0);
 
       $scope.inspector = angular.toJson(JSON.parse(request.toString()),true);

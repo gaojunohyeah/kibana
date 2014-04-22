@@ -25,7 +25,8 @@ function (angular, app, _, kbn, moment) {
   var module = angular.module('kibana.panels.table', []);
   app.useModule(module);
 
-  module.controller('table', function($rootScope, $scope, $modal, $q, $compile, fields, querySrv, dashboard, filterSrv) {
+  module.controller('table', function($rootScope, $scope, $modal, $q, $compile, $timeout,
+    fields, querySrv, dashboard, filterSrv) {
     $scope.panelMeta = {
       modals : [
         {
@@ -175,10 +176,19 @@ function (angular, app, _, kbn, moment) {
     // Create a percent function for the view
     $scope.percent = kbn.to_percent;
 
+    $scope.closeFacet = function() {
+      if($scope.modalField) {
+        delete $scope.modalField;
+      }
+    };
+
     $scope.termsModal = function(field,chart) {
-      $scope.modalField = field;
-      showModal(
-        '{"height":"300px","chart":"'+chart+'","field":"'+field+'"}','terms');
+      $scope.closeFacet();
+      $timeout(function() {
+        $scope.modalField = field;
+        showModal(
+          '{"height":"200px","chart":"'+chart+'","field":"'+field+'"}','terms');
+      },0);
     };
 
     $scope.statsModal = function(field) {
@@ -193,18 +203,16 @@ function (angular, app, _, kbn, moment) {
 
       // create a new modal. Can't reuse one modal unforunately as the directive will not
       // re-render on show.
-      var panelModal = $modal({
+      /*
+      $modal({
         template: './app/panels/table/modal.html',
-        persist: true,
-        show: false,
-        scope: $scope,
+        persist: false,
+        show: true,
+        scope: $scope.$new(),
         keyboard: false
       });
+      */
 
-      // and show it
-      $q.when(panelModal).then(function(modalEl) {
-        modalEl.modal('show');
-      });
     };
 
 
@@ -327,7 +335,7 @@ function (angular, app, _, kbn, moment) {
       request = request.query(
         $scope.ejs.FilteredQuery(
           boolQuery,
-          filterSrv.getBoolFilter(filterSrv.ids)
+          filterSrv.getBoolFilter(filterSrv.ids())
         ))
         .highlight(
           $scope.ejs.Highlight($scope.panel.highlight)
@@ -345,6 +353,7 @@ function (angular, app, _, kbn, moment) {
         $scope.panelMeta.loading = false;
 
         if(_segment === 0) {
+          $scope.panel.offset = 0;
           $scope.hits = 0;
           $scope.data = [];
           $scope.current_fields = [];

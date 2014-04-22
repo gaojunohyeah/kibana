@@ -17,14 +17,14 @@ define(['settings'],
        *
        * The URL to your passport manager server's login request url.
        */
-      local_url: "http://192.168.1.5:9000",
+      local_url: "http://localhost:9000",
 
       /** @scratch /configuration/config.js/5
        * ==== login_url
        *
        * The URL to your passport manager server's login request url.
        */
-      login_url: "http://192.168.1.5:9000/pmanager/login_login",
+      login_url: "http://localhost:9000/pmanager/login_login",
 
       /** @scratch /configuration/config.js/5
        * ==== cookie_user_name
