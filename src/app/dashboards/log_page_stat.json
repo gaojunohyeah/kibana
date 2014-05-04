@@ -179,8 +179,8 @@
           "editable": true,
           "type": "table",
           "loadingEditor": false,
-          "size": 10,
-          "pages": 100,
+          "size": 20,
+          "pages": 50,
           "offset": 0,
           "sort": [
             "_score",
