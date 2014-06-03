@@ -183,6 +183,7 @@ define([
             'message.param': '具体原因参数',
 
             // meta log
+            'message.channelId': '渠道ID',
             'message.deviceId': '设备id',
             'message.deviceType': '设备类型',
             'message.deviceConnectType': '网络环境',
@@ -234,8 +235,18 @@ define([
             'message.users': '总用户数',
             'message.uv': '登陆用户数',
 
+            'message.channelUserId': '渠道用户ID',
+            'message.creditAmount': '真实币种数量',
+            'message.creditCurrency': '真实币种类型',
+            'message.gameCreditPoint': '对应RMB游戏币',
+            'message.gameGmPoint': '对应GM游戏币',
+            'message.quantity': '数量',
+            'message.orderType': '订单类型',
+            'message.userId': '用户ID',
+
             'message.newCharge': '新增付费人数',
             'message.totalRechargeStone': '兑入宝石数',
+            'message.totalRechargeRMB': '兑入RMB数',
             'message.consumeRMB': '消耗RMB宝石数',
             'message.consumeMoney': '消耗系统宝石数',
             'message.totalConsumeUser': '消耗玉石用户数',
@@ -437,6 +448,7 @@ define([
             'message.rid': 'relation id',
             'message.param': 'param',
 
+            'message.channelId': 'channel id',
             'message.deviceId': 'device id',
             'message.deviceType': 'device type',
             'message.deviceConnectType': 'net environment',
@@ -487,8 +499,18 @@ define([
             'message.users': 'Total Users Num',
             'message.uv': 'Login Users Num',
 
+            'message.channelUserId': 'channelUserId',
+            'message.creditAmount': 'creditAmount',
+            'message.creditCurrency': 'creditCurrency',
+            'message.gameCreditPoint': 'gameCreditPoint',
+            'message.gameGmPoint': 'gameGmPoint',
+            'message.quantity': 'quantity',
+            'message.orderType': 'orderType',
+            'message.userId': 'userId',
+
             'message.newCharge': 'New Recharge Users Num',
             'message.totalRechargeStone': 'Total Recharge Stone Num',
+            'message.totalRechargeRMB': 'totalRechargeRMB',
             'message.consumeRMB': 'Consume RMB Stone Num',
             'message.consumeMoney': 'Consume GM Stone Num',
             'message.totalConsumeUser': 'Consume Stone Users Num',

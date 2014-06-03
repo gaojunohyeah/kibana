@@ -1055,6 +1055,10 @@
               "jadetype": {
                 "type": "long",
                 "index": "not_analyzed"
+              },
+              "channelId": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }

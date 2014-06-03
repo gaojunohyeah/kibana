@@ -223,6 +223,13 @@ define(['settings'],
        * gameServerConfig modify info
        * see userController.js -> function loadGameServerConfig
        */
-      gameServerConfigModify:{}
+      gameServerConfigModify:{},
+
+      passportLogTypes:{
+        "register": "注册",
+        "login": "登陆",
+        "gift": "礼包",
+        "activityCode": "激活码"
+      }
     });
   });

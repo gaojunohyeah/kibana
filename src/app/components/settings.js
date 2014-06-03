@@ -28,7 +28,8 @@ function (_) {
       gameConfigDictionary      : {},
       userInfoDictionary        : {},
       gameServerConfigDictionary: {},
-      gameServerConfigModify    : {}
+      gameServerConfigModify    : {},
+      passportLogTypes          : {}
     };
 
     // This initializes a new hash on purpose, to avoid adding parameters to

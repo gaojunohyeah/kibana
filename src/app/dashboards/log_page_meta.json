@@ -28,10 +28,30 @@
           "active": true,
           "alias": "",
           "id": 0
+        },
+        "1": {
+          "type": "terms",
+          "field": "message.serverId",
+          "value": "\\\b",
+          "mandate": "mustNot",
+          "active": true,
+          "alias": "",
+          "id": 1
+        },
+        "2": {
+          "type": "terms",
+          "field": "message.serverId",
+          "value": "X\u0001\u0000",
+          "mandate": "mustNot",
+          "active": true,
+          "alias": "",
+          "id": 2
         }
       },
       "ids": [
-        0
+        0,
+        1,
+        2
       ]
     }
   },
@@ -71,14 +91,7 @@
           "queries": {
             "mode": "selected",
             "ids": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7
+              0
             ]
           },
           "style": {
@@ -86,6 +99,49 @@
           },
           "normTimes": true,
           "title": "游戏详细日志"
+        }
+      ],
+      "notice": false
+    },
+    {
+      "title": "游戏日志数量统计",
+      "height": "350px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "field": "message.serverId",
+          "exclude": [],
+          "missing": true,
+          "other": true,
+          "size": 20,
+          "order": "count",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "arrangement": "horizontal",
+          "chart": "table",
+          "counter_pos": "above",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              0
+            ]
+          },
+          "tmode": "terms",
+          "tstat": "total",
+          "valuefield": "",
+          "title": "数量统计"
         }
       ],
       "notice": false

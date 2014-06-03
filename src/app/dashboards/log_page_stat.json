@@ -128,6 +128,15 @@
           "type": "lucene",
           "enable": true,
           "query": "type:\"user_operation_stat\""
+        },
+        "14": {
+          "id": 14,
+          "color": "#6D1F62",
+          "alias": "",
+          "pin": false,
+          "type": "lucene",
+          "enable": true,
+          "query": "type:\"recharge\""
         }
       },
       "ids": [
@@ -144,7 +153,8 @@
         10,
         11,
         12,
-        13
+        13,
+        14
       ]
     },
     "filter": {
@@ -346,6 +356,55 @@
             "query_as_alias": true
           },
           "title": "实时在线"
+        },
+        {
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "table",
+          "loadingEditor": false,
+          "size": 50,
+          "pages": 20,
+          "offset": 0,
+          "sort": [
+            "_score",
+            "desc"
+          ],
+          "overflow": "min-height",
+          "fields": [
+            "message.timestamp",
+            "message.gameCode",
+            "message.regionId",
+            "message.serverId",
+            "message.uv",
+            "message.newLongin",
+            "message.users",
+            "message.day_RU",
+            "message.day_UV",
+            "message.day_ACU",
+            "message.day_PCU"
+          ],
+          "highlight": [],
+          "sortable": true,
+          "header": true,
+          "paging": true,
+          "field_list": false,
+          "all_fields": false,
+          "trimFactor": 300,
+          "localTime": false,
+          "timeField": "@timestamp",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              0
+            ]
+          },
+          "style": {
+            "font-size": "9pt"
+          },
+          "normTimes": true,
+          "title": "在线数据"
         }
       ],
       "notice": false
@@ -503,6 +562,60 @@
           },
           "normTimes": true,
           "title": "消费点统计"
+        },
+        {
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "table",
+          "loadingEditor": false,
+          "size": 50,
+          "pages": 20,
+          "offset": 0,
+          "sort": [
+            "_score",
+            "desc"
+          ],
+          "overflow": "min-height",
+          "fields": [
+            "message.timestamp",
+            "message.gameCode",
+            "message.regionId",
+            "message.serverId",
+            "message.channelUserId",
+            "message.orderId",
+            "message.rechargeType",
+            "message.creditAmount",
+            "message.creditCurrency",
+            "message.gameCreditPoint",
+            "message.gameGmPoint",
+            "message.quantity",
+            "message.orderType",
+            "message.registerTimestamp",
+            "message.lastLoginTimestamp",
+            "message.userId"
+          ],
+          "highlight": [],
+          "sortable": true,
+          "header": true,
+          "paging": true,
+          "field_list": false,
+          "all_fields": false,
+          "trimFactor": 300,
+          "localTime": false,
+          "timeField": "@timestamp",
+          "spyable": true,
+          "queries": {
+            "mode": "selected",
+            "ids": [
+              14
+            ]
+          },
+          "style": {
+            "font-size": "9pt"
+          },
+          "normTimes": true,
+          "title": "平台充值单条日志"
         }
       ],
       "notice": false

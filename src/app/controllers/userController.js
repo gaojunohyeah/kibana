@@ -396,7 +396,7 @@ define([
                   value: '',
                   type: 'after_select',
                   list: $rootScope.config.gameConfigDictionary,
-                  affectIndex: "1,3",
+                  affectIndex: "1",
                   selected: true
                 },
                 {
@@ -418,15 +418,7 @@ define([
                   name: 'type',
                   value: '',
                   type: 'after_select',
-                  list: {},
-                  affectIndex: "4",
-                  selected: true
-                },
-                {
-                  name: 'message.reason',
-                  value: '',
-                  type: 'after_select',
-                  list: {},
+                  list: $rootScope.config.passportLogTypes,
                   selected: true
                 },
                 {
@@ -437,7 +429,7 @@ define([
                   selected: true
                 },
                 {
-                  name: 'message.logTime',
+                  name: 'message.timestamp',
                   value: '',
                   type: 'time',
                   selected: true

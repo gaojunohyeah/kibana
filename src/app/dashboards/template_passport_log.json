@@ -214,6 +214,10 @@
               "gameGmPoint": {
                 "type": "long",
                 "index": "not_analyzed"
+              },
+              "orderType": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }
