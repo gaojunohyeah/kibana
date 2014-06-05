@@ -268,6 +268,7 @@ define([
             'message.vip10': 'VIP10',
             'message.totalVip': 'VIP总用户数',
 
+            'message.platformCoinAmount': '平台币数量',
             'message.consumeJadeNum': '消耗玉石数量',
             'message.consumeTimesNum': '消耗次数',
             'message.consumePeopleNum': '消耗玉石人数',
@@ -508,6 +509,7 @@ define([
             'message.orderType': 'orderType',
             'message.userId': 'userId',
 
+            'message.platformCoinAmount': 'platformCoinAmount',
             'message.newCharge': 'New Recharge Users Num',
             'message.totalRechargeStone': 'Total Recharge Stone Num',
             'message.totalRechargeRMB': 'totalRechargeRMB',

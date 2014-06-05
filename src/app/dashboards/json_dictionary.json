@@ -321,7 +321,7 @@
           "NORMAL_DUNGEON": "普通关卡",
           "ELITE_DUNGEON": "精英关卡",
           "RESOURCE_DUNGEON": "资源关卡",
-          "ACTIVITY_DUNGEON": "获得关卡"
+          "ACTIVITY_DUNGEON": "活动关卡"
         },
         "message.userOperation": {
           "GIFT_GET": "礼包获得",

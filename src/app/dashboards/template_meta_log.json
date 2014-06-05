@@ -180,6 +180,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }
@@ -246,6 +250,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "cardId": {
                 "type": "long",
@@ -336,6 +344,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }
@@ -402,6 +414,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }
@@ -468,6 +484,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }
@@ -534,6 +554,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "dungeonId": {
                 "type": "long",
@@ -604,6 +628,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               }
             }
           }
@@ -670,6 +698,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "playFpoint": {
                 "type": "long",
@@ -744,6 +776,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "friendSl": {
                 "type": "long",
@@ -826,6 +862,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "giftId": {
                 "type": "long",
                 "index": "not_analyzed"
@@ -895,6 +935,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "playerGold": {
                 "type": "long",
@@ -970,6 +1014,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "inviter": {
                 "type": "long",
                 "index": "not_analyzed"
@@ -1043,6 +1091,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "current": {
                 "type": "long",
@@ -1126,6 +1178,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "missionId": {
                 "type": "long",
                 "index": "not_analyzed"
@@ -1195,6 +1251,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "loginDay": {
                 "type": "long",
@@ -1266,6 +1326,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "position": {
                 "type": "long",
                 "index": "not_analyzed"
@@ -1335,6 +1399,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "deviceType": {
                 "type": "long",
@@ -1422,6 +1490,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "deviceId": {
                 "type": "string",
                 "index": "not_analyzed"
@@ -1504,6 +1576,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "spskillId": {
                 "type": "long",
                 "index": "not_analyzed"
@@ -1573,6 +1649,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "count": {
                 "type": "long",
@@ -1648,6 +1728,10 @@
               "param": {
                 "type": "string"
               },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
+              },
               "count": {
                 "type": "long",
                 "index": "not_analyzed"
@@ -1721,6 +1805,10 @@
               },
               "param": {
                 "type": "string"
+              },
+              "loginType": {
+                "type": "long",
+                "index": "not_analyzed"
               },
               "wbType": {
                 "type": "long",
